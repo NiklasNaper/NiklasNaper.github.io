@@ -1,0 +1,38 @@
+body{
+
+  background-color: lightgrey;
+}
+ul{list-style-type: none;
+
+
+}
+li{display: inline;
+
+
+
+
+
+}
+li a{
+  text-decoration: none;
+  background-color: blue;
+  padding: 5px;
+  border-radius: 5000px;
+  margin: 24px;
+  color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+header{width: 200px;
+background-color: #bce8ff;
+text-align: center;
+margin-left: 200px;
+font-size: 30px;
+
+}
+img{ margin: auto;
+  display: block;
+
+
+}
