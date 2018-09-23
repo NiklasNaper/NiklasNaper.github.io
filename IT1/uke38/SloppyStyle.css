@@ -26,11 +26,41 @@ margin-top: 100px;
 
 
 }
+
+video{
+margin-left: 10%;
+width: 80%;
+margin-right: 10%;
+margin-top: 50px;
+
+
+
+}
 table{
   border-style: solid;
   border-collapse:
-  
+
 }
 td, th{
   border-bottom: solid;
+}
+iframe{ width: 80%;
+height: 600px;
+margin-right: 10%;
+margin-top: 100px;
+margin-left: 10%;
+}
+
+
+audio{ margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
+  margin-bottom: 100px;
+
+
+
+}
+
+video-poster{ width: auto;
+  margin: auto;
 }
