@@ -1,7 +1,7 @@
 header{font-size: 40px;
   margin-left: auto;
   margin-right: auto;
-color: yellow;
+color: Limegreen;
 width: 75%;
 text-align: center;
 border-color: #ff6600;
@@ -16,15 +16,50 @@ body{background-image: url(http://lbc9.net/digital-art/3d/flames/flames-3d.jpg);
 background-size: cover;
 
 }
-video{width: 40%;
-  margin-left: 100px;
-  margin-bottom: 50px;
-  margin-top: 700px;
+iframe{width: 560;
+  height: 315;
+  margin-left: 10%;
+  margin-bottom: 15px;
+margin-top: 30px;
   border-style: solid;
   border-color: red;
   border-top-style: hidden;
   border-bottom-style: hidden;
 
+}
+p{ width: 40%;
+  margin: auto;
+  text-align: center;
+  border-style: double;
+  border-radius: 40px;
+  color: yellow;
+  border-color: #ff6600;
+  margin-top: 50px;
+  font-size: 30px;
 
+}
+li{width: 40%;
+  margin: auto;
+  text-align: left;
+  font-size: 20px;
+  color: yellow;
+  margin-top: 10px;
+
+}
+div{ float: left;
+  margin: 5px;
+
+
+
+}
+i{ width: 40%;
+  margin: auto;
+  text-align: center;
+  border-style: double;
+  border-radius: 40px;
+  color: limegreen;
+  border-color: #ff6600;
+  margin-top: 50px;
+  font-size: 30px;
 
 }
