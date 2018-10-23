@@ -1,0 +1,31 @@
+p{ font-style: italic;
+margin-left: 10%;
+margin-right: 10%;
+margin bottom: 10px;
+font-size: 40px;
+border-style: groove;
+border-radius: 20px;
+border-color: lightblue;
+color: yellow;
+}
+h1{
+  font-size: 50px;
+  text-align: center;
+}
+body{
+  background-color: black;
+  color: orange;
+
+}
+p:hover{ transform: translate(10px);
+  transition-duration: 2s;
+
+}
+h1:hover{
+  transform: rotatey(3600deg);
+  transition-duration: 2s;
+}
+img:active{
+  transform: rotate(36000deg);
+  transition-duration: 40s;
+}
