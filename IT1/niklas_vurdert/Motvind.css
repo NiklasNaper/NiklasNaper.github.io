@@ -1,0 +1,25 @@
+body{
+  background-color: lightblue;
+
+margin-left: 200px;
+margin-right: 200px;
+
+
+}
+
+
+h1{ font-style: italic;
+text-align: center;
+}
+img{
+  width: 400px;
+}
+h2{ margin-top: 30px;
+
+}
+video{
+  margin-top: 40px;
+}
+p{
+  margin-top: 10px;
+}
