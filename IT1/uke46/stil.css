@@ -1,0 +1,36 @@
+body{
+  background-color: lightgrey;
+}
+div{
+  color: white;
+  font-size: 20px;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.storsak{
+  grid-column: span 3;
+  grid-row: span 3;
+
+}
+.middelssak{
+  grid-column: span 2;
+  grid-row: span 2;
+
+}
+.litensak{
+  grid-row: span 1;
+  grid-column: span 1;
+
+}
+img{
+  width: 90%;
+}
+header{
+  display: grid;
+  grid-template-columns: 10% 60% repeat(3, 10%);
+}
+#hjem{
+grid-column: 3;
+}

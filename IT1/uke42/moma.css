@@ -6,24 +6,28 @@ font-size: 40px;
 border-style: groove;
 border-radius: 20px;
 border-color: lightblue;
-color: yellow;
+color: rgba(0,255,255);
+
+
+
+
 }
 h1{
   font-size: 50px;
   text-align: center;
 }
 body{
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: orange;
 
 }
 p:hover{ transform: translate(10px);
-  transition-duration: 2s;
+  transition-duration: 5000s;
 
 }
 h1:hover{
-  transform: rotatey(3600deg);
-  transition-duration: 2s;
+  transform: rotatey(360deg);
+  transition-duration: 1s;
 }
 img:active{
   transform: rotate(36000deg);

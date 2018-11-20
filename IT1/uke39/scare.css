@@ -1,0 +1,29 @@
+img{ margin-left: 10%;
+  margin-top: 10%;
+  width: 1%;
+
+}
+
+
+img:hover{
+  transform: scale(1.1);
+  width: 40%;
+  transition: 0.3s;
+  transform: rotate(30deg);
+margin-left: 1%;
+margin-top: 1%;
+transition-delay: 0.1s;
+
+
+}
+body{background-color: black;
+
+}
+p{width: 40%;
+  tranf
+
+}
+p:active{
+  transform: translate(4000px);
+
+}

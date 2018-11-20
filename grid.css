@@ -1,0 +1,96 @@
+body{
+  background-color: rgb(190, 255, 150);
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+grid-gap: 4px;
+
+
+
+}
+a{
+  text-decoration: none;
+}
+h1{
+  font-size: 37px;
+  text-align: center;
+  margin-top: 0px;
+  width: 40px;
+  margin: auto;
+  padding-right: 200px;
+
+}
+h1:hover{
+  transition-duration: 2000s;
+  transform: rotate(3600000deg);
+}
+
+h2{text-align: center;
+
+    font-size: 14px;
+
+}
+.grunnstoff{
+  background-color: #eee;
+  border-radius: 5px;
+  text-align: center;
+}
+.col-span-16{
+  grid-column: span 16;
+
+}
+.usynlig{
+  opacity: 0;
+}
+.col-span-10{
+  grid-column: span 10;
+}
+.pupre{
+  background-color: purple;
+}
+.pupre:hover{
+  background-color: rgb(196, 122, 255);}
+.or{
+  background-color: red;
+}
+  .or:hover{
+    background-color: rgb(147, 4, 0);
+}
+.w{
+  background-color: #eefefe;
+}
+div{
+color: rgb(0, 0, 0);
+margin-left: 0;
+}
+p{
+  margin-left: 80%;
+}
+.e{
+  background-color: #ffe500;
+}
+.col-span-5{
+  grid-column: span 5;
+}
+
+.col-span-18{
+    grid-column: span 18;
+  }
+  .col-span-3{
+    grid-column: span 3;
+  }
+  .col-span-3{
+    grid-column: span 3;
+  }
+  .col-span-2{
+    grid-column: span 2;
+
+  }
+.w:hover{
+  background-color: rgb(98, 128, 255);
+}
+.e:hover{
+  background-color: rgb(255, 239, 91);
+}
