@@ -1,6 +1,10 @@
 const config = {
   text: "xd Nazarfa",
+<<<<<<< HEAD
   gravity: 20
+=======
+  gravity: 25
+>>>>>>> ef4299db463821b8b7a9b8cf33b8e7fd0121d65b
 };
 
 let canvas = document.querySelector("#canvas");
@@ -26,7 +30,11 @@ function reset() {
 
 function drawText() {
   ctx.save();
+<<<<<<< HEAD
   let fontSize = w * 0.1;
+=======
+  let fontSize = w * 0.15;
+>>>>>>> ef4299db463821b8b7a9b8cf33b8e7fd0121d65b
   ctx.font = "bold " + fontSize + "px Arial, Helvetica, sans-serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle"
