@@ -3,6 +3,9 @@ body{
 
   margin: 0;
 }
+body::selection{
+
+}
 h1, h2{
 color: #000000;
 background-color: grey;
@@ -17,6 +20,11 @@ margin-left: 35%;
 grid-column: 3fr;
 
 }
+h1::selection, h2::selection{
+color: limegreen;
+background-color: yellow;
+
+}
 h1{
   margin-top: 2%;
 }
@@ -29,19 +37,40 @@ header{
   grid-template-rows: 1fr;
   grid-column-gap: 1%;
   grid-row-gap: 3%;
+  background-color: rgb(193,193,193);
 }
+#Knappheader{
+  margin-left: 5px;
+  margin-top: 5px;
+  width:10%;
+  color: green;
+  background-color: blue;
+  border-style: none;
+}
+
+
+
+
+
 ul{
   text-decoration: none;
   list-style-type: none;
+  list-style: none;
+  text-decoration: none;
+
+}
+li{
+  text-decoration: none;
+}
+main>a{
+  text-decoration: none;
+
 }
 div{
   background-color: ;
   height: 213.81px;
 }
-h1::selection, h2::selection{
-color: green;
 
-}
 .hometitle{
 margin-right: 0%;
 }
@@ -56,10 +85,78 @@ header>div>img{
 main{
   background-color: lightgrey;
 }
-header{
-  background-color: #ffffff;
-}
+
 .homepicture{
 
 width: 40%;
+}
+.navbar {
+    overflow: hidden;
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #000000;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: lightgrey;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: 0;
+    min-width: 159px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgrey;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+footer{
+  background-color: grey;
+  padding-top: 100px;
+  margin-top: 400px;
+}
+footer>p{
+  text-align: center;
+  margin: auto;
+  padding-bottom: 20px;
 }
