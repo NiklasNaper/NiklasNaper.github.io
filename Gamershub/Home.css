@@ -1,5 +1,5 @@
 body{
-  background-color: lightgrey;
+  background-color: #000000;
 
   margin: 0;
 }
@@ -8,26 +8,25 @@ body::selection{
 }
 h1{
 color: #000000;
-background-color: grey;
+background-color: lightgrey;
 text-align: center;
 font-size: 300%;
-margin-top: 50px;
 margin-bottom: 5px;
 border-radius: 10px;
 border-style: inset;
 width: 34%;
 margin-left: 35%;
 grid-column: 3fr;
+margin-top: 2%;
 
 }
 h1::selection, h2::selection{
 color: limegreen;
-background-color: yellow;
+background-color: blue;
 
 }
-h1{
-  margin-top: 2%;
-}
+
+
 li{
   display: list-item;
 }
@@ -85,7 +84,7 @@ header>div>img{
 
 }
 main{
-  background-color: lightgrey;
+  background-color: black;
 }
 
 .homepicture{
@@ -96,6 +95,8 @@ width: 40%;
     overflow: hidden;
     background-color: grey;
     font-family: Arial, Helvetica, sans-serif;
+    padding-right: 10px;
+    padding-left: 74%;
 }
 
 .navbar a {
@@ -155,12 +156,24 @@ width: 40%;
     display: block;
 }
 footer{
-  background-color: grey;
-  padding-top: 100px;
+  background-color: black;
+  padding-top: 10px;
   margin-top: 400px;
+  border-top-color: rgb(0, 255, 0);
+  border-style: inset;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  border-right-style: hidden;
 }
 footer>p{
   text-align: center;
   margin: auto;
   padding-bottom: 20px;
+  border-radius: 0px;
+  border-color: rgb(0, 0, 255);
+  border-style: solid;
+  padding: 0px;
+  width: 29.9%;
+  background-color: lightgrey;
+  margin-bottom: 5px;
 }
