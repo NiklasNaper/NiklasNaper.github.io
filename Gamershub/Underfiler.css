@@ -1,0 +1,149 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(19, 19, 19);
+}
+
+h1{
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: blue;
+}
+
+h1::selection{
+  color: limegreen;
+  background-color: none;
+}
+
+.Nais img{
+width: 100%;
+height: 46px;
+float: right;
+}
+
+.Nais{
+  height: 46px;
+}
+header{
+  display: grid;
+  grid-template-columns: 91.6fr 180.1fr 49.5fr;
+  background-color: rgb(193,193,193);
+  height: 46px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+main>p{
+  color: white;
+  margin-left: 50px;
+  text-decoration: underline;
+}
+
+main>a p{
+  color: white;
+  margin-left: 50px;
+  text-decoration: underline;
+}
+.homepicture>a>img{
+  float: right;
+  height: 46px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 0px;
+  padding-left: 0%;
+  padding: 0px;
+  height: 46px;
+  width: 100%;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #000000;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: lightgrey;
+    transition: 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(200,200,200);
+    min-width: 77px;
+    box-shadow: 10px 4px 29px 0px rgba(0,0,0,1);
+    z-index: 1;
+}
+
+.dropdown-content>a {
+    float: none;
+    color: black;
+    padding: 11px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgrey;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer{
+  background-color: black;
+  padding-top: 10px;
+  margin-top: 400px;
+  border-top-color: rgb(0, 255, 0);
+  border-style: inset;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  border-right-style: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+footer>p{
+  text-align: center;
+  margin: auto;
+  border-radius: 0px;
+  border-color: rgb(0, 0, 255);
+  border-style: solid;
+  padding: 0px;
+  width: 41.9%;
+  background-color: lightgrey;
+  margin-bottom: 5px;
+}

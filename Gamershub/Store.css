@@ -1,0 +1,11 @@
+.Scam{
+  width: 50%;
+  margin: auto;
+  align-self: center;
+  display: block;
+}
+
+main>a>img{
+  border-style: solid;
+  border-color: rgb( 0, 0, 255);
+}
