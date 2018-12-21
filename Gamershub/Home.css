@@ -1,25 +1,24 @@
 body{
   margin: 0;
   padding: 0;
+  background-color: rgb(19, 19, 19);
 }
 
 header{
   display: grid;
   grid-template-columns: 91.6fr 176fr 49.5fr;
-  background-color: rgb(193,193,193);
+  background-color: rgb(19, 19, 19);
   height: 46px;
   position: fixed;
   width: 100%;
   top: 0;
-  background-image: image("Bilder/Home/Banner.png");
   z-index: 1;
 }
 
 main div{
   background-color: rgb(19, 19, 19);
   width: 438px;
-  margin-left: 6px;
-  margin-bottom: 7px;
+  padding-bottom: 7px;
 }
 
 main{
@@ -40,45 +39,55 @@ float: right;
   height: 46px;
 }
 
-.G502>p .Razer>p .G510s>p .Steelseries>p .Lenovo>p {
+.homepicture>a img{
+  float: right;
+  height: 46px;
+}
+
+.G502>p .Razer>p .G510s>p .Steelseries>p .Lenovo>p .Underscore>p{
   text-align: center;
   text-decoration: none;
   background-color: lightgrey;
   border-color: ;
   border-style: ;
   border-radius: ;
-  border-width: 2px;
+  border-width: ;
   font-weight: 900;
   color: black;
   width: 20px;
-  margin: auto;
-  font-style: 40px;
+  margin-right: 20px;
 }
 
 .Razer img:hover{
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
+  transform: scale(1.02, 1.02);
+  transition-duration: 0.2s;
 }
 
 .G510s img:hover{
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
+  transform: scale(1.02, 1.02);
+  transition-duration: 0.2s;
 }
 
 .G502 img:hover{
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
+  transform: scale(1.02, 1.02);
+  transition-duration: 0.2s;
 }
 
 .Steelseries img:hover{
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
+  transform: scale(1.02, 1.02);
+  transition-duration: 0.2s;
 }
 
 .Lenovo img:hover{
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
+  transform: scale(1.02, 1.02);
+  transition-duration: 0.2s;
 }
+
+.Underscore img:hover{
+  transform: scale(1.02, 1.02);
+  transition-duration: 0.2;
+}
+
 .G510s img{
   border-style: solid;
   border-color: blue;
@@ -129,21 +138,57 @@ float: right;
   height: 270px;
 }
 
+.Underscore img{
+  border-style: solid;
+  border-color: blue;
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+  width: 300px;
+  height: 270px;
+}
+
 .G510s{
   margin-top: 80px;
+  margin-left: 6px;
+  padding-bottom: 20px;
 }
 
 .Steelseries{
   margin-top: 80px;
+  margin-left: 6px;
+  padding-bottom: 20px;
 }
 
 .Razer{
   margin-top: 80px;
+  margin-left: 6px;
+  padding-bottom: 20px;
 }
 
-.homepicture>a img{
-  float: right;
-  height: 46px;
+.G502{
+  margin-left: 6px;
+  margin-bottom: 4px;
+  padding-bottom: 20px;
+}
+
+.Lenovo{
+  margin-left: 6px;
+  margin-bottom: 4px;
+  padding-bottom: 20px;
+}
+
+.Underscore{
+  margin-left: 6px;
+  margin-bottom: 4px;
+  padding-bottom: 20px;
+}
+
+.Innhold>b p{
+  width: auto;
+  margin: 0px;
+  text-align: center;
+
 }
 
 .navbar {
@@ -160,7 +205,7 @@ float: right;
 .navbar a {
     float: left;
     font-size: 16px;
-    color: #000000;
+    color: rgb(0, 0, 255);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -175,22 +220,22 @@ float: right;
     font-size: 16px;
     border: none;
     outline: none;
-    color: #000000;
+    color: rgb(0, 0, 255);
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: lightgrey;
+.navbar a:hover, .dropdown:hover .dropbtn{
+    background-color: rgb(60, 60, 60);
     transition: 0.3s;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(200,200,200);
+    background-color: rgb(19, 19, 19);
     min-width: 79px;
     box-shadow: 10px 4px 29px 0px rgba(0,0,0,1);
     z-index: 1;
@@ -198,7 +243,7 @@ float: right;
 
 .dropdown-content>a {
     float: none;
-    color: black;
+    color: rgb(0, 0, 255);
     padding: 12px;
     text-decoration: none;
     display: block;
@@ -207,7 +252,7 @@ float: right;
 }
 
 .dropdown-content a:hover {
-    background-color: lightgrey;
+    background-color: rgb(100, 100, 100);
 }
 
 .dropdown:hover .dropdown-content {
@@ -226,7 +271,6 @@ footer{
   bottom: 0;
   width: 100%;
   padding-bottom: 5px;
-  margin-bottom: 0px;
 }
 
 footer>p{
