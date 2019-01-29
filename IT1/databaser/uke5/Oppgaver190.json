@@ -1,0 +1,71 @@
+{
+  "1":{
+    "oppgave":"Hva er en primærnøkkel?",
+    "svar":"En primærnøkkel er en identifikator som er som en unik id som gjør at man lett kan finne fram til bestemte objekter."
+  },
+  "2":{
+    "oppgave":"Hva tror du kan være primærnøkkel for",
+      "a":"elever på en skole",
+        "svar":"FeideID"
+    },
+      "b":"Fritidsbåter"{
+        "svar":"Registreringsnummer"
+    },
+      "c":"planter"{
+        "svar":"latinsknavn"
+    },
+      "d":"Kontakter"{
+        "svar":"Mobilnummer"
+    },
+      "e":"Stjerner på himmelen"{
+        "svar":"Stjernenavn"
+    },
+
+  "3":{
+    "oppgave":"Hva er en kandidatnøkkel?",
+        "svar":"En kandidatnøkkel er de mulighetee for hvilke primærnøkler som kan brukes"
+},
+  "4":{
+    "oppgave":"Hva er en fremmednøkkel?",
+      "svar":"En fremmednøkkel er en henvisning til noe i en annen database, vanligvis en primærnøkkel."
+
+  },
+  "5":{
+    "oppgave":"Hva er normalisering?",
+      "svar":"Teknikker som brukes for å unngå dobbeltlagring"
+},
+  "6":{
+    "oppgave":"Lag et objekt med data om brukere av et dataspill. Bruk en fremmednøkkel som viser meldinger fra en av spillerne.",
+    "svar":{
+      "brukere":{
+        "Nazarfa":{
+          "passord":"Sloooo",
+          "highscore":"5001"
+
+        },
+        "photon":{
+          "passord":"BT4u1881",
+          "highscore":"-2"
+        },
+        "Itzext":{
+          "passord":"Dubsdubs",
+          "hightscore":"100000000"
+        }
+      },
+      "meldinger":{
+        "001":{
+          "text":"Sup googliman",
+          "brukernavn":"Nazarfa"
+        },
+        "002":{
+          "text":"Eyy",
+          "brukernavn":"photon"
+        },
+        "003":{
+          "text":"EYY BOIS!",
+          "brukernavn":"Anders"
+        }
+      }
+    }
+  }
+}

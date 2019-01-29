@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Naz database</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBleGgyr-jk-vkEBcKG8_3POpMSC9qf-Kc",
+    authDomain: "nazarfa-databse.firebaseapp.com",
+    databaseURL: "https://nazarfa-databse.firebaseio.com",
+    projectId: "nazarfa-databse",
+    storageBucket: "nazarfa-databse.appspot.com",
+    messagingSenderId: "822599880445"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+
+  <body>
+<p>Obs! Denne siden inneholder javascript.</p>
+
+<img src="data:image/png;base64,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">
+
+<script type="text/javascript">
+
+
+// variabler som refererer til firebase databasen
+  const db = firebase.database();
+  const kontaktliste = db.ref("kontaktliste");   //refererer til kontaktiste i databasen
+
+
+  let kontakt = {
+    "firstName":"Barack",
+    "lastName":"Obama"
+  }
+
+  let kontakt1 = {
+    "firstName":"xd",
+    "lastName":"Nazarfa"
+  }
+
+  let zloopy = {
+    "brawlers":"Spike"
+  }
+  kontaktliste.push(kontakt);
+  kontaktliste.push(kontakt1);
+  kontaktliste.push(zloopy);
+
+
+
+function lesFraDb(snapshot){
+  let nyKontakt = snapshot.val();
+  document.body.innerHTML += `<p>Fornavn: ${nyKontakt.firstName}. Etternavn: ${nyKontakt.lastName}. Brawlere: ${nyKontakt.brawlers}</p>`;
+}
+
+kontaktliste.on("child_added", lesFraDb);
+
+</script>
+  </body>
+</html>

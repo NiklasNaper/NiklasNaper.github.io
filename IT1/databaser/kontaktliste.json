@@ -1,0 +1,32 @@
+{
+  "kontakter":{
+    "1":{
+      "firstName":"Niklas",
+      "lastName":"Naper",
+      "telephone":40409050,
+      "adress":"Kjeksla 4, 1397 Nesøya",
+      "fortnite":true,
+      "brawlers":["Tara","Crow","Leon","Mortis"],
+      "utdanning":{
+        "VGS":"Sandvika",
+        "csgo":{
+          "rank":"Gold nova 3",
+          "top4skins":["AWP dragon lore", "DEAGLE Urban rubble", "Ak-47 Real leagaf", "Famas Cratskan"]
+        }
+      }
+
+    },
+
+    "2":{
+      "Firstname":"Anders",
+      "Lastname":"Krossen",
+      "Telephone":46648387,
+      "Adress":"Fjordveien 63"
+    },
+    "3":{
+      "Skrt":true,
+      "nei":"ja"
+    }
+
+      }
+}
