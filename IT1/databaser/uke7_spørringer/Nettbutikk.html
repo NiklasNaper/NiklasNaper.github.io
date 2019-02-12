@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nettbutikk</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBY8NMFC8vOGp-Dr1VLEJVP_X1Q_PuiXn0",
+    authDomain: "uke7-47626.firebaseapp.com",
+    databaseURL: "https://uke7-47626.firebaseio.com",
+    projectId: "uke7-47626",
+    storageBucket: "uke7-47626.appspot.com",
+    messagingSenderId: "793214381302"
+  };
+  firebase.initializeApp(config);
+</script>
+<link rel="shortcut icon" href="bilder/Logo.png">
+
+  </head>
+  <body>
+<header>
+
+</header>
+<main>
+<script type="text/javascript">
+  const db = firebase.database();
+  const sko = db.ref("varer/sko");
+  const jakker = db.ref("varer/jakker");
+
+function visVare(snapshot){
+  console.log(snapshot.val());
+}
+
+
+  jakker.on("child_added",visVare);
+  //sko.on("child_added",visVare);
+
+  sko.orderByChild("pris") //  sortteringsfunksjon for pris(childen pris)
+  .limitToLast(2) //  gjør at det blir de to dyreste, eller de med høyest tall
+  .on("child_added",visVare); //  dette er en spørrefunksjon som lytter etter nye oppføringer
+// kjører visVare på hver oppføring 
+</script>
+</main>
+  </body>
+</html>

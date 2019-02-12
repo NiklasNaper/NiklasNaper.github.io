@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon</title>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDwXXfobDULsbY4TAX1AQWop-FONEvr__g",
+    authDomain: "pokemon-f451e.firebaseapp.com",
+    databaseURL: "https://pokemon-f451e.firebaseio.com",
+    projectId: "pokemon-f451e",
+    storageBucket: "",
+    messagingSenderId: "107182069582"
+  };
+  firebase.initializeApp(config);
+</script>
+<link rel="shortcut icon" href="Bilder/Logo.png">
+<link rel="stylesheet" href="kul.css">
+<style>
+
+</style>
+  </head>
+  <body>
+<header>
+  <div class="logo">
+    <img src="bilder/naazloo.png" id="logoo">
+  </div>
+  <div class="Buttt">
+<button type="button" name="button" onclick="visAlle()">Alle</button>
+  </div>
+<div class="Buttt"><button type="button" name="button" onclick="visSterkeste()">Sterkeste</button></div>
+<div class="Buttt"><button type="button" name="button" onclick="visSvakeste()">Svakeste</button></div>
+<div class="Buttt"><button type="button" name="button" onclick="visTheme()">Dark Theme</button></div>
+<div class="Buttt"><button type="button" name="button" onclick="visThem()">Light Theme</button></div>
+
+</header>
+<main>
+  <p id="load">Laster inn pokémon...</p>
+<section id="secAllePokemon">
+
+</section>
+
+<script type="text/javascript">
+const db = firebase.database();
+const pokemon = db.ref("pokemon");
+const load = document.querySelector("#load");
+const secAllePokemon = document.querySelector("#secAllePokemon");
+const css = document.querySelector("style");
+
+function visPokemon(snapshot){
+  let key = snapshot.key;
+  let poke = snapshot.val();
+  secAllePokemon.innerHTML += `
+    <section class="pokemon">
+    <h3>${key}:${poke["Name"]}</h3>
+    <img src=${poke["Image URL"]}>
+    <p>Type: ${poke["Type 1"]} and ${poke["Type 2"]}</p>
+    <p>Max CP: ${poke["Max CP"]}</p>
+    <p>Max HP: ${poke["Max HP"]}</p>
+    </section>
+    `;
+      if(secAllePokemon != 0){
+        load.innerHTML = ``;
+      }
+}
+
+    pokemon.orderByKey().limitToFirst(151).on("child_added",visPokemon);
+
+    function visSterkeste(){
+      secAllePokemon.innerHTML = ``;
+      pokemon
+      .orderByChild("Max CP")
+      .limitToLast(20)
+      .on("child_added",visPokemon);
+    }
+    function visSvakeste(){
+      secAllePokemon.innerHTML = ``;
+      pokemon
+      .orderByChild("Max CP")
+      .limitToFirst(2)
+      .on("child_added",visPokemon);
+    }
+    function visAlle(){
+      secAllePokemon.innerHTML = ``;
+      pokemon
+      .orderByKey()
+      .on("child_added",visPokemon);
+
+    }
+    function visTheme(){
+      css.innerHTML =
+      `body{
+        background-color: black;
+        color: white;
+
+      }
+      p{
+        color: white;
+      }
+      header{
+        background-color: grey;
+      }`
+    }
+
+      function visThem(){
+        css.innerHTML =
+        `body{
+          background-color: white;
+          color: black;
+      }`
+}
+
+
+
+
+
+</script>
+</main>
+  </body>
+</html>

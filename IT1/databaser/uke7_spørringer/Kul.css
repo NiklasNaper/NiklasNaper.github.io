@@ -1,0 +1,73 @@
+p{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+h3{
+  color: blue;
+}
+body{
+padding: 0;
+margin: 0;
+}
+header{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgb(28, 255, 0);
+    margin: auto;
+    padding: 0;
+height: 33px;
+}
+div{
+  margin: 0;
+  padding: 0;
+  height: 33px;
+}
+.Buttt{
+  display: block;
+  margin: auto;
+  margin-top: 2px;
+}
+.logo{
+  float: left;
+
+}
+#logoo{
+height: 33px;
+margin: 0;
+padding: 0;
+}
+button{
+  font-family: fantasy;
+  font-size: 120%;
+  border-radius: 6px;
+  border-color: black;
+  float: right;
+  margin: auto;
+  margin-right: 5px;
+  width: 160px;
+}
+#secAllePokemon{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.pokemon:hover{
+background-color: grey;
+
+}
+#secAllePokemon>section{
+margin-top: 10px;
+
+}
+
+.pokemon{
+  text-align: center;
+}
+::-webkit-scrollbar{
+  background-color: rgb(28, 255, 0);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: blue;
+}
