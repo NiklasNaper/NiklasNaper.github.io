@@ -26,7 +26,7 @@
   <body>
 <header>
   <div class="logo">
-    <img src="bilder/naazloo.png" id="logoo">
+  <a href="Pokemon.html">  <img src="bilder/naazloo.png" id="logoo"></a>
   </div>
   <div class="Buttt">
 <button type="button" name="button" onclick="visAlle()">Alle</button>
@@ -49,15 +49,16 @@ const pokemon = db.ref("pokemon");
 const load = document.querySelector("#load");
 const secAllePokemon = document.querySelector("#secAllePokemon");
 const css = document.querySelector("style");
+const Foot = document.querySelector("#Foot")
 
 function visPokemon(snapshot){
   let key = snapshot.key;
   let poke = snapshot.val();
   secAllePokemon.innerHTML += `
     <section class="pokemon">
-    <h3>${key}:${poke["Name"]}</h3>
-    <img src=${poke["Image URL"]}>
-    <p>Type: ${poke["Type 1"]} and ${poke["Type 2"]}</p>
+    <h3>${poke["Name"]}</h3>
+    <img class="PokeImg" src=${poke["Image URL"]}>
+    <p>Type: ${poke["Type 1"]}  ${poke["Type 2"]}</p>
     <p>Max CP: ${poke["Max CP"]}</p>
     <p>Max HP: ${poke["Max HP"]}</p>
     </section>
@@ -65,22 +66,30 @@ function visPokemon(snapshot){
       if(secAllePokemon != 0){
         load.innerHTML = ``;
       }
+      if(secAllePokemon == 0){
+        Foot.innerHTML = `
+
+        `;
+      }
 }
 
-    pokemon.orderByKey().limitToFirst(151).on("child_added",visPokemon);
+    pokemon
+    .orderByKey()
+    .limitToFirst(152)
+    .on("child_added",visPokemon);
 
     function visSterkeste(){
       secAllePokemon.innerHTML = ``;
       pokemon
       .orderByChild("Max CP")
-      .limitToLast(20)
+      .limitToLast(21)
       .on("child_added",visPokemon);
     }
     function visSvakeste(){
       secAllePokemon.innerHTML = ``;
       pokemon
       .orderByChild("Max CP")
-      .limitToFirst(2)
+      .limitToFirst(21)
       .on("child_added",visPokemon);
     }
     function visAlle(){
@@ -119,5 +128,10 @@ function visPokemon(snapshot){
 
 </script>
 </main>
+<footer>
+  <p id="Foot">Our office is located in Richmansby. Adress: Bogstadveien 666, 1488, Sandvika.
+ Copyright © 2018-2018 Naz Games Inc. All Rights Reserved.
+  </p>
+</footer>
   </body>
 </html>

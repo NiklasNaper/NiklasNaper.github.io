@@ -37,6 +37,14 @@ height: 33px;
 margin: 0;
 padding: 0;
 }
+.PokeImg:hover{
+  transform: scale(1.08, 1.08);
+}
+.PokeImg{
+  transition: all .1s ease-in-out;
+  width: 250px;
+  height: 250px;
+}
 button{
   font-family: fantasy;
   font-size: 120%;
@@ -57,7 +65,7 @@ background-color: grey;
 
 }
 #secAllePokemon>section{
-margin-top: 10px;
+margin-bottom: 10px;
 
 }
 
