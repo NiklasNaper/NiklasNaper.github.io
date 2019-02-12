@@ -28,9 +28,7 @@
   <div class="logo">
   <a href="Pokemon.html">  <img src="bilder/naazloo.png" id="logoo"></a>
   </div>
-  <div class="Buttt">
-<button type="button" name="button" onclick="visAlle()">Alle</button>
-  </div>
+<div class="Buttt"><button type="button" name="button" onclick="visAlle()">Alle</button></div>
 <div class="Buttt"><button type="button" name="button" onclick="visSterkeste()">Sterkeste</button></div>
 <div class="Buttt"><button type="button" name="button" onclick="visSvakeste()">Svakeste</button></div>
 <div class="Buttt"><button type="button" name="button" onclick="visTheme()">Dark Theme</button></div>
@@ -49,7 +47,7 @@ const pokemon = db.ref("pokemon");
 const load = document.querySelector("#load");
 const secAllePokemon = document.querySelector("#secAllePokemon");
 const css = document.querySelector("style");
-const Foot = document.querySelector("#Foot")
+const foot = document.querySelector("#Foot")
 
 function visPokemon(snapshot){
   let key = snapshot.key;
@@ -67,7 +65,7 @@ function visPokemon(snapshot){
         load.innerHTML = ``;
       }
       if(secAllePokemon == 0){
-        Foot.innerHTML = `
+        foot.innerHTML = `
 
         `;
       }
@@ -110,7 +108,14 @@ function visPokemon(snapshot){
         color: white;
       }
       header{
-        background-color: grey;
+        background-color: rgb(28, 255, 0);
+        ::-webkit-scrollbar{
+          background-color: grey;
+          width: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+          background-color: blue;
+        }
       }`
     }
 
@@ -119,6 +124,13 @@ function visPokemon(snapshot){
         `body{
           background-color: white;
           color: black;
+          ::-webkit-scrollbar{
+            background-color: rgb(28, 255, 0);
+            width: 10px;
+          }
+          ::-webkit-scrollbar-thumb{
+            background-color: blue;
+          }
       }`
 }
 

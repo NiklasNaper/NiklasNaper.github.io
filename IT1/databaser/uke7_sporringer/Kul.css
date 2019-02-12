@@ -11,12 +11,12 @@ padding: 0;
 margin: 0;
 }
 header{
-  display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: rgb(28, 255, 0);
     margin: auto;
     padding: 0;
-height: 33px;
+    height: 33px;
 }
 div{
   margin: 0;
