@@ -37,9 +37,7 @@
 </header>
 <main>
   <p id="load">Laster inn pokémon...</p>
-<section id="secAllePokemon">
-
-</section>
+<section id="secAllePokemon"></section>
 
 <script type="text/javascript">
 const db = firebase.database();
@@ -47,7 +45,7 @@ const pokemon = db.ref("pokemon");
 const load = document.querySelector("#load");
 const secAllePokemon = document.querySelector("#secAllePokemon");
 const css = document.querySelector("style");
-const foot = document.querySelector("#Foot")
+const foot = document.querySelector("#foot");
 
 function visPokemon(snapshot){
   let key = snapshot.key;
@@ -61,13 +59,11 @@ function visPokemon(snapshot){
     <p>Max HP: ${poke["Max HP"]}</p>
     </section>
     `;
-      if(secAllePokemon != 0){
+      if(secAllePokemon != null){
         load.innerHTML = ``;
       }
-      if(secAllePokemon == 0){
-        foot.innerHTML = `
-
-        `;
+      if(secAllePokemon === null){
+        foot.innerHTML = ``;
       }
 }
 
@@ -102,6 +98,7 @@ function visPokemon(snapshot){
       `body{
         background-color: black;
         color: white;
+        transition-duration: 1s;
 
       }
       p{
@@ -124,14 +121,15 @@ function visPokemon(snapshot){
         `body{
           background-color: white;
           color: black;
+          transition-duration: 1s;
+        }
           ::-webkit-scrollbar{
             background-color: rgb(28, 255, 0);
             width: 10px;
           }
           ::-webkit-scrollbar-thumb{
             background-color: blue;
-          }
-      }`
+          }`
 }
 
 
@@ -141,7 +139,7 @@ function visPokemon(snapshot){
 </script>
 </main>
 <footer>
-  <p id="Foot">Our office is located in Richmansby. Adress: Bogstadveien 666, 1488, Sandvika.
+  <p id="foot">Our office is located in Richmansby. Adress: Bogstadveien 666, 1488, Sandvika.
  Copyright © 2018-2018 Naz Games Inc. All Rights Reserved.
   </p>
 </footer>
