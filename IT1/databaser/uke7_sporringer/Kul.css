@@ -11,12 +11,12 @@ padding: 0;
 margin: 0;
 }
 header{
-  display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: rgb(28, 255, 0);
     margin: auto;
     padding: 0;
-height: 33px;
+    height: 33px;
 }
 div{
   margin: 0;
@@ -36,6 +36,14 @@ div{
 height: 33px;
 margin: 0;
 padding: 0;
+}
+.PokeImg:hover{
+  transform: scale(1.08, 1.08);
+}
+.PokeImg{
+  transition: all .1s ease-in-out;
+  width: 250px;
+  height: 250px;
 }
 button{
   font-family: fantasy;
@@ -57,7 +65,7 @@ background-color: grey;
 
 }
 #secAllePokemon>section{
-margin-top: 10px;
+margin-bottom: 10px;
 
 }
 
