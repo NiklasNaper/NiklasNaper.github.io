@@ -9,6 +9,11 @@ h3{
 body{
 padding: 0;
 margin: 0;
+background-color: rgb(240, 240, 240)
+}
+section{
+  border-color: black;
+
 }
 header{
     display: grid;
@@ -26,10 +31,11 @@ div{
   margin: 0;
   padding: 0;
   height: 33px;
+
 }
 
 #load{
-  margin-top: 33px; 
+  margin-top: 33px;
 }
 
 .Buttt{
@@ -67,11 +73,11 @@ button{
 #secAllePokemon{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin: 100px 100px 100px 100px;
 
 }
 .pokemon:hover{
-background-color: grey;
-
+  background-color: lightgrey;  
 }
 #secAllePokemon>section{
 margin-bottom: 10px;
@@ -80,6 +86,9 @@ margin-bottom: 10px;
 
 .pokemon{
   text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  margin: 10px 10px 10px 10px;
 }
 ::-webkit-scrollbar{
   background-color: rgb(28, 255, 0);

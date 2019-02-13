@@ -36,7 +36,7 @@
 
 </header>
 <main>
-  <p id="load">Laster inn pokémon...</p>
+  <p id="load">Loading content...</p>
 <section id="secAllePokemon"></section>
 
 <script type="text/javascript">
@@ -62,9 +62,13 @@ function visPokemon(snapshot){
       if(secAllePokemon != null){
         load.innerHTML = ``;
       }
-      if(secAllePokemon === null){
-        foot.innerHTML = ``;
-      }
+      if(secAllePokemon != null){
+        foot.innerHTML = `
+        #foot
+        `;
+      }else{foot.innerHTML = `
+
+        `}
 }
 
     pokemon
@@ -101,12 +105,17 @@ function visPokemon(snapshot){
         transition-duration: .7s;
 
       }
+      .pokemon:hover{
+      background-color: rgb(0, 255, 0);
+
+      }
       p{
         color: white;
         transition-duration: .7s;
       }
       header{
         background-color: rgb(28, 255, 0);
+}
         ::-webkit-scrollbar{
           background-color: grey;
           width: 10px;
@@ -120,9 +129,13 @@ function visPokemon(snapshot){
       function visThem(){
         css.innerHTML =
         `body{
-          background-color: white;
+          background-color: rgb(240, 240, 240);
 
           transition-duration: .7s;
+        }
+        .pokemon:hover{
+        background-color: lightgrey;
+
         }
         p{
           color: black;
@@ -143,8 +156,8 @@ function visPokemon(snapshot){
 
 </script>
 </main>
-<footer>
-  <p id="foot">Our office is located in Richmansby. Adress: Bogstadveien 666, 1488, Sandvika.
+<footer id="foot">
+  <p>Our office is located in Richmansby. Adress: Bogstadveien 666, 1488, Sandvika.
  Copyright © 2018-2018 Naz Games Inc. All Rights Reserved.
   </p>
 </footer>
