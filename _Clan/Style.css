@@ -1,7 +1,0 @@
-header{
-  float: left;
-  width: 100px;
-  background-color: red;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
