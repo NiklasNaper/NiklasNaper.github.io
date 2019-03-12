@@ -1,0 +1,55 @@
+body{
+  margin: 0;
+  background-color: rgb(240, 240, 240);
+}
+#secPokemon{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 44px 44px 44px 44px;
+}
+
+.pokemon{
+  display: block;
+  margin: auto;
+  border-style: solid;
+  border-color: rgb(0, 255, 0);
+  width: 400px;
+  margin: 4px 4px 4px 4px;
+  text-align: center;
+}
+
+.pokemon:hover{
+  background-color: rgb(230, 230, 230);
+}
+
+header{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+button{
+  border-radius: 40px;
+  border-color: rgb(0, 255, 0);
+  width: 80px;
+  margin: auto;
+}
+
+#pokeimg:hover{
+  transform: scale(1.1, 1.1);
+}
+#pokeimg{
+  transition: all .7s;
+  width: 270px;
+  width: 270px;
+}
+#headerimg{
+  width: 100%;
+  height: 200px;
+}
+::-webkit-scrollbar{
+  background-color: rgb(28, 255, 0);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: blue;
+}

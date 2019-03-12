@@ -38,7 +38,12 @@
 <main>
   <p id="load">Loading content...</p>
 <section id="secAllePokemon"></section>
-
+</main>
+<footer id="foot">
+  <p>Our office is located in Richmansby. Adress: Bogstadveien 666, 1488, Sandvika.
+ Copyright © 2018-2018 Naz Games Inc. All Rights Reserved.
+  </p>
+</footer>
 <script type="text/javascript">
 const db = firebase.database();
 const pokemon = db.ref("pokemon");
@@ -54,7 +59,7 @@ function visPokemon(snapshot){
     <section class="pokemon">
     <h3>${poke["Name"]}</h3>
     <img class="PokeImg" src=${poke["Image URL"]}>
-    <p>Type: ${poke["Type 1"]}  ${poke["Type 2"]}</p>
+    <p>Type: ${poke["Type 1"]} ${poke["Type 2"]}</p>
     <p>Max CP: ${poke["Max CP"]}</p>
     <p>Max HP: ${poke["Max HP"]}</p>
     </section>
@@ -62,13 +67,7 @@ function visPokemon(snapshot){
       if(secAllePokemon != null){
         load.innerHTML = ``;
       }
-      if(secAllePokemon != null){
-        foot.innerHTML = `
-        #foot
-        `;
-      }else{foot.innerHTML = `
-
-        `}
+      foot.style.visibility = 1;
 }
 
     pokemon
@@ -155,11 +154,7 @@ function visPokemon(snapshot){
 
 
 </script>
-</main>
-<footer id="foot">
-  <p>Our office is located in Richmansby. Adress: Bogstadveien 666, 1488, Sandvika.
- Copyright © 2018-2018 Naz Games Inc. All Rights Reserved.
-  </p>
-</footer>
+
+
   </body>
 </html>

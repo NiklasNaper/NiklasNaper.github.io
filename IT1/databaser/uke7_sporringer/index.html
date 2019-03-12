@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon44</title>
+<link rel="shortcut icon" href="bilder/Logo.png">
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCGK19dTfcUesTu9I-iNzfeRijDZiIPIOA",
+    authDomain: "pokemon2-a554d.firebaseapp.com",
+    databaseURL: "https://pokemon2-a554d.firebaseio.com",
+    projectId: "pokemon2-a554d",
+    storageBucket: "pokemon2-a554d.appspot.com",
+    messagingSenderId: "1099190398524"
+  };
+  firebase.initializeApp(config);
+</script>
+<style>
+
+</style>
+  </head>
+  <body>
+          <img id="headerimg" src="bilder/naazloo.png">
+    <header>
+      <button type="button" name="button" onclick="visAllePokemon()">Restore</button>
+      <button type="button" name="button" onclick="vis20SterkestePokemon()">Strongest</button>
+      <button type="button" name="button" onclick="Vissvakeste()">Weakest</button>
+      <button type="button" name="button" onclick="darktheme()">Darktheme</button>
+      <button type="button" name="button" onclick="lighttheme()">Lighttheme</button>
+    </header>
+<main>
+  <p id="loading">Loading content...</p>
+  <section id="secPokemon">
+
+  </section>
+</main>
+<script type="text/javascript">
+  //Dette er javascript
+  //Referanser til HTML-elementer
+  const secPokemon = document.querySelector("#secPokemon");
+
+  //referanser til firebase for å lage en shortcut
+  const db = firebase.database();
+  const pokemon = db.ref("pokemon");
+  const css = document.querySelector("style");
+  const load = document.querySelector("#loading")
+
+  visAllePokemon();
+function visAllePokemon(){
+secPokemon.innerHTML =``;
+  pokemon.on("child_added",genererHTML);
+}
+
+function Vissvakeste(){
+  secPokemon.innerHTML=``;
+  pokemon
+  .orderByChild("Max CP")
+  .limitToFirst(10)
+  .on("child_added",genererHTML);
+}
+
+function vis20SterkestePokemon(){
+  secPokemon.innerHTML=``;
+  pokemon
+  .orderByChild("Max CP")
+  .limitToLast(10)
+  .on("child_added",genererHTML);
+}
+
+    function genererHTML(snapshot){
+        let key = snapshot.key;
+        let poke = snapshot.val();
+        secPokemon.innerHTML += `
+          <section class="pokemon">
+            <h3>${poke["Name"]}</h3>
+            <img id="pokeimg" src=${poke["Image URL"]}>
+            <p>Type: ${poke["Type 1"]} ${poke["Type 2"]}</p>
+            <p>Max HP: ${poke["Max HP"]}</p>
+            <p>Max CP: ${poke["Max CP"]}</p>
+          </section>
+        `;
+        if (secPokemon != 0){
+          load.innerHTML=``;
+        }
+      }
+      function darktheme(){
+        css.innerHTML=`
+        body{
+          background-color: black;
+          transition-duration: .5s;
+          color: white;
+        }
+        .pokemon:hover{
+          background-color: rgb(20, 20, 20);
+        }
+        `
+
+      }
+      function lighttheme(){
+        css.innerHTML=`
+        body{
+          background-color: rgb(240, 240, 240);
+          transition-duration: .5s;
+          color: black;
+        }
+        .pokemon:hover{
+          background-color: rgb(210, 210, 210);
+        }
+        `
+
+      }
+</script>
+  </body>
+</html>
