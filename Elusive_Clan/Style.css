@@ -58,3 +58,13 @@ header{
   transition: margin-left .5s;
 
 }
+
+footer{
+position: absolute;
+margin-top: 2000px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+.Flink{
+  text-decoration: none;
+}
