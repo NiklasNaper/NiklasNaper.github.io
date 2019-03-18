@@ -5,16 +5,31 @@
     <title>Elusive_Clan</title>
     <link rel="stylesheet" href="Style.css">
     <link rel="shortcut icon" href="">
+
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyChu0j-D58IEdyXwmJdza06qT8EqUY5XCU",
+    authDomain: "elusive-clan.firebaseapp.com",
+    databaseURL: "https://elusive-clan.firebaseio.com",
+    projectId: "elusive-clan",
+    storageBucket: "",
+    messagingSenderId: "304205795447"
+  };
+  firebase.initializeApp(config);
+</script>
   </head>
   <body>
 <header>
   <!-- Her kommer headeren som jeg kopierte fra: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar -->
   <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+    <a class="Sidebarlink" href="members.html">Members</a>
+    <a class="Sidebarlink" href="video's.html">Video's</a>
+    <a class="Sidebarlink" href="comments.html">Comments</a>
+    <a class="Sidebarlink" href="info.html">Info</a>
+    <a href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber"><img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
   </div>
 
   <div id="main">
@@ -43,7 +58,7 @@ let nav = "Elusive1";
     }else if (nav == "Elusive2") {
       document.getElementById("mySidebar").style.width = "0";
       document.getElementById("main").style.marginLeft = "0";
-      nav = "closed";
+      nav = "Elusive1";
     }
   }
   </script>
@@ -51,13 +66,13 @@ let nav = "Elusive1";
 <main>
 </main>
 <footer>
-<div class="Fdiv">
-<a class="Flink" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw" target="_blank">Youtube</a>
+<div class="Footdiv">
+<a class="Footlink" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw" target="_blank">Youtube</a>
 </div>
 <div class="Fdiv">
 
 </div>
-<div class="Fdiv">
+<div class="Footdiv">
 
 </div>
 </footer>
