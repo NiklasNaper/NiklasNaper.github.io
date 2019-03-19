@@ -1,8 +1,43 @@
 {
 "Elusive":{
-    "Videoer":{
-      "Video1":{
+    "Members":{
+      "Nazarfa001":{
+      "Name":"Nazarfa",
+      "Subscribers":45,
+      "Skills":true,
+      "YoutubeName":"Nazarfa",
+      "Kills":,
+      "KD":
+
+},
+
+      "Jotto001":{
+        "Name":"Jotto",
+        "Subscribers":30,
+        "Skills":true,
+        "YoutubeName":"Jotto",
+        "Kills":,
+        "KD":
+
+},
+
+      "Tempel67001":{
+        "Name":"Tempel67",
+        "Subscribers":84,
+        "Skills":false,
+        "YoutubeName":"Deadlord",
+        "Kills":,
+        "KD":
+
+}
+
+
+},
+
+    "Videoes":{
+      "1":{
         "Title":"Official First Video | Elusive",
+        "Members":["Jotto","nazrafa"],
         "Likes":7,
         "Dislikes":0,
         "Comments":1,
@@ -12,8 +47,9 @@
 
 },
 
-      "Video2":{
+      "2":{
         "Title":"Introducing ELU Nazarfa | Elusive",
+        "Members":["Nazarfa"],
         "Likes":10,
         "Dislikes":1,
         "Comments":1,
@@ -23,8 +59,9 @@
 
 },
 
-      "Video3":{
+      "3":{
         "Title":"Introducing ELU Tempel67 | Elusive",
+        "Members":["Tempel67"],
         "Likes":6,
         "Dislikes":1,
         "Comments":2,
@@ -34,8 +71,9 @@
 
 },
 
-      "Video4":{
+      "4":{
         "Title":"This is our Clan | Elusive",
+        "Members":["Jotto","Nazarfa"],
         "Likes":10,
         "Dislikes":0,
         "Comments":2,
@@ -45,8 +83,9 @@
 
 },
 
-      "Video5":{
+      "5":{
         "Title":"Nazarfa Monatge 2 | Elsusive",
+        "Members":["Nazarfa"],
         "Likes":8,
         "Dislikes":0,
         "Comments":3,
@@ -54,11 +93,12 @@
         "Duration":1.14,
         "Video URL":"https://www.youtube.com/watch?v=ZHOXdyHLC8U"
 
+}
 },
 
   "Comments":{
 
-    "comment1":{
+    "1":{
       "Profile":"DoubleK",
       "Text":"good video! i love it!﻿",
       "Likes":1,
@@ -66,7 +106,7 @@
 
 },
 
-    "comment2":{
+    "c2":{
       "Profile":"DoubleK",
       "Text":"amazing﻿",
       "Likes":1,
@@ -74,7 +114,7 @@
 
 },
 
-    "commment3":{
+    "3":{
       "Profile":"DoubleK",
       "Text":"wow, good skill﻿",
       "Likes":1,
@@ -82,7 +122,7 @@
 
 },
 
-    "comment4":{
+    "4":{
       "Profile":"Deadlord",
       "Text":"Thanks dude !﻿",
       "Likes":1,
@@ -90,7 +130,7 @@
 
 },
 
-    "comment5":{
+    "5":{
       "Profile":"ToastToni",
       "Text":"i can clap your ass bois, so bad EPIC: fejk toasttoni, add me if you are not scared﻿",
       "Likes":0,
@@ -98,7 +138,7 @@
 
 },
 
-    "comment6":{
+    "6":{
       "Profile":"Fillip W07",
       "text":"❤️😱﻿",
       "Likes":1,
@@ -106,7 +146,7 @@
 
 },
 
-    "comment7":{
+    "7":{
       "Profile":"Elusive Clan",
       "text":"﻿Thanks for the love :D﻿",
       "Likes":0,
@@ -114,7 +154,7 @@
 
 },
 
-    "comment8":{
+    "8":{
       "Profile":"Valeera Maiev",
       "text":"👏﻿",
       "Likes":2,
@@ -122,7 +162,7 @@
 
 },
 
-    "comment9":{
+    "9":{
       "Profile":"ELusive Clan",
       "text":"Thanks for the love and support my fellow friend :D﻿",
       "Likes":1,
@@ -130,21 +170,13 @@
 
 },
 
-    "comment10":{
-      "Profile":"",
-      "text":"",
-      "Likes":,
-      "Heart":
+    "MAL":{
+      "Profile":"Example",
+      "text":"None",
+      "Likes":0,
+      "Heart":false
 
-},
-
-    "commentMAL":{
-      "Profile":"",
-      "text":"",
-      "Likes":,
-      "Heart":
-
-    },
+    }
   }
 
 }

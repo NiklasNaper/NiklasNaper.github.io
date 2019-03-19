@@ -1,9 +1,17 @@
 body{
-  margin: 0px;
+  background-image: url(bilder/Elusivebackground.png);
+  margin: 0;
   font-family: "Lato", sans-serif;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header{
+position: fixed;
+background-color: green;
+z-index: 1;
 
 }
 
@@ -21,7 +29,7 @@ header{
 }
 
 #Sidebarbutton{
-
+  color: white;
 }
 
 .Sidebarlink {
@@ -64,14 +72,31 @@ header{
 }
 
 footer{
-position: absolute;
-margin-top: 2000px;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+  position: absolute;
+  margin-top: 2000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 0px;
 }
+
 .Footlink{
   text-decoration: none;
+  width: inherit;
 }
+
+.Footdiv{
+  display: block;
+  margin: auto;
+  height: 20px;
+}
+
+#FootMar{
+  font-size: 55px;
+  font-weight: 1000;
+}
+
 #Sidebarlogo{
 width:240px;
 display: block;
@@ -84,4 +109,15 @@ margin-top: 44px;
   width: 60px;
   text-align: center;
   margin-left: 30px;
+  top: 0;
+}
+
+@media(max-width: 1366px){
+
+}
+@media(max-width: 1920px){
+
+}
+@media(max-width: 480px){
+
 }
