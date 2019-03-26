@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCFhmDveqpzRvevF6EyrLOh0NbACDQ3C_4",
+        authDomain: "pokemon-uke-8.firebaseapp.com",
+        databaseURL: "https://pokemon-uke-8.firebaseio.com",
+        projectId: "pokemon-uke-8",
+        storageBucket: "",
+        messagingSenderId: "974522538356"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+
+    </header>
+    <main>
+    </main>
+      <script type="text/javascript">
+      //Referanser til HTML elementer
+      const main = document.querySelector("main");
+        //Kode som henter ut info fra url
+        let url_string = window.location.href;
+        let url = new URL(url_string);
+        let id = url.searchParams.get("id");
+
+        console.log(id);
+
+        //referanser til databasen
+        const db = firebase.database();
+        const pokemon = db.ref("Pokemon");
+        const valgtPokemon = db.ref("pokemon/"+id);
+
+        //Oppstart
+        visValgtPokemon();
+
+        //funksjonsdefinisjoner
+        function visValgtPokemon(){
+          main.innerHTML = ``;
+          valgtPokemon.on("value",genererHTML);
+        }
+
+        function genererHTML(snapshot){
+          let key = snapshot.key;
+          let objekt = snapshot.val();
+          console.log(key,objekt);
+
+          let typeTekst = "";
+          if(objekt.Type2){
+            typeTekst = `Type1: ${objekt.Type1} og type 2: ${objekt.Type2}`;
+          } else{
+            typeTekst = `Type 1: ${objekt.Type1}`;
+          }
+
+          main.innerHTML += `
+          <section class="valgtPokemon">
+          <h1>${objekt.Name}</h1>
+          <img src="${objekt.ImageURL}">
+          <p>${typeTekst}</p>
+          <p>Max CP: ${objekt.MaxCP}</p>
+          <p>Max HP: ${objekt.MaxHP}</p>
+          </section>
+          `;
+        }
+
+
+
+      </script>
+
+
+
+  </body>
+</html>

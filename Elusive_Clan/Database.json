@@ -3,21 +3,21 @@
     "Members":{
       "Nazarfa001":{
       "Name":"Nazarfa",
-      "Subscribers":45,
+      "Subscribers":48,
       "Skills":true,
       "YoutubeName":"Nazarfa",
-      "Kills":,
-      "KD":
+      "Kills":5600,
+      "KD":1.46
 
 },
 
       "Jotto001":{
         "Name":"Jotto",
-        "Subscribers":30,
+        "Subscribers":31,
         "Skills":true,
         "YoutubeName":"Jotto",
-        "Kills":,
-        "KD":
+        "Kills":7899,
+        "KD":2.49
 
 },
 
@@ -26,8 +26,8 @@
         "Subscribers":84,
         "Skills":false,
         "YoutubeName":"Deadlord",
-        "Kills":,
-        "KD":
+        "Kills": 0,
+        "KD": 0
 
 }
 
@@ -106,7 +106,7 @@
 
 },
 
-    "c2":{
+    "2":{
       "Profile":"DoubleK",
       "Text":"amazing﻿",
       "Likes":1,
@@ -140,7 +140,7 @@
 
     "6":{
       "Profile":"Fillip W07",
-      "text":"❤️😱﻿",
+      "Text":"❤️😱﻿",
       "Likes":1,
       "Heart":true
 
@@ -148,7 +148,7 @@
 
     "7":{
       "Profile":"Elusive Clan",
-      "text":"﻿Thanks for the love :D﻿",
+      "Text":"﻿Thanks for the love :D﻿",
       "Likes":0,
       "Heart":false
 
@@ -156,23 +156,63 @@
 
     "8":{
       "Profile":"Valeera Maiev",
-      "text":"👏﻿",
+      "Text":"👏﻿",
       "Likes":2,
       "Heart":true
 
 },
 
     "9":{
-      "Profile":"ELusive Clan",
-      "text":"Thanks for the love and support my fellow friend :D﻿",
+      "Profile":"Elusive Clan",
+      "Text":"Thanks for the love and support my fellow friend :D﻿",
       "Likes":1,
+      "Heart":false
+
+},
+
+    "10":{
+      "Profile":"ogill",
+      "Text":"Imagine putting yourself killing someone off drop and posting it to youtube﻿",
+      "Likes":1,
+      "Heart":true
+
+},
+
+    "11":{
+      "Profile":"Elusive Clan",
+      "Text":"Couldn't imagine :)﻿",
+      "Likes":0,
+      "Heart":false
+
+},
+
+    "12":{
+      "Profile":"Elusive clan",
+      "Text":"Hey Nazarfa here. Just wanted to let you know that we are sorry that we have been inactive. In the future we will be uploading more frequently, but as the situation is right now we have been unable to due to member requesting and too many exams at school. Thank you for supporting us we appreciate it. 💪👊﻿",
+      "Likes":0,
+      "Heart":false
+
+},
+
+    "13":{
+      "Profile":"Example",
+      "Text":"None",
+      "Likes":0,
       "Heart":false
 
 },
 
     "MAL":{
       "Profile":"Example",
-      "text":"None",
+      "Text":"None",
+      "Likes":0,
+      "Heart":false
+
+},
+
+    "14":{
+      "Profile":"Example",
+      "Text":"None",
       "Likes":0,
       "Heart":false
 
