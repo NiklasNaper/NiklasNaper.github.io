@@ -67,7 +67,9 @@ function visPokemon(snapshot){
       if(secAllePokemon != null){
         load.innerHTML = ``;
       }
-      foot.style.visibility = 1;
+      if (secAllePokemon == null) {
+        foot.innerHTML = ``;
+      }
 }
 
     pokemon

@@ -20,6 +20,7 @@
 </script>
   </head>
   <body class="Underside">
+
     <header>
       <!-- Her kommer headeren som jeg kopierte fra: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar -->
       <div id="mySidebar" class="sidebar">
@@ -63,7 +64,7 @@
 
       <div id="Leftdiv">
         <p id="Load">Loading content...</p>
-        <br></br>
+        <p id="SortBy">Sort By:</p>
         <button class="commentknapp" id="commentKnapp1" type="button" onclick="visAlle()"><p id="Knapptxt">All Comments</p></button>
         <button class="commentknapp" type="button" onclick="visLiked()"><p id="Knapptxt">Most Liked</p></button>
         <button class="commentknapp" type="button" onclick="visHeart()"><p id="Knapptxt">Heart</p></button>
@@ -131,6 +132,14 @@
         }
         footer{
           display: none;
+        }
+        `;
+      }
+      if (seccom.innerHTML != ``) {
+        css.innerHTML = `
+        html{
+          height: 100%;
+          bottom: 0;
         }
         `;
       }

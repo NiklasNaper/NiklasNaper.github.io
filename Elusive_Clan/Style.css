@@ -4,6 +4,9 @@
 
 html{
   height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   position: absolute;
 }
 
@@ -128,20 +131,18 @@ header{
 .Comments{
   margin-top: 5vw;
   grid-column: span 6;
-  background-color: white;
-  border-top-left-radius: 1vw;
-  border-top-right-radius: 1vw;
   margin-bottom: 8vw;
-  display: grid;
-  grid-template-columns: 1fr;
+  height: inherit;
 }
 
 .comments{
   width: inherit;
   height: 10vw;
+  background-color: white;
   border-bottom-style: dotted;
   border-color: #878787;
   padding: 1vw;
+  padding-top: 0.5vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -157,13 +158,15 @@ header{
 }
 
 #comtxt{
-  font-size: 1.3;
+  font-size: 1.65vw;
   float: right;
   display: inline;
   margin: 0;
   text-align: left;
   text-overflow: ellipsis;
   grid-column: span 7;
+  letter-spacing: -0.1vw;
+  line-height: 2vw;
 }
 
 #comlikes{
@@ -178,16 +181,14 @@ header{
 #comliketxt{
   display: inline;
   color: rgb(255, 120, 0);
-  float: right;
   margin: 0;
-  margin-right: 0.5vw;
   font-size: 2vw;
 }
 
 #comliketxt2{
   display: inline;
   color: black;
-  float: right;
+  text-align: right;
   margin: 0;
   margin-right: 0.5vw;
   font-size: 2vw;
@@ -244,6 +245,14 @@ header{
   font-size: 1vw;
 }
 
+#SortBy{
+  margin: auto;
+  padding: 1vw;
+  font-family: sans-serif;
+  font-weight: 1000;
+  font-size: 2vw;
+}
+
 #commentKnapp1{
 }
 
@@ -263,7 +272,7 @@ header{
 
 footer{
   height: 3vw;
-  position: relative;
+  position: fixed;
   width: 100%;
   bottom: 0;
   background-color: #202020;
@@ -316,10 +325,634 @@ footer{
 ::-webkit-scrollbar-thumb {
   background-color: grey;
 }
-
+/* LAPTOP*/
 @media(max-width: 1920px){
+  html{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+  }
 
+  body{
+    background-image: url(bilder/Elusivebackground.png);
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+  }
+
+  button{
+    outline: 0;
+  }
+
+  header{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 2.7vw;
+    text-align: center;
+  }
+
+  #Sidebarbutton{
+    color: white;
+  }
+
+  .Sidebarlink{
+    padding: 0 2vw 3vw 2vw;
+    text-decoration: none;
+    font-size: 2vw;
+    color: #818181;
+    display: block;
+    transition: .3s;
+  }
+
+  .sidebar a:hover{
+    color: #f1f1f1;
+  }
+
+  .sidebar .closebtn{
+    position: absolute;
+    top: 0;
+    right: 2vw;
+    font-size: 2vw;
+    margin-left: 3.2vw;
+  }
+
+  .openbtn{
+    font-size: 2.1vw;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 0;
+    margin: 0;
+    padding: 0.5vw 0.7vw;
+    border: none;
+    border-bottom-right-radius: 1vw;
+  }
+
+  .openbtn:hover{
+    background-color: rgb(30, 30, 30);
+  }
+
+  #Sidebarlogo{
+    width: 17vw;
+    display: block;
+    margin: auto;
+    margin-top: 3vw;
+  }
+
+  #askelusive{
+    margin: 0;
+    padding: 0;
+    margin-top: 1vw;
+  }
+
+  #main{
+    transition: .5s;
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+
+  #commentheader{
+    text-align: center;
+    margin: auto;
+    display: inline;
+    top: 0;
+    grid-column: span 8;
+    margin: 0;
+    height: 1vw;
+    margin-top: 3.3vw;
+    font-size: 3vw;
+    color: rgb(0, 255, 0);
+  }
+
+  #Commentsmain{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    height: 100%;
+  }
+
+  .Comments{
+    margin-top: 5vw;
+    grid-column: span 6;
+    margin-bottom: 8vw;
+    height: inherit;
+  }
+
+  .comments{
+    width: inherit;
+    height: 10vw;
+    background-color: white;
+    border-bottom-style: dotted;
+    border-color: #878787;
+    padding: 1vw;
+    padding-top: 0.5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  #comName{
+    left: 0;
+    float: left;
+    margin: 0;
+    display: inline;
+    font-size: 2vw;
+    color: rgb(255, 120, 0);
+    grid-column: span 2;
+  }
+
+  #comtxt{
+    font-size: 1.65vw;
+    float: right;
+    display: inline;
+    margin: 0;
+    text-align: left;
+    text-overflow: ellipsis;
+    grid-column: span 7;
+    letter-spacing: -0.1vw;
+    line-height: 2vw;
+  }
+
+  #comlikes{
+    display: inline;
+    margin: 0;
+    margin-right: 1vw;
+    float: right;
+    margin-top: 2.5vw;
+    grid-column: span 0;
+  }
+
+  #comliketxt{
+    display: inline;
+    color: rgb(255, 120, 0);
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  #comliketxt2{
+    display: inline;
+    color: black;
+    text-align: right;
+    margin: 0;
+    margin-right: 0.5vw;
+    font-size: 2vw;
+  }
+
+  #comliketxt3{
+    display: inline;
+    color: black;
+    float: right;
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  #comheart{
+    display: inline;
+    float: right;
+    margin: 0;
+    padding: 1vw;
+    margin: auto;
+    font-size: 1.5vw;
+  }
+
+  #name{
+    display: inline;
+
+  }
+
+  #logo{
+    width: 10vw;
+    display: inline;
+    float: right;
+  }
+
+  .commentknapp{
+    height: 3vw;
+    width: 10vw;
+    border-radius: 1vw;
+    margin: 3vw;
+    margin-bottom: 0.1vw;
+    margin-top: 1vw;
+    border-left: 0.2vw solid #e9e9e9;
+    border-top: 0.2vw solid #e9e9e9;
+    border-right: 0.2vw solid #8e8e8e;
+    border-bottom:0.2vw solid #8e8e8e;
+  }
+
+  .commentknapp:active{
+    border-color: grey;
+  }
+
+  #Knapptxt{
+    margin: 0;
+    font-size: 1.1vw;
+  }
+
+  #commentKnapp1{
+  }
+
+  #Load{
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+    float: right;
+    margin-right: 1vw;
+    height: 0;
+  }
+
+  #Leftdiv{
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    height: 10vw;
+  }
+
+  footer{
+    height: 3vw;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #202020;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+
+  #Footertxt{
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    font-size: 1.7vw;
+    display: inline-block;
+    margin: auto;
+  }
+
+  #venstre{
+    float: left;
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  #høyre{
+    float: right;
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  .Footlink{
+    text-decoration: none;
+    width: inherit;
+    font-weight: 1000;
+    color: rgb(255, 255, 255);
+    margin: 0;
+  }
+
+  .Footdiv{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin: auto;
+    display: inline;
+  }
 }
-@media(max-width: 480px){
+/*TELEFON */
+@media(max-width: 750px){
+  html{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+  }
 
+  body{
+    background-image: url(bilder/Elusivebackground.png);
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+  }
+
+  header{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 2.7vw;
+    text-align: center;
+  }
+
+  #Sidebarbutton{
+    color: white;
+  }
+
+  .Sidebarlink{
+    padding: 0 2vw 3vw 2vw;
+    text-decoration: none;
+    font-size: 2vw;
+    color: #818181;
+    display: block;
+    transition: .3s;
+  }
+
+  .sidebar a:hover{
+    color: #f1f1f1;
+  }
+
+  .sidebar .closebtn{
+    position: absolute;
+    top: 0;
+    right: 2vw;
+    font-size: 2vw;
+    margin-left: 3.2vw;
+  }
+
+  .openbtn{
+    font-size: 3.1vw;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 0;
+    margin: 0;
+    padding: 0.5vw 0.7vw;
+    border: none;
+    border-bottom-right-radius: 1vw;
+  }
+
+  .openbtn:hover{
+    background-color: rgb(30, 30, 30);
+  }
+
+  #Sidebarlogo{
+    width: 17vw;
+    display: block;
+    margin: auto;
+    margin-top: 3vw;
+  }
+
+  #askelusive{
+    margin: 0;
+    padding: 0;
+    margin-top: 1vw;
+  }
+
+  #main{
+    transition: .5s;
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+
+  #commentheader{
+    text-align: center;
+    margin: auto;
+    display: inline;
+    top: 0;
+    grid-column: span 8;
+    margin: 0;
+    height: 1vw;
+    margin-top: 3.3vw;
+    font-size: 3vw;
+    color: rgb(0, 255, 0);
+  }
+
+  #Commentsmain{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    height: 100%;
+    padding: 1vw;
+    padding-left: 3vw;
+  }
+
+  .Comments{
+    margin-top: 5vw;
+    position: static;
+    grid-column: span 8;
+    margin-bottom: 8vw;
+    height: inherit;
+  }
+
+  .comments{
+    width: inherit;
+    height: 24vw;
+    background-color: white;
+    border-bottom-style: dotted;
+    border-color: #878787;
+    padding: 1vw;
+    padding-top: 0.5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  #comName{
+    left: 0;
+    float: left;
+    margin: 0;
+    display: inline;
+    font-size: 2vw;
+    color: rgb(255, 120, 0);
+    grid-column: span 2;
+  }
+
+  #comtxt{
+    font-size: 2.9vw;
+    float: right;
+    display: inline;
+    margin: 0;
+    text-align: left;
+    text-overflow: ellipsis;
+    grid-column: span 12;
+    letter-spacing: -0.1vw;
+    line-height: 2.7vw;
+  }
+
+  #comlikes{
+    display: inline;
+    margin: 0;
+    margin-right: 1vw;
+    float: right;
+    margin-top: 2.5vw;
+    grid-column: span 0;
+  }
+
+  #comliketxt{
+    display: inline;
+    color: rgb(255, 120, 0);
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  #comliketxt2{
+    display: inline;
+    color: black;
+    text-align: right;
+    margin: 0;
+    margin-right: 0.5vw;
+    font-size: 2vw;
+  }
+
+  #comliketxt3{
+    display: inline;
+    color: black;
+    float: right;
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  #comheart{
+    display: inline;
+    float: right;
+    margin: 0;
+    padding: 1vw;
+    margin: auto;
+    font-size: 1.5vw;
+  }
+
+  #name{
+    display: inline;
+  }
+
+  #logo{
+    width: 15vw;
+    display: inline;
+    float: right;
+  }
+
+  .commentknapp{
+    height: 3vw;
+    width: 18vw;
+    border-radius: 1vw;
+    margin: 1vw;
+    border-left: 0.2vw solid #e9e9e9;
+    border-top: 0.2vw solid #e9e9e9;
+    border-right: 0.2vw solid #8e8e8e;
+    border-bottom:0.2vw solid #8e8e8e;
+    float: right;
+    padding: 0;
+    margin-left: 80%;
+  }
+
+  .commentknapp:active{
+    border-color: grey;
+  }
+
+  #SortBy{
+    margin: 0;
+    margin-right: 4vw;
+  }
+
+  #Knapptxt{
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  #Load{
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+    float: right;
+    margin-right: 1vw;
+    height: 0;
+  }
+
+  #Leftdiv{
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    height: 10vw;
+    width: 96%;
+    margin-top: 4vw;
+    text-align: right;
+    position: fixed;
+  }
+
+  #Rightdiv{
+    width: 0;
+  }
+
+  footer{
+    height: 3vw;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #202020;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+
+  #Footertxt{
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    font-size: 1.7vw;
+    display: inline-block;
+    margin: auto;
+  }
+
+  #venstre{
+    float: left;
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  #høyre{
+    float: right;
+    margin: 0;
+    font-size: 2vw;
+  }
+
+  .Footlink{
+    text-decoration: none;
+    width: inherit;
+    font-weight: 1000;
+    color: rgb(255, 255, 255);
+    margin: 0;
+  }
+
+  .Footdiv{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin: auto;
+    display: inline;
+  }
+}
+/*Liten telefon*/
+@media(max-width: 630px){
+  #Leftdiv{
+    margin-top: 3vw;
+  }
 }
