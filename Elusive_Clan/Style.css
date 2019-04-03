@@ -57,11 +57,11 @@ header{
   transition: .3s;
 }
 
-.sidebar a:hover {
+.sidebar a:hover{
   color: #f1f1f1;
 }
 
-.sidebar .closebtn {
+.sidebar .closebtn{
   position: absolute;
   top: 0;
   right: 2vw;
@@ -70,7 +70,7 @@ header{
 }
 
 .openbtn{
-  font-size: 2vw;
+  font-size: 2.1vw;
   cursor: pointer;
   background-color: #111;
   color: white;
@@ -81,7 +81,7 @@ header{
   border-bottom-right-radius: 1vw;
 }
 
-.openbtn:hover {
+.openbtn:hover{
   background-color: rgb(30, 30, 30);
 }
 
@@ -98,9 +98,11 @@ header{
   margin-top: 1vw;
 }
 
-#main {
+#main{
   transition: .5s;
   display: inline;
+  padding: 0;
+  margin: 0;
 }
 
 #commentheader{
@@ -136,7 +138,7 @@ header{
 
 .comments{
   width: inherit;
-  height: 4.4vw;
+  height: 10vw;
   border-bottom-style: dotted;
   border-color: #878787;
   padding: 1vw;
@@ -149,18 +151,16 @@ header{
   float: left;
   margin: 0;
   display: inline;
-  font-size: 1vw;
+  font-size: 2vw;
   color: rgb(255, 120, 0);
   grid-column: span 2;
 }
 
 #comtxt{
-  font-size: 1.1vw;
+  font-size: 1.3;
   float: right;
   display: inline;
   margin: 0;
-  font-size: 1vw;
-  width: ;
   text-align: left;
   text-overflow: ellipsis;
   grid-column: span 7;
@@ -219,7 +219,6 @@ header{
   width: 10vw;
   display: inline;
   float: right;
-  padding: 4px;
 }
 
 .commentknapp{
@@ -242,12 +241,10 @@ header{
 
 #Knapptxt{
   margin: 0;
-  margin-bottom: 1vw;
   font-size: 1vw;
 }
 
 #commentKnapp1{
-  margin-top: 5vw;
 }
 
 #Load{
@@ -256,6 +253,12 @@ header{
   float: right;
   margin-right: 1vw;
   height: 0;
+}
+
+#Leftdiv{
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  height: 10vw;
 }
 
 footer{
