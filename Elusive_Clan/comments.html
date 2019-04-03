@@ -53,23 +53,28 @@
       }
       </script>
       <img id="logo" src="bilder/logo.png">
+      <style id="Style">
+
+      </style>
     </header>
 
     <main id="Commentsmain">
       <h1 id="commentheader">Comments on our youtubechannel</h1>
 
-      <div id="Mellomdiv">
-        <button class="commentknapp" id="commentKnapp1" type="button" onclick="visAlle()">All Comments</button>
-        <button class="commentknapp" type="button" onclick="visAlle()">Most Liked</button>
-        <button class="commentknapp" type="button" onclick="visAlle()">Heart</button>
-        <button class="commentknapp" type="button" onclick="visAlle()">Elusive Comment</button>
+      <div id="Leftdiv">
+        <p id="Load">Loading content...</p>
+        <button class="commentknapp" id="commentKnapp1" type="button" onclick="visAlle()"><p id="Knapptxt">All Comments</p></button>
+        <button class="commentknapp" type="button" onclick="visLiked()"><p id="Knapptxt">Most Liked</p></button>
+        <button class="commentknapp" type="button" onclick="visHeart()"><p id="Knapptxt">Heart</p></button>
+        <button class="commentknapp" type="button" onclick="visElusive()"><p id="Knapptxt">Elusive Comment</p></button>
       </div>
+
       <section class="Comments">
 
       </section>
 
       <div id="Rightdiv">
-      <p id="Load">Loading content...</p>
+
       </div>
 
     </main>
@@ -79,16 +84,34 @@
     //refererer til databasen
     const db = firebase.database();
     //lager en funksjon som caller ut fra databasen
-    const comment = db.ref("Elusive/Comments");
+    const comment = db.ref("Comments");
+    const css = document.querySelector("#Style");
     const foot = document.querySelector(".footer");
-    const load = document.querySelector("#Rightdiv")
+    const load = document.querySelector("#Load");
+
     function visComments(snapshot){
-      //javascript som skriver ut kommentarene på nettsiden
+      //javascript funksjon som skriver ut kommentarene på nettsiden
       let comSnap = snapshot.val();
       let key = snapshot.key;
+      let heart = "";
+      let likes = "";
+
+              if (comSnap.Likes == 1) {
+        likes = `<p id="comliketxt2">Like</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+      } else {
+        likes = `<p id="comliketxt3">Likes</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+      }
+
+    if (comSnap.Heart == ("true")) {
+        heart = `<p id="comheart"> ${comSnap.Hearttxt}</p>`;
+      } else {
+        heart = `<p></p>`;
+    }
       seccom.innerHTML +=`
       <section class="comments">
       <h1 id="comName">${comSnap.Profile}</h1>
+      ${heart}
+      ${likes}
       <p id="comtxt">${comSnap.Text}</p>
       </section>
       `;
@@ -96,17 +119,55 @@
         load.innerHTML = ``;
       }
       //Prøvde meg på noe men det funka ikke
-      if (seccom == 0) {
+      if (seccom.innerHTML == ``) {
         foot.innerHTML = ``;
       }
+      //Prøvde meg på enda en ting men det funka heller ikke ;(
+      if (seccom.innerHTML == 0) {
+        css.innerHTML = `
+        .Comments{
+          background-color: none;
+        }
+        footer{
+          display: none;
+        }
+        `;
+      }
     }
+    //funksjoner som kaller ut innhold fra databasen
     function visAlle(){
-      seccom.innerHTML = ``
-      comment.on("child_added",visComments);
+      seccom.innerHTML = ``;
+      comment
+      .on("child_added",visComments);
     }
+
+    function visHeart(){
+      seccom.innerHTML = ``;
+      comment
+      .orderByChild("Heart")
+      .equalTo("true")
+      .on("child_added",visComments);
+    }
+
+    function visLiked(){
+      seccom.innerHTML = ``;
+      comment
+      .orderByChild("Likes")
+      .limitToLast(5)
+      .on("child_added",visComments);
+    }
+
+    function visElusive(){
+      seccom.innerHTML = ``;
+      comment
+      .orderByChild("Profile")
+      .equalTo("Elusive Clan")
+      .on("child_added",visComments);
+    }
+
     visAlle();
     </script>
-    <footer>
+    <footer class="footer">
 
     <div class="Footdiv">
     <a  id="venstre" class="Footlink" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw" target="_blank">Youtube</a>
@@ -119,8 +180,6 @@
     <div class="Footdiv">
       <a id="høyre" class="Footlink" href="https://www.facebook.com/ElusiveClan" target="_blank">Facebook</a>
       </div>
-
-
-    </footer class="footer">
+    </footer>
   </body>
 </html>

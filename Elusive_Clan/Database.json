@@ -1,5 +1,4 @@
 {
-"Elusive":{
     "Members":{
       "Nazarfa001":{
       "Name":"Nazarfa",
@@ -102,7 +101,8 @@
       "Profile":"DoubleK",
       "Text":"good video! i love it!﻿",
       "Likes":1,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
@@ -110,7 +110,8 @@
       "Profile":"DoubleK",
       "Text":"amazing﻿",
       "Likes":1,
-      "Heart":true
+      "Heart":"true",
+      "Hearttxt":"❤️"
 
 },
 
@@ -118,7 +119,8 @@
       "Profile":"DoubleK",
       "Text":"wow, good skill﻿",
       "Likes":1,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
@@ -126,7 +128,8 @@
       "Profile":"Deadlord",
       "Text":"Thanks dude !﻿",
       "Likes":1,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
@@ -134,7 +137,8 @@
       "Profile":"ToastToni",
       "Text":"i can clap your ass bois, so bad EPIC: fejk toasttoni, add me if you are not scared﻿",
       "Likes":0,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
@@ -142,7 +146,8 @@
       "Profile":"Fillip W07",
       "Text":"❤️😱﻿",
       "Likes":1,
-      "Heart":true
+      "Heart":"true",
+      "Hearttxt":"❤️"
 
 },
 
@@ -150,7 +155,8 @@
       "Profile":"Elusive Clan",
       "Text":"﻿Thanks for the love :D﻿",
       "Likes":0,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
@@ -158,7 +164,8 @@
       "Profile":"Valeera Maiev",
       "Text":"👏﻿",
       "Likes":2,
-      "Heart":true
+      "Heart":"true",
+      "Hearttxt":"❤️"
 
 },
 
@@ -166,7 +173,8 @@
       "Profile":"Elusive Clan",
       "Text":"Thanks for the love and support my fellow friend :D﻿",
       "Likes":1,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
@@ -174,7 +182,8 @@
       "Profile":"ogill",
       "Text":"Imagine putting yourself killing someone off drop and posting it to youtube﻿",
       "Likes":1,
-      "Heart":true
+      "Heart":"true",
+      "Hearttxt":"❤️"
 
 },
 
@@ -182,7 +191,8 @@
       "Profile":"Elusive Clan",
       "Text":"Couldn't imagine :)﻿",
       "Likes":0,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
@@ -190,35 +200,37 @@
       "Profile":"Elusive clan",
       "Text":"Hey Nazarfa here. Just wanted to let you know that we are sorry that we have been inactive. In the future we will be uploading more frequently, but as the situation is right now we have been unable to due to member requesting and too many exams at school. Thank you for supporting us we appreciate it. 💪👊﻿",
       "Likes":0,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
     "13":{
-      "Profile":"Example",
-      "Text":"None",
-      "Likes":0,
-      "Heart":false
+      "Profile":"Tom-Vegar Moen",
+      "Text":"cool beans﻿",
+      "Likes":1,
+      "Heart":"false",
+      "Hearttxt":""
 
 },
 
     "MAL":{
-      "Profile":"Example",
-      "Text":"None",
-      "Likes":0,
-      "Heart":false
+      "Profile":"Tom-Vegar Moen",
+      "Text":"make a shoutout to tommoe02 on elusive clan﻿",
+      "Likes":1,
+      "Heart":"true",
+      "Hearttxt":"❤️"
 
 },
 
     "14":{
-      "Profile":"Example",
-      "Text":"None",
+      "Profile":"Elusive Clan",
+      "Text":"Sure I will soon make a video about you :D﻿",
       "Likes":0,
-      "Heart":false
+      "Heart":"false",
+      "Hearttxt":""
 
     }
   }
-
-}
 
 }

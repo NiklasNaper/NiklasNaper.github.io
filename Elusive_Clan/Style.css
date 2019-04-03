@@ -1,5 +1,10 @@
 *::selection{
-  background-color: cyan;
+  background-color: orange;
+}
+
+html{
+  height: 100%;
+  position: absolute;
 }
 
 body{
@@ -10,11 +15,8 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100%;
 }
-
-/*.Underside{
-  background-image: linear-gradient(to top, black, rgb(0, 255, 0));
-}*/
 
 button{
   outline: 0;
@@ -101,50 +103,35 @@ header{
   display: inline;
 }
 
-.Footlink{
-  text-decoration: none;
-  width: inherit;
-  font-weight: 1000;
-  margin-top: 0.1vw;
-  color: rgb(255, 255, 255);
-}
-
-.Footdiv{
-  padding: 0;
-  margin: 0;
+#commentheader{
   text-align: center;
   margin: auto;
   display: inline;
-}
-
-#Footertxt{
-  font-family: sans-serif;
-  color: rgb(255, 255, 255);
-}
-
-*::selection{
-  background-color: cyan;
-}
-
-#venstre{
-  float: left;
-}
-
-#høyre{
-  float: right;
+  top: 0;
+  grid-column: span 8;
+  margin: 0;
+  height: 1vw;
+  margin-top: 3.3vw;
+  font-size: 3vw;
+  color: rgb(0, 255, 0);
 }
 
 #Commentsmain{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  height: 100%;
 }
 
 .Comments{
   margin-top: 5vw;
   grid-column: span 6;
   background-color: white;
-  border-top-left-radius: 3vw;
-  border-top-right-radius: 3vw;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  margin-bottom: 8vw;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .comments{
@@ -153,16 +140,18 @@ header{
   border-bottom-style: dotted;
   border-color: #878787;
   padding: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #comName{
   left: 0;
   float: left;
   margin: 0;
-  margin-bottom: 1.2vw;
   display: inline;
-  margin-left: 3vw;
   font-size: 1vw;
+  color: rgb(255, 120, 0);
+  grid-column: span 2;
 }
 
 #comtxt{
@@ -170,11 +159,55 @@ header{
   float: right;
   display: inline;
   margin: 0;
-  margin-right: 3vw;
   font-size: 1vw;
-  width: 44vw;
+  width: ;
   text-align: left;
   text-overflow: ellipsis;
+  grid-column: span 7;
+}
+
+#comlikes{
+  display: inline;
+  margin: 0;
+  margin-right: 1vw;
+  float: right;
+  margin-top: 2.5vw;
+  grid-column: span 0;
+}
+
+#comliketxt{
+  display: inline;
+  color: rgb(255, 120, 0);
+  float: right;
+  margin: 0;
+  margin-right: 0.5vw;
+  font-size: 2vw;
+}
+
+#comliketxt2{
+  display: inline;
+  color: black;
+  float: right;
+  margin: 0;
+  margin-right: 0.5vw;
+  font-size: 2vw;
+}
+
+#comliketxt3{
+  display: inline;
+  color: black;
+  float: right;
+  margin: 0;
+  font-size: 2vw;
+}
+
+#comheart{
+  display: inline;
+  float: right;
+  margin: 0;
+  padding: 1vw;
+  margin: auto;
+  font-size: 1.5vw;
 }
 
 #name{
@@ -190,45 +223,95 @@ header{
 }
 
 .commentknapp{
-  font-size: 0.8vw;
-  height: 2vw;
-  width: 7vw;
+  font-size: 1.1vw;
+  height: 3vw;
+  width: 10vw;
   border-radius: 1vw;
-  border-color: #e9e9e9;
   margin: 3vw;
   margin-bottom: 0.1vw;
   margin-top: 1vw;
+  border-left: 0.2vw solid #e9e9e9;
+  border-top: 0.2vw solid #e9e9e9;
+  border-right: 0.2vw solid #8e8e8e;
+  border-bottom:0.2vw solid #8e8e8e;
+}
+
+.commentknapp:active{
+  border-color: grey;
+}
+
+#Knapptxt{
+  margin: 0;
+  margin-bottom: 1vw;
+  font-size: 1vw;
 }
 
 #commentKnapp1{
   margin-top: 5vw;
 }
 
-#commentheader{
-  text-align: center;
-  margin: auto;
-  display: inline;
-  top: 0;
-  grid-column: span 8;
-  margin-top: 3.3vw;
-  font-size: 3vw;
-  color: rgb(0, 255, 0);
-}
-
 #Load{
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 1000;
+  float: right;
+  margin-right: 1vw;
+  height: 0;
 }
 
 footer{
+  height: 3vw;
   position: relative;
-  margin-top: 50vw;
   width: 100%;
   bottom: 0;
   background-color: #202020;
-  align-items: center;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
+}
+
+#Footertxt{
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-size: 1.7vw;
+  display: inline-block;
+  margin: auto;
+}
+
+#venstre{
+  float: left;
+  margin: 0;
+  font-size: 2vw;
+}
+
+#høyre{
+  float: right;
+  margin: 0;
+  font-size: 2vw;
+}
+
+.Footlink{
+  text-decoration: none;
+  width: inherit;
+  font-weight: 1000;
+  color: rgb(255, 255, 255);
+  margin: 0;
+}
+
+.Footdiv{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin: auto;
+  display: inline;
+}
+
+::-webkit-scrollbar{
+  background-color: lightgrey;
+  width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
 }
 
 @media(max-width: 1920px){
