@@ -904,7 +904,7 @@ footer{
   }
 
   footer{
-    height: 3vw;
+    height: 4vw;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -920,6 +920,7 @@ footer{
     font-size: 1.7vw;
     display: inline-block;
     margin: auto;
+    padding-bottom: 1vw;
   }
 
   #venstre{
