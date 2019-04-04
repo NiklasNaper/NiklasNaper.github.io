@@ -634,7 +634,7 @@ footer{
   }
 }
 /*TELEFON */
-@media(max-width: 750px){
+@media(max-width: 800px){
   html{
     height: 100%;
     width: 100%;
@@ -893,8 +893,10 @@ footer{
     height: 10vw;
     width: 96%;
     margin-top: 97vw;
+    margin-bottom: 20vw;
     text-align: right;
     position: fixed;
+    bottom: 0;
   }
 
   #Rightdiv{
@@ -947,11 +949,5 @@ footer{
     text-align: center;
     margin: auto;
     display: inline;
-  }
-}
-/*Liten telefon*/
-@media(max-width: 630px){
-  #Leftdiv{
-    margin-top: 3vw;
   }
 }
