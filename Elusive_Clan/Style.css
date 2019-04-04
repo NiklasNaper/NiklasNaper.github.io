@@ -883,9 +883,8 @@ footer{
   #Load{
     color: rgb(255, 255, 255);
     font-weight: 1000;
-    float: right;
-    margin-right: 1vw;
-    height: 0;
+
+    margin-right: 40vw;
   }
 
   #Leftdiv{
@@ -899,7 +898,7 @@ footer{
   }
 
   #Rightdiv{
-    width: 0;
+    margin-bottom: 150vw;
   }
 
   footer{
