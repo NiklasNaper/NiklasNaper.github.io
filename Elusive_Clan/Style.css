@@ -753,10 +753,9 @@ footer{
   #Commentsmain{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: ;
     height: 100%;
     padding: 1vw;
-    padding-left: 3vw;
   }
 
   .Comments{
@@ -894,7 +893,7 @@ footer{
     grid-template-rows: repeat(10, 1fr);
     height: 10vw;
     width: 96%;
-    margin-top: 4vw;
+    margin-top: 97vw;
     text-align: right;
     position: fixed;
   }
