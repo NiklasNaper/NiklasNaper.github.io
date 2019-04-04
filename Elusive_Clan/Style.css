@@ -634,7 +634,7 @@ footer{
   }
 }
 /*TELEFON */
-@media(max-width: 800px){
+@media(max-width: 750px){
   html{
     height: 100%;
     width: 100%;
@@ -762,7 +762,6 @@ footer{
     margin-top: 5vw;
     position: static;
     grid-column: span 8;
-    margin-bottom: 8vw;
     height: inherit;
   }
 
@@ -883,8 +882,8 @@ footer{
   #Load{
     color: rgb(255, 255, 255);
     font-weight: 1000;
-
-    margin-right: 40vw;
+    margin-left: 40vw;
+    padding-bottom: 10vw;
   }
 
   #Leftdiv{
@@ -892,7 +891,6 @@ footer{
     grid-template-rows: repeat(10, 1fr);
     height: 10vw;
     width: 96%;
-    margin-top: 97vw;
     margin-bottom: 20vw;
     text-align: right;
     position: fixed;
@@ -900,7 +898,7 @@ footer{
   }
 
   #Rightdiv{
-    margin-bottom: 150vw;
+
   }
 
   footer{
