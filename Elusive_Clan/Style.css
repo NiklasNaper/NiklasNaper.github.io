@@ -462,7 +462,7 @@ footer{
 
   .comments{
     width: inherit;
-    height: 10vw;
+    height: 11.3vw;
     background-color: white;
     border-bottom-style: dotted;
     border-color: #878787;
@@ -532,7 +532,7 @@ footer{
     float: right;
     margin: 0;
     padding: 1vw;
-    margin: auto;
+    line-height: 2vw;
     font-size: 1.5vw;
   }
 
