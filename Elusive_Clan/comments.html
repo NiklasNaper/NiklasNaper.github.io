@@ -55,15 +55,13 @@
       </script>
       <img id="logo" src="bilder/logo.png">
       <style id="Style">
-
       </style>
     </header>
 
     <main id="Commentsmain">
       <h1 id="commentheader">Comments on our youtubechannel</h1>
-
       <div id="Leftdiv">
-        <p id="Load">Loading content...</p>
+
         <p id="SortBy">Sort By:</p>
         <button class="commentknapp" id="commentKnapp1" type="button" onclick="visAlle()"><p id="Knapptxt">All Comments</p></button>
         <button class="commentknapp" type="button" onclick="visLiked()"><p id="Knapptxt">Most Liked</p></button>
@@ -76,7 +74,7 @@
       </section>
 
       <div id="Rightdiv">
-
+<p id="Load">Loading content...</p>
       </div>
 
     </main>
@@ -90,6 +88,7 @@
     const css = document.querySelector("#Style");
     const foot = document.querySelector(".footer");
     const load = document.querySelector("#Load");
+    const left = document.querySelector("#Leftdiv")
 
     function visComments(snapshot){
       //javascript funksjon som skriver ut kommentarene på nettsiden
@@ -142,6 +141,9 @@
           bottom: 0;
         }
         `;
+      }
+      if (seccom.innerHTML == 0) {
+        left.innerHTML = ``;
       }
     }
     //funksjoner som kaller ut innhold fra databasen
