@@ -285,6 +285,7 @@ header{
 
 .membersec{
   grid-column: span 6;
+  margin-bottom: 5vw;
 }
 
 #themeknapp{
@@ -312,7 +313,7 @@ header{
   font-size: 2vw;
   margin: 0.5vw;
   margin-left: 0;
-  grid-column: span 12;
+  grid-column: span 10;
 }
 
 #onemember{
@@ -342,6 +343,7 @@ header{
   font-size: 1.2vw;
   font-family: monospace;
   grid-column: span 2;
+  color: rgb(0, 255, 100);
 }
 
 #Loadmem{
@@ -364,6 +366,7 @@ header{
   text-align: left;
   font-size: 1.2vw;
   font-family: monospace;
+  color: rgb(189, 0, 255);
 }
 
 #ortxtKD{
@@ -382,15 +385,18 @@ header{
 #subamount{
   font-size: 1.2vw;
   font-family: monospace;
+  color: rgb(0, 255, 100);
 }
 #specifyerkill{
   font-size: 1.2vw;
   font-family: monospace;
+  grid-column: span 2;
 }
 
 #killamount{
   font-size: 1.2vw;
   font-family: monospace;
+  color: rgb(189, 0, 255);
 }
 
 .memSort{
@@ -777,7 +783,7 @@ footer{
   }
 }
 /*TELEFON */
-@media(max-width: 375px){
+@media(max-width: 750px){
   header{
     position: fixed;
     z-index: 1;
@@ -1019,6 +1025,53 @@ footer{
     text-align: right;
     position: fixed;
     bottom: 0;
+  }
+
+  #membersmain{
+    padding: 1vw;
+  }
+
+  #onemember{
+    height: 15vw;
+  }
+
+  #memberName{
+    font-size: 5vw;
+  }
+
+  .buttonmemlineshift{
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .memSort{
+    width: 20vw;
+    height: 7vw;
+    margin: 0;
+    margin-top: 2vw;
+  }
+
+  #ortxt, #ytName, #subcount, #subamount, #specifyerkill, #nochan, #killamount, #ortxtKD, #memKD{
+    font-size: 2vw;
+    font-family: monospace;
+  }
+
+  #wierdbuttonmem{
+    margin-top: 0;
+  }
+
+  .membersleft{
+    grid-column: span 0;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 5vw;
+    right: 0;
+    margin-right: 1vw;
+  }
+
+  .membersec{
+    grid-column: span 8;
   }
 
   footer{

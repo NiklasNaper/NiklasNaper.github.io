@@ -30,6 +30,7 @@
         <a class="Sidebarlink" href="video's.html">Video's</a>
         <a class="Sidebarlink" href="comments.html">Comments</a>
         <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank"><img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
+          <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
         <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>
       </div>
       <div id="main">
@@ -53,16 +54,19 @@
       }
       </script>
       <img id="logo" src="bilder/logo.png">
+      <style id="styling">
+
+      </style>
     </header>
     <main id="membersmain">
 
       <h1 id="membersheader">Members of our clan</h1>
 
       <div class="membersleft">
-          <p><button class="memSort" type="button" name="button" onclick="visKD()"><p class="memSorttxt">Best KD</p></button></p>
-          <p><button class="memSort" type="button" name="button" onclick="visSubs()"><p class="memSorttxt">Most Subs</p></button></p>
-          <p><button class="memSort" type="button" name="button" onclick="visSkills()"><p class="memSorttxt">Skills</p></button></p></p>
-          <p><button class="memSort" type="button" name="button" onclick="visKills()"><p class="memSorttxt">Most Kills</p></button></p>
+          <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visKD()"><p class="memSorttxt">Best KD</p></button></p>
+          <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visSubs()"><p class="memSorttxt">Most Subs</p></button></p>
+          <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visSkills()"><p class="memSorttxt">Skills</p></button></p></p>
+          <p class="buttonmemlineshift"><button id="wierdbuttonmem" class="memSort" type="button" name="button" onclick="visKills()"><p class="memSorttxt">Most Kills</p></button></p>
       </div>
       <div class="membersec">
 
@@ -77,6 +81,8 @@
     const db = firebase.database();
     const members = db.ref("Members");
     const load = document.querySelector("#Loadmem");
+    const css = document.querySelector("#styling");
+    const sidebar = document.querySelector(".sidebar");
 
     function visMembers(snapshot){
       let memSnap = snapshot.val();
@@ -99,11 +105,11 @@
       secmem.innerHTML += `
       <section id="onemember">
       <h1 id="memberName">${memSnap.Name}</h1>
+      <p id="ortxtKD">KD:</p><p id="memKD">${memSnap.KD}</p>
       <img id="mempic" src=${memSnap["Ppic"]}>
       ${yt}
       ${sub}
       <p id="specifyerkill">Kill Amount:</p><p id="killamount">${memSnap.Kills}</p>
-      <p id="ortxtKD">KD:</p><p id="memKD">${memSnap.KD}</p>
       </section>
       `;
 
@@ -143,7 +149,95 @@
       .on("child_added",visMembers);
     }
 
+    function visKills(){
+      secmem.innerHTML = ``;
+      members
+      .orderByChild("Kills")
+      .limitToLast(1)
+      .on("child_added",visMembers);
+    }
+
     visAlle();
+
+    let farge = "en";
+    function nyTheme(){
+      if (farge == "en") {
+        css.innerHTML = `
+
+        #onemember{
+          transition: 1s;
+          background-color: black;
+        }
+        #nochan{
+          transition: 1s;
+          color: white;
+        }
+        #specifyerkill{
+          transition: 1s;
+          color: white;
+        }
+        #ortxt, #ytName, #subcount, #subamount{
+          transition: 1s;
+          color: white;
+        }
+        #killamount{
+          transition: 1s;
+          color: white;
+        }
+        #ortxtKD, #memKD{
+          transition: 1s;
+          color: white;
+        }
+        `
+        sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+        <a class="Sidebarlink" href="Index.html">Home</a>
+        <a class="Sidebarlink" href="members.html">Members</a>
+        <a class="Sidebarlink" href="video's.html">Video's</a>
+        <a class="Sidebarlink" href="comments.html">Comments</a>
+        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+        <img id="Sidebarlogo" src="bilder/Logo1.png"></a>
+        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
+        <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
+        farge = "to";
+      } else if (farge == "to") {
+        css.innerHTML = `
+
+        #onemember{
+          transition: 1s;
+          background-color: white;
+        }
+        #nochan{
+          transition: 1s;
+          color: black;
+        }
+        #specifyerkill{
+          transition: 1s;
+          color: black;
+        }
+        #ortxt, #ytName, #subcount, #subamount{
+          transition: 1s;
+          color: black;
+          }
+        #killamount{
+          transition: 1s;
+          color: black;
+        }
+        #ortxtKD, #memKD{
+          transition: 1s;
+          color: black;
+        }`
+        sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+        <a class="Sidebarlink" href="Index.html">Home</a>
+        <a class="Sidebarlink" href="members.html">Members</a>
+        <a class="Sidebarlink" href="video's.html">Video's</a>
+        <a class="Sidebarlink" href="comments.html">Comments</a>
+        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+        <img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
+        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
+        <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
+        farge = "en";
+      }
+    }
 
     </script>
     <footer>
