@@ -1,33 +1,45 @@
 {
     "Members":{
       "Nazarfa001":{
-      "Name":"Nazarfa",
-      "Subscribers":48,
+      "Name":"ELU Nazarfa",
+      "Subscribers":51,
       "Skills":true,
       "YoutubeName":"Nazarfa",
       "Kills":5600,
-      "KD":1.46
+      "KD":1.46,
+      "Ppic":"https://yt3.ggpht.com/-uyHeuif9S9Q/AAAAAAAAAAI/AAAAAAAAAmw/_oqFw4peeJ0/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg"
 
 },
 
-      "Jotto001":{
-        "Name":"Jotto",
+      "Jotto002":{
+        "Name":"ELU Jotto",
         "Subscribers":31,
         "Skills":true,
         "YoutubeName":"Jotto",
         "Kills":7899,
-        "KD":2.49
+        "KD":2.49,
+        "Ppic":"https://yt3.ggpht.com/a-/AAuE7mC7emcnegfIuGfOw-2rvC_3pScWPWQJey0yzg=s288-mo-c-c0xffffffff-rj-k-no"
 
 },
 
-      "Tempel67001":{
+      "Tempel67003":{
         "Name":"Tempel67",
-        "Subscribers":84,
+        "Subscribers":110,
         "Skills":false,
-        "YoutubeName":"Deadlord",
-        "Kills": 0,
-        "KD": 0
+        "YoutubeName":"ELU Shadow ツ",
+        "Kills": 4467,
+        "KD": 1.73,
+        "Ppic":"https://yt3.ggpht.com/a-/AAuE7mB-mFKk_vPzY1-QSCwl10q_zrPDPVlClYwZkA=s288-mo-c-c0xffffffff-rj-k-no"
+},
 
+        "Ghost004":{
+        "Name":"Ghost",
+        "Subscribers":0,
+        "Skills":true,
+        "YoutubeName":"nei",
+        "Kills": 5994,
+        "KD": 2.03,
+        "Ppic":"https://kaph.no/wp-content/uploads/2017/12/facebook-default-no-profile-pic.jpg"
 }
 
 

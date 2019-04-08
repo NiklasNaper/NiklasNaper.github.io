@@ -20,7 +20,7 @@
   firebase.initializeApp(config);
 </script>
   </head>
-  <body class="Underside">
+  <body>
     <header>
       <!-- Her kommer headeren som jeg kopierte fra: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar -->
       <div id="mySidebar" class="sidebar">
@@ -32,7 +32,6 @@
         <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank"><img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
         <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>
       </div>
-
       <div id="main">
         <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>
       </div>
@@ -42,8 +41,8 @@
       function toggleNav() {
 
         if (nav == "Elusive1") {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
+          document.getElementById("mySidebar").style.width = "18vw";
+          document.getElementById("main").style.marginLeft = "18vw";
           nav = "Elusive2";
 
         }else if (nav == "Elusive2") {
@@ -53,7 +52,100 @@
         }
       }
       </script>
+      <img id="logo" src="bilder/logo.png">
     </header>
+    <main id="membersmain">
+
+      <h1 id="membersheader">Members of our clan</h1>
+
+      <div class="membersleft">
+          <p><button class="memSort" type="button" name="button" onclick="visKD()"><p class="memSorttxt">Best KD</p></button></p>
+          <p><button class="memSort" type="button" name="button" onclick="visSubs()"><p class="memSorttxt">Most Subs</p></button></p>
+          <p><button class="memSort" type="button" name="button" onclick="visSkills()"><p class="memSorttxt">Skills</p></button></p></p>
+          <p><button class="memSort" type="button" name="button" onclick="visKills()"><p class="memSorttxt">Most Kills</p></button></p>
+      </div>
+      <div class="membersec">
+
+      </div>
+      <div class="membersright">
+        <p id="Loadmem">Loading content...</p>
+      </div>
+    </main>
+    <script type="text/javascript">
+
+    const secmem = document.querySelector(".membersec")
+    const db = firebase.database();
+    const members = db.ref("Members");
+    const load = document.querySelector("#Loadmem");
+
+    function visMembers(snapshot){
+      let memSnap = snapshot.val();
+      let key = snapshot.key;
+      let yt = "";
+      let sub = "";
+
+      if (memSnap.YoutubeName == ("nei")) {
+        yt = `<p id="nochan">No channel</p>`;
+      } else {
+        yt = `<p id="ortxt">Youtubechannel:</p><p id="ytName">${memSnap.YoutubeName}</p>`;
+      }
+
+      if (memSnap.Subscribers == (0)) {
+        sub = ``;
+      } else {
+        sub = `<p id="subcount">Sub count:</p><p id="subamount">${memSnap.Subscribers}</p>`;
+      }
+
+      secmem.innerHTML += `
+      <section id="onemember">
+      <h1 id="memberName">${memSnap.Name}</h1>
+      <img id="mempic" src=${memSnap["Ppic"]}>
+      ${yt}
+      ${sub}
+      <p id="specifyerkill">Kill Amount:</p><p id="killamount">${memSnap.Kills}</p>
+      <p id="ortxtKD">KD:</p><p id="memKD">${memSnap.KD}</p>
+      </section>
+      `;
+
+      if (secmem != 0) {
+        load.innerHTML = ``;
+      }
+    }
+
+    function visAlle(){
+      secmem.innerHTML = ``;
+      members
+      .on("child_added",visMembers);
+    }
+
+    function visKD(){
+      secmem.innerHTML = ``;
+      members
+      .orderByChild("KD")
+      .limitToLast(1)
+      .on("child_added",visMembers);
+
+    }
+
+    function visSubs(){
+      secmem.innerHTML = ``;
+      members
+      .orderByChild("Subscribers")
+      .limitToLast(1)
+      .on("child_added",visMembers);
+    }
+
+    function visSkills(){
+      secmem.innerHTML = ``;
+      members
+      .orderByChild("Skills")
+      .equalTo(true)
+      .on("child_added",visMembers);
+    }
+
+    visAlle();
+
+    </script>
     <footer>
 
     <div class="Footdiv">

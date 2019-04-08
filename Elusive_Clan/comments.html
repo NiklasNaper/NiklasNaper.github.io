@@ -31,6 +31,7 @@
         <a class="Sidebarlink" href="comments.html">Comments</a>
         <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
         <img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
+        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
         <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>
       </div>
       <div id="main">
@@ -63,10 +64,10 @@
       <div id="Leftdiv">
 
         <p id="SortBy">Sort By:</p>
-        <button class="commentknapp" id="commentKnapp1" type="button" onclick="visAlle()"><p id="Knapptxt">All Comments</p></button>
-        <button class="commentknapp" type="button" onclick="visLiked()"><p id="Knapptxt">Most Liked</p></button>
-        <button class="commentknapp" type="button" onclick="visHeart()"><p id="Knapptxt">Heart</p></button>
-        <button class="commentknapp" type="button" onclick="visElusive()"><p id="Knapptxt">Elusive Comment</p></button>
+        <button class="commentknapp" id="commentKnapp1" type="button" onclick="visAlle()"><p class="Knapptxt">All Comments</p></button>
+        <button class="commentknapp" type="button" onclick="visLiked()"><p class="Knapptxt">Most Liked</p></button>
+        <button class="commentknapp" type="button" onclick="visHeart()"><p class="Knapptxt">Heart</p></button>
+        <button class="commentknapp" type="button" onclick="visElusive()"><p class="Knapptxt">Elusive Comment</p></button>
       </div>
 
       <section class="Comments">
@@ -88,7 +89,9 @@
     const css = document.querySelector("#Style");
     const foot = document.querySelector(".footer");
     const load = document.querySelector("#Load");
-    const left = document.querySelector("#Leftdiv")
+    const left = document.querySelector("#Leftdiv");
+    const sidebar = document.querySelector(".sidebar")
+
 
     function visComments(snapshot){
       //javascript funksjon som skriver ut kommentarene på nettsiden
@@ -97,7 +100,7 @@
       let heart = "";
       let likes = "";
 
-              if (comSnap.Likes == 1) {
+      if (comSnap.Likes == 1) {
         likes = `<p id="comliketxt2">Like</p> <p id="comliketxt">${comSnap.Likes}</p>`;
       } else {
         likes = `<p id="comliketxt3">Likes</p> <p id="comliketxt">${comSnap.Likes}</p>`;
@@ -125,7 +128,7 @@
       }
       //Prøvde meg på enda en ting men det funka heller ikke ;(
       if (seccom.innerHTML == 0) {
-        css.innerHTML = `
+        css.innerHTML += `
         .Comments{
           background-color: none;
         }
@@ -135,7 +138,7 @@
         `;
       }
       if (seccom.innerHTML != ``) {
-        css.innerHTML = `
+        css.innerHTML += `
         html{
           height: 100%;
           bottom: 0;
@@ -175,6 +178,62 @@
       .orderByChild("Profile")
       .equalTo("Elusive Clan")
       .on("child_added",visComments);
+    }
+
+    let farge = "en";
+    function nyTheme(){
+      if (farge == "en") {
+        css.innerHTML = `
+
+        .comments{
+          transition: 1s;
+          background-color: black;
+        }
+        #comtxt{
+          transition: 1s;
+          color: white;
+        }
+        #comliketxt2, #comliketxt3{
+          transition: 1s;
+          color: white;
+        }
+        `
+        sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+        <a class="Sidebarlink" href="Index.html">Home</a>
+        <a class="Sidebarlink" href="members.html">Members</a>
+        <a class="Sidebarlink" href="video's.html">Video's</a>
+        <a class="Sidebarlink" href="comments.html">Comments</a>
+        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+        <img id="Sidebarlogo" src="bilder/Logo1.png"></a>
+        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
+        <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
+        farge = "to";
+      } else if (farge == "to") {
+        css.innerHTML = `
+
+        .comments{
+          transition: 1s;
+          background-color: white;
+        }
+        #comtxt{
+          transition: 1s;
+          color: black;
+        }
+        #comliketxt2, #comliketxt3{
+          transition: 1s;
+          color: black;
+        }`
+        sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+        <a class="Sidebarlink" href="Index.html">Home</a>
+        <a class="Sidebarlink" href="members.html">Members</a>
+        <a class="Sidebarlink" href="video's.html">Video's</a>
+        <a class="Sidebarlink" href="comments.html">Comments</a>
+        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+        <img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
+        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
+        <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
+        farge = "en";
+      }
     }
 
     visAlle();
