@@ -32,7 +32,7 @@
         <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
         <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
         <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
-        <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>
+        <a class="Sidebarlink" href="Apply Membership.html">Apply For Membership</a>
       </div>
       <div id="main">
         <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>
@@ -61,7 +61,7 @@
     </header>
 
     <main id="Commentsmain">
-      <h1 id="commentheader">Comments on our youtubechannel</h1>
+      <h1 id="specialheader2" class="commentheader">Comments on our youtubechannel</h1>
       <div id="Leftdiv">
 
         <p id="SortBy">Sort By:</p>
@@ -91,8 +91,6 @@
     const foot = document.querySelector(".footer");
     const load = document.querySelector(".Load");
     const left = document.querySelector("#Leftdiv");
-    const sidebar = document.querySelector(".sidebar");
-
 
     function visComments(snapshot){
       //javascript funksjon som skriver ut kommentarene på nettsiden
@@ -200,15 +198,6 @@
           color: white;
         }
         `
-        sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
-        <a class="Sidebarlink" href="Index.html">Home</a>
-        <a class="Sidebarlink" href="members.html">Members</a>
-        <a class="Sidebarlink" href="video's.html">Video's</a>
-        <a class="Sidebarlink" href="comments.html">Comments</a>
-        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
-        <img id="Sidebarlogo" src="bilder/Logo1.png"></a>
-        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
-        <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
         farge = "to";
       } else if (farge == "to") {
         css.innerHTML = `
@@ -224,16 +213,8 @@
         #comliketxt2, #comliketxt3{
           transition: 1s;
           color: black;
-        }`
-        sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
-        <a class="Sidebarlink" href="Index.html">Home</a>
-        <a class="Sidebarlink" href="members.html">Members</a>
-        <a class="Sidebarlink" href="video's.html">Video's</a>
-        <a class="Sidebarlink" href="comments.html">Comments</a>
-        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
-        <img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
-        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
-        <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
+        }
+        `
         farge = "en";
       }
     }

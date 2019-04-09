@@ -19,6 +19,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
+  top: 0;
 }
 
 button{
@@ -108,7 +109,7 @@ header{
   margin: 0;
 }
 
-#commentheader{
+.commentheader{
   text-align: center;
   margin: auto;
   display: inline;
@@ -117,7 +118,7 @@ header{
   margin: 0;
   height: 1vw;
   margin-top: 3.3vw;
-  font-size: 3vw;
+  font-size: 2.5vw;
   color: rgb(0, 255, 0);
 }
 
@@ -291,6 +292,7 @@ header{
 .membersec{
   grid-column: span 6;
   margin-bottom: 4.77vw;
+  margin-top: 5vw;
 }
 
 #themeknapp{
@@ -464,11 +466,53 @@ header{
   font-weight: 1000;
   color: rgb(255, 120, 0);
   margin-top: 0;
+  text-align: center;
+  padding-left: 0;
+  padding-bottom: 0;
 }
 
 #Timesec{
-  background-color: black;
+  background-color: #111;
   width: 9vw;
+  border-bottom-right-radius: 1vw;
+  border-style: solid;
+  border-color: rgb(255, 120, 0);
+}
+
+#specialheader{
+  grid-column: span 24;
+  margin-bottom: 5vw;
+  font-size: 4vw;
+}
+
+#indexheader{
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  margin: 0;
+  padding: 2vw;
+  font-family: cursive;
+  color: rgb(255, 120, 0);
+}
+
+#indexheader2{
+  margin: 0;
+  margin-top: 1vw;
+  font-family: cursive;
+  text-align: center;
+  font-size: 2vw;
+  color: rgb(255, 120, 0);
+}
+
+#indextxt{
+  text-align: center;
+  font-family: cursive;
+  font-weight: 1000;
+  font-size: 1.1vw;
+  width: 8vw;
+  margin-top: 2.5vw;
+  padding: 0.2vw;
+  position: fixed;
 }
 
 footer{
@@ -545,6 +589,7 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
+    top: 0;
   }
 
   button{
@@ -632,19 +677,6 @@ footer{
     display: inline;
     padding: 0;
     margin: 0;
-  }
-
-  #commentheader{
-    text-align: center;
-    margin: auto;
-    display: inline;
-    top: 0;
-    grid-column: span 8;
-    margin: 0;
-    height: 1vw;
-    margin-top: 3.3vw;
-    font-size: 3vw;
-    color: rgb(0, 255, 0);
   }
 
   #Commentsmain{
@@ -881,7 +913,7 @@ footer{
   }
 
   .openbtn{
-    font-size: 3.1vw;
+    font-size: 5vw;
     cursor: pointer;
     background-color: #111;
     color: white;
@@ -889,7 +921,7 @@ footer{
     margin: 0;
     padding: 0.5vw 0.7vw;
     border: none;
-    border-bottom-right-radius: 1vw;
+    border-bottom-right-radius: 2vw;
   }
 
   .openbtn:hover{
@@ -916,7 +948,7 @@ footer{
     margin: 0;
   }
 
-  #commentheader{
+  .commentheader{
     text-align: center;
     margin: auto;
     display: inline;
@@ -924,8 +956,8 @@ footer{
     grid-column: span 8;
     margin: 0;
     height: 1vw;
-    margin-top: 3.3vw;
-    font-size: 3vw;
+    margin-top: 7vw;
+    font-size: 7vw;
     color: rgb(0, 255, 0);
   }
 
@@ -1035,7 +1067,7 @@ footer{
   }
 
   #logo{
-    width: 15vw;
+    width: 24vw;
     display: inline;
     float: right;
   }
@@ -1071,7 +1103,6 @@ footer{
   .Load{
     color: rgb(255, 255, 255);
     font-weight: 1000;
-    margin-left: 40vw;
     padding-bottom: 10vw;
   }
 
@@ -1131,6 +1162,7 @@ footer{
 
   .membersec{
     grid-column: span 8;
+    margin-top: 7vw;
   }
 
   footer{
@@ -1180,4 +1212,51 @@ footer{
     margin: auto;
     display: inline;
   }
+
+  #secvids{
+    grid-column: span 22;
+    padding: 6vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #videoframe{
+    width: 72vw;
+    height: 40.5vw;
+  }
+
+  #Timesec{
+    width: 21vw;
+    height: 20vw;
+    text-align: center;
+    border-bottom-right-radius: 3vw;
+  }
+
+  #timeinfo{
+    font-size: 3vw;
+  }
+
+  #timee{
+    font-size: 3vw;
+  }
+
+  #specialheader{
+    grid-column: span 24;
+    margin-bottom: 8vw;
+    font-size: 7vw;
+  }
+
+  #specialheader2{
+    font-size: 5vw;
+    margin-bottom: 2vw;
+  }
+
+  #indexheader{
+    padding-top: 9vw;
+  }
+
+  #indextxt{
+    margin-top: 10vw;
+    font-size: 2vw;
+    width: 20vw;
 }

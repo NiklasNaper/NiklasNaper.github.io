@@ -32,7 +32,7 @@
         <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
         <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
         <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
-        <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>
+        <a class="Sidebarlink" href="Apply Membership.html">Apply For Membership</a>
       </div>
 
       <div id="main">
@@ -56,11 +56,13 @@
         }
       }
       </script>
+        <img id="logo" src="bilder/logo.png">
       <style id="stil">
 
       </style>
     </header>
     <main id="mainvids">
+      <h1 id="specialheader" class="commentheader">Video's on our channel</h1>
       <div class="Leftdivvid">
 
       </div>
@@ -111,15 +113,6 @@
             transition: 1s;
           }
           `
-          sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
-          <a class="Sidebarlink" href="Index.html">Home</a>
-          <a class="Sidebarlink" href="members.html">Members</a>
-          <a class="Sidebarlink" href="video's.html">Video's</a>
-          <a class="Sidebarlink" href="comments.html">Comments</a>
-          <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
-          <img id="Sidebarlogo" src="bilder/Logo1.png"></a>
-          <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
-          <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
           farge = "to";
         } else if (farge == "to") {
           css.innerHTML = `
@@ -128,19 +121,9 @@
             transition: 1s;
           }
           `
-          sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
-          <a class="Sidebarlink" href="Index.html">Home</a>
-          <a class="Sidebarlink" href="members.html">Members</a>
-          <a class="Sidebarlink" href="video's.html">Video's</a>
-          <a class="Sidebarlink" href="comments.html">Comments</a>
-          <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
-          <img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
-          <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
-          <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
           farge = "en";
         }
       }
-
       </script>
     </main>
 
