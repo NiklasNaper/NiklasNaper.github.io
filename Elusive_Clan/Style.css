@@ -515,6 +515,16 @@ header{
   position: fixed;
 }
 
+#iframeindex{
+  display: block;
+  margin: auto;
+  width: 72vw;
+  height: 40.5vw;
+  margin-bottom: 5vw;
+  margin-top: 40vw;
+  border: none;
+}
+
 footer{
   height: 3vw;
   position: fixed;
