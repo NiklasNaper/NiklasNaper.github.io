@@ -63,6 +63,11 @@ let nav = "Elusive1";
     var d = new Date();
     var year = d.getFullYear();
     var month = d.getMonth();
+    if (month <10) {
+      var mon = "0" + month;
+    } else {
+      var mon = month;
+    }
     var day = d.getDate();
     var hour = d.getHours();
     var minutes = d.getMinutes();
@@ -80,7 +85,7 @@ let nav = "Elusive1";
     } else {
       var mil = mill;
     }
-    var time = (year + "." + (month + 1) + "." + day + " - " + hour + ":" + minutes + ":" + sec + ":" + mil);
+    var time = (year + "." + (mon + 1) + "." + day + " - " + hour + ":" + minutes + ":" + sec + ":" + mil);
     timee.innerHTML = `${time}`;
   }
   </script>
