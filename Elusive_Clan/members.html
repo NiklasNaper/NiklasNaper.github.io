@@ -29,8 +29,9 @@
         <a class="Sidebarlink" href="members.html">Members</a>
         <a class="Sidebarlink" href="video's.html">Video's</a>
         <a class="Sidebarlink" href="comments.html">Comments</a>
-        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank"><img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
-          <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
+        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+        <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
+        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
         <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>
       </div>
       <div id="main">
@@ -38,6 +39,7 @@
       </div>
 
       <script>
+      //Litta javascript for å få navbaren til å fungere
     let nav = "Elusive1";
       function toggleNav() {
 
@@ -73,7 +75,7 @@
 
       </div>
       <div class="membersright">
-        <p id="Loadmem">Loading content...</p>
+        <p class="Load">Loading content...</p>
       </div>
     </main>
     <script type="text/javascript">
@@ -81,7 +83,7 @@
     const secmem = document.querySelector(".membersec")
     const db = firebase.database();
     const members = db.ref("Members");
-    const load = document.querySelector("#Loadmem");
+    const load = document.querySelector(".Load");
     const css = document.querySelector("#styling");
     const sidebar = document.querySelector(".sidebar");
 

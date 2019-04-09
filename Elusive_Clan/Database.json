@@ -5,8 +5,8 @@
       "Subscribers":51,
       "Skills":true,
       "YoutubeName":"Nazarfa",
-      "Kills":5600,
-      "KD":1.46,
+      "Kills":5859,
+      "KD":1.47,
       "Ppic":"https://yt3.ggpht.com/-uyHeuif9S9Q/AAAAAAAAAAI/AAAAAAAAAmw/_oqFw4peeJ0/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg"
 
 },
@@ -40,6 +40,15 @@
         "Kills": 5994,
         "KD": 2.03,
         "Ppic":"https://kaph.no/wp-content/uploads/2017/12/facebook-default-no-profile-pic.jpg"
+},
+        "ItzExt005":{
+          "Name":"ItzExt",
+          "Subscribers":0,
+          "Skills":true,
+          "YoutubeName":"nei",
+          "Kills": 9609,
+          "KD": 2.27,
+          "Ppic":"https://static-cdn.jtvnw.net/jtv_user_pictures/2c62b6fb-0c2c-4dfa-abbe-e3f45983fe23-profile_image-70x70.png"
 }
 
 
@@ -54,7 +63,7 @@
         "Comments":1,
         "Views":37,
         "Duration":0.46,
-        "Video URL":"https://www.youtube.com/watch?v=dSciKzkgEFo"
+        "Video URL":"https://www.youtube.com/embed/dSciKzkgEFo"
 
 },
 
@@ -66,7 +75,7 @@
         "Comments":1,
         "Views":56,
         "Duration":2.06,
-        "Video URL":"https://www.youtube.com/watch?v=CTEc1mwpUX4&t=34s"
+        "Video URL":"https://www.youtube.com/embed/CTEc1mwpUX4"
 
 },
 
@@ -78,7 +87,7 @@
         "Comments":2,
         "Views":33,
         "Duration":6.39,
-        "Video URL":"https://www.youtube.com/watch?v=zOjq_g7PSm8&t=87s"
+        "Video URL":"https://www.youtube.com/embed/zOjq_g7PSm8"
 
 },
 
@@ -90,19 +99,31 @@
         "Comments":2,
         "Views":49,
         "Duration":2.39,
-        "Video URL":"https://www.youtube.com/watch?v=ttunBoBX2xE&t=10s"
+        "Video URL":"https://www.youtube.com/embed/ttunBoBX2xE"
 
 },
 
       "5":{
-        "Title":"Nazarfa Monatge 2 | Elsusive",
+        "Title":"Nazarfa Monatge | Elsusive",
         "Members":["Nazarfa"],
         "Likes":8,
         "Dislikes":0,
         "Comments":3,
         "Views":38,
         "Duration":1.14,
-        "Video URL":"https://www.youtube.com/watch?v=ZHOXdyHLC8U"
+        "Video URL":"https://www.youtube.com/embed/ZHOXdyHLC8U"
+
+},
+
+        "6":{
+          "Title":"Nazarfa Monatge 2 | Elsusive",
+          "Members":["Nazarfa"],
+          "Likes":9,
+          "Dislikes":0,
+          "Comments":5,
+          "Views":52,
+          "Duration":2.15,
+          "Video URL":"https://www.youtube.com/embed/O9P1NblsmLk"
 
 }
 },

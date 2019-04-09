@@ -29,7 +29,9 @@
         <a class="Sidebarlink" href="members.html">Members</a>
         <a class="Sidebarlink" href="video's.html">Video's</a>
         <a class="Sidebarlink" href="comments.html">Comments</a>
-        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank"><img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
+        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+        <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
+        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
         <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>
       </div>
 
@@ -38,6 +40,7 @@
       </div>
 
       <script>
+      //Litta javascript for å få navbaren til å fungere
     let nav = "Elusive1";
       function toggleNav() {
 
@@ -53,7 +56,94 @@
         }
       }
       </script>
+      <style id="stil">
+
+      </style>
     </header>
+    <main id="mainvids">
+      <div class="Leftdivvid">
+
+      </div>
+      <section id="vidsec">
+
+      </section>
+      <div class="Rightdivvid">
+        <p class="Load">Loading content...</p>
+      </div>
+      <script type="text/javascript">
+
+      const db = firebase.database();
+      const video = db.ref("Videoes");
+      const secvid = document.querySelector("#vidsec");
+      const load = document.querySelector(".Load");
+      const css = document.querySelector("#stil");
+      const sidebar = document.querySelector(".sidebar");
+
+
+      function visVids(snapshot){
+        let vidSnap = snapshot.val();
+        let key = snapshot.key;
+
+        secvid.innerHTML += `
+        <section id="secvids">
+        <iframe id="videoframe" src=${vidSnap["Video URL"]} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        `;
+        if (secvid.innerHTML != 0) {
+          load.innerHTML = ``;
+        }
+
+      }
+
+      function visAlle(){
+        secvid.innerHTML = ``;
+      video
+      .on("child_added",visVids)
+}
+      visAlle();
+
+      let farge = "en";
+      function nyTheme(){
+        if (farge == "en") {
+          css.innerHTML = `
+          #secvids{
+            background-color: black;
+            transition: 1s;
+          }
+          `
+          sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+          <a class="Sidebarlink" href="Index.html">Home</a>
+          <a class="Sidebarlink" href="members.html">Members</a>
+          <a class="Sidebarlink" href="video's.html">Video's</a>
+          <a class="Sidebarlink" href="comments.html">Comments</a>
+          <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+          <img id="Sidebarlogo" src="bilder/Logo1.png"></a>
+          <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
+          <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
+          farge = "to";
+        } else if (farge == "to") {
+          css.innerHTML = `
+          #secvids{
+            background-color: white;
+            transition: 1s;
+          }
+          `
+          sidebar.innerHTML = `<a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+          <a class="Sidebarlink" href="Index.html">Home</a>
+          <a class="Sidebarlink" href="members.html">Members</a>
+          <a class="Sidebarlink" href="video's.html">Video's</a>
+          <a class="Sidebarlink" href="comments.html">Comments</a>
+          <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+          <img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
+          <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
+          <a class="Sidebarlink" href="askelusive.html">Ask Elusive</a>`;
+          farge = "en";
+        }
+      }
+
+      </script>
+    </main>
+
     <footer>
 
     <div class="Footdiv">
