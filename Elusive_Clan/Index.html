@@ -37,7 +37,11 @@
   <div id="main">
     <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>
   </div>
-  <section id="timee"></section>
+  <section id="Timesec">
+      <p id="timeinfo">Current Time</p>
+      <section id="timee">
+      </section>
+  </section>
   <script>
     //Litta javascript for å få navbaren til å fungere
 let nav = "Elusive1";
@@ -55,7 +59,6 @@ let nav = "Elusive1";
     }
   }
   </script>
-
   <script>
   let timee = document.querySelector("#timee");
   setInterval(nextSpam, 1);
@@ -64,11 +67,16 @@ let nav = "Elusive1";
     var year = d.getFullYear();
     var month = d.getMonth();
     if (month <10) {
-      var mon = "0" + month;
+      var mon = "0" + (month + 1);
     } else {
-      var mon = month;
+      var mon = (month + 1);
     }
     var day = d.getDate();
+    if (day < 10) {
+      var dayy = "0" + day;
+    } else {
+      var dayy = day;
+    }
     var hour = d.getHours();
     var minutes = d.getMinutes();
     var second = d.getSeconds();
@@ -85,7 +93,7 @@ let nav = "Elusive1";
     } else {
       var mil = mill;
     }
-    var time = (year + "." + (mon + 1) + "." + day + " - " + hour + ":" + minutes + ":" + sec + ":" + mil);
+    var time = (year + "." + (mon) + "." + dayy + "    " + hour + ":" + minutes + ":" + sec + ":" + mil);
     timee.innerHTML = `${time}`;
   }
   </script>
