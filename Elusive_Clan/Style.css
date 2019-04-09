@@ -92,7 +92,7 @@ header{
   width: 17vw;
   display: block;
   margin: auto;
-  margin-top: 3vw;
+  margin-top: 1vw;
 }
 
 #askelusive{
@@ -257,12 +257,13 @@ header{
   font-size: 2vw;
 }
 
-#Load{
+.Load{
   color: rgb(255, 255, 255);
   font-weight: 1000;
   float: right;
   margin-right: 1vw;
   height: 0;
+  margin-top: 4vw;
 }
 
 #Leftdiv{
@@ -282,7 +283,7 @@ header{
   line-height: 4vw;
   display: inline;
   top: 0;
-  margin-top: 3.3vw;
+  margin-top: 1vw;
   font-size: 3vw;
   color: rgb(0, 255, 0);
 }
@@ -350,10 +351,6 @@ header{
   color: rgb(0, 255, 100);
 }
 
-#Loadmem{
-  color: white;
-  font-size: 1vw;
-}
 #mempic{
   width: 3vw;
 }
@@ -424,6 +421,39 @@ header{
   font-size: 1.1vw;
   margin: 0;
   margin-bottom: 0.6vw;
+}
+
+#mainvids{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 5vw;
+}
+
+#vidsec{
+  grid-column: span 22;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#secvids{
+  background-color: white;
+  margin: 1vw;
+  padding: 2vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  text-align: center;
+  border-radius: 2vw;
+}
+
+#videoframe{
+  width: 37vw;
+  height: 20.5vw;
+}
+
+#timee{
+  padding: 1vw;
+  font-family: monospace;
+  font-size: 1.2vw;
 }
 
 footer{
@@ -573,7 +603,7 @@ footer{
     width: 17vw;
     display: block;
     margin: auto;
-    margin-top: 3vw;
+    margin-top: 1vw;
   }
 
   #askelusive{
@@ -725,7 +755,7 @@ footer{
     font-size: 1.1vw;
   }
 
-  #Load{
+  .Load{
     color: rgb(255, 255, 255);
     font-weight: 1000;
     float: right;
@@ -855,7 +885,7 @@ footer{
     width: 17vw;
     display: block;
     margin: auto;
-    margin-top: 3vw;
+    margin-top: 1vw;
   }
 
   #askelusive{
@@ -1023,7 +1053,7 @@ footer{
     font-size: 2vw;
   }
 
-  #Load{
+  .Load{
     color: rgb(255, 255, 255);
     font-weight: 1000;
     margin-left: 40vw;
