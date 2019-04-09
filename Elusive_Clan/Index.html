@@ -29,15 +29,17 @@
     <a class="Sidebarlink" href="members.html">Members</a>
     <a class="Sidebarlink" href="video's.html">Video's</a>
     <a class="Sidebarlink" href="comments.html">Comments</a>
-    <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank"><img id="Sidebarlogo" src="bilder/Logo.jpg"></a>
+    <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+    <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
     <a id="askelusive" class="Sidebarlink" href="askelusive.html">Ask Elusive</a>
   </div>
 
   <div id="main">
     <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>
   </div>
-
+  <section id="timee"></section>
   <script>
+    //Litta javascript for å få navbaren til å fungere
 let nav = "Elusive1";
   function toggleNav() {
 
@@ -51,6 +53,35 @@ let nav = "Elusive1";
       document.getElementById("main").style.marginLeft = "0";
       nav = "Elusive1";
     }
+  }
+  </script>
+
+  <script>
+  let timee = document.querySelector("#timee");
+  setInterval(nextSpam, 1);
+  function nextSpam(){
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth();
+    var day = d.getDate();
+    var hour = d.getHours();
+    var minutes = d.getMinutes();
+    var second = d.getSeconds();
+    if (second < 10) {
+      var sec = "0" + second;
+    } else {
+      var sec = second;
+    }
+    var mill = d.getMilliseconds();
+    if (mill <10) {
+      var mil = "00" + mill;
+    } else if (mill <100) {
+      var mil = "0" + mill;
+    } else {
+      var mil = mill;
+    }
+    var time = (year + "." + (month + 1) + "." + day + " - " + hour + ":" + minutes + ":" + sec + ":" + mil);
+    timee.innerHTML = `${time}`;
   }
   </script>
 </header>
