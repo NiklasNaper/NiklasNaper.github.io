@@ -67,7 +67,8 @@
       <div class="membersleft">
           <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visAlle()"><p class="memSorttxt">All</p></button></p>
           <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visKD()"><p class="memSorttxt">Best KD</p></button></p>
-          <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visSubs()"><p class="memSorttxt">Most Subs</p></button></p>
+          <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visSubs()"><p class="memSorttxt">Most YTSubs</p></button></p>
+          <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visTSubs()"><p class="memSorttxt">Most TwitchSubs</p></button></p>
           <p class="buttonmemlineshift"><button class="memSort" type="button" name="button" onclick="visSkills()"><p class="memSorttxt">Skills</p></button></p></p>
           <p class="buttonmemlineshift"><button id="wierdbuttonmem" class="memSort" type="button" name="button" onclick="visKills()"><p class="memSorttxt">Most Kills</p></button></p>
       </div>
@@ -91,9 +92,12 @@
       let key = snapshot.key;
       let yt = "";
       let sub = "";
+      let tsub = "";
 
       if (memSnap.YoutubeName == ("nei")) {
-        yt = `<p id="nochan">No channel</p>`;
+        yt = `<p id="nochan">No YT channel</p>`;
+      } else if (memSnap.Twitch == ("Ja")) {
+        yt = `<p id="twitchchannel">Twitch:</p><p id="twitchname">${memSnap.Twitchname}</p>`;
       } else {
         yt = `<p id="ortxt">Youtubechannel:</p><p id="ytName">${memSnap.YoutubeName}</p>`;
       }
@@ -104,13 +108,20 @@
         sub = `<p id="subcount">Sub count:</p><p id="subamount">${memSnap.Subscribers}</p>`;
       }
 
+      if (memSnap.Tsubs == (0)) {
+        tsub = ``;
+      } else {
+        tsub = `<p id="tsub">Sub count:</p> <p id="tsubcount">${memSnap.Tsubs}</p>`;
+      }
+
       secmem.innerHTML += `
       <section id="onemember">
       <h1 id="memberName">${memSnap.Name}</h1>
       <p id="ortxtKD">KD:</p><p id="memKD">${memSnap.KD}</p>
-      <img id="mempic" src=${memSnap["Ppic"]}>
+      <img id="mempic" src=${memSnap["Ppic"]} title="Profilepicture">
       ${yt}
       ${sub}
+      ${tsub}
       <p id="specifyerkill">Kill Amount:</p><p id="killamount">${memSnap.Kills}</p>
       </section>
       `;
@@ -139,6 +150,14 @@
       secmem.innerHTML = ``;
       members
       .orderByChild("Subscribers")
+      .limitToLast(1)
+      .on("child_added",visMembers);
+    }
+
+    function visTSubs(){
+      secmem.innerHTML = ``;
+      members
+      .orderByChild("Tsubs")
       .limitToLast(1)
       .on("child_added",visMembers);
     }

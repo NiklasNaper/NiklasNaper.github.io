@@ -55,7 +55,7 @@ header{
 .Sidebarlink{
   padding: 1vw 2vw 1vw 2vw;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 2.1vw;
   color: #818181;
   display: block;
   transition: .3s;
@@ -362,7 +362,19 @@ header{
   font-size: 1.2vw;
   font-family: monospace;
   grid-column: span 7;
-  margin-left: 2vw;
+  margin-left: 5vw;
+}
+
+#tsub{
+  font-size: 1.2vw;
+  font-family: monospace;
+  grid-column: span 2;
+}
+
+#tsubcount{
+  font-size: 1.2vw;
+  font-family: monospace;
+  color: rgb(0, 255, 100);
 }
 
 #memKD{
@@ -490,17 +502,8 @@ header{
   text-align: center;
   font-size: 3vw;
   margin: 0;
-  padding: 2vw;
+  padding: 1vw;
   font-family: cursive;
-  color: rgb(255, 120, 0);
-}
-
-#indexheader2{
-  margin: 0;
-  margin-top: 1vw;
-  font-family: cursive;
-  text-align: center;
-  font-size: 2vw;
   color: rgb(255, 120, 0);
 }
 
@@ -510,7 +513,7 @@ header{
   font-weight: 1000;
   font-size: 1.1vw;
   width: 8vw;
-  margin-top: 2.5vw;
+  margin-top: 7vw;
   padding: 0.2vw;
   position: fixed;
 }
@@ -518,11 +521,38 @@ header{
 #iframeindex{
   display: block;
   margin: auto;
-  width: 72vw;
-  height: 40.5vw;
+  width: 70vw;
+  height: 39.4vw;
   margin-bottom: 5vw;
-  margin-top: 40vw;
+  margin-top: 39vw;
   border: none;
+  animation-name: T;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes T{
+  from {transform: translate(0, 0);}
+  to {transform: translate(0, -40vw);}
+}
+
+
+
+#twitchchannel{
+  font-family: monospace;
+  font-size: 1.2vw;
+  grid-column: span 2;
+  text-align: right;
+  margin-right: 1vw;
+}
+
+#twitchname{
+  font-family: monospace;
+  font-size: 1.2vw;
+  grid-column: span 2;
+  color: rgb(0, 255, 100);
 }
 
 footer{
@@ -633,9 +663,9 @@ footer{
   }
 
   .Sidebarlink{
-    padding: 0 2vw 1vw 2vw;
+    padding: 1vw 2vw 1vw 2vw;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 2.1vw;
     color: #818181;
     display: block;
     transition: .3s;
@@ -1146,13 +1176,14 @@ footer{
   }
 
   .memSort{
-    width: 20vw;
-    height: 7vw;
+    width: 12vw;
+    height: 4vw;
     margin: 0;
     margin-top: 2vw;
+    display: inline;
   }
 
-  #ortxt, #ytName, #subcount, #subamount, #specifyerkill, #nochan, #killamount, #ortxtKD, #memKD{
+  #ortxt, #ytName, #subcount, #subamount, #specifyerkill, #nochan, #killamount, #ortxtKD, #memKD, #tsub, #tsubcount, #twitchchannel, #twitchname{
     font-size: 2vw;
     font-family: monospace;
   }
@@ -1162,7 +1193,6 @@ footer{
   }
 
   .membersleft{
-    grid-column: span 0;
     position: fixed;
     bottom: 0;
     margin-bottom: 5vw;
@@ -1266,7 +1296,27 @@ footer{
   }
 
   #indextxt{
-    margin-top: 10vw;
+    margin-top: 14vw;
     font-size: 2vw;
     width: 20vw;
+}
+
+#iframeindex{
+  display: block;
+  margin: auto;
+  width: 70vw;
+  height: 39.4vw;
+  margin-bottom: 5vw;
+  margin-top: 72vw;
+  border: none;
+  animation-name: T;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes T{
+  from {transform: translate(0, 0);}
+  to {transform: translate(0, -45vw);}
 }

@@ -7,29 +7,38 @@
       "YoutubeName":"Nazarfa",
       "Kills":5859,
       "KD":1.47,
-      "Ppic":"https://yt3.ggpht.com/-uyHeuif9S9Q/AAAAAAAAAAI/AAAAAAAAAmw/_oqFw4peeJ0/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg"
+      "Ppic":"https://yt3.ggpht.com/-uyHeuif9S9Q/AAAAAAAAAAI/AAAAAAAAAmw/_oqFw4peeJ0/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg",
+      "Twitch":"Nei",
+      "Twitchname":"",
+      "Tsubs":0
 
 },
 
       "Jotto002":{
         "Name":"ELU Jotto",
-        "Subscribers":31,
+        "Subscribers":36,
         "Skills":true,
         "YoutubeName":"Jotto",
-        "Kills":7899,
-        "KD":2.49,
-        "Ppic":"https://yt3.ggpht.com/a-/AAuE7mC7emcnegfIuGfOw-2rvC_3pScWPWQJey0yzg=s288-mo-c-c0xffffffff-rj-k-no"
+        "Kills":8365,
+        "KD":2.44,
+        "Ppic":"https://yt3.ggpht.com/a-/AAuE7mC7emcnegfIuGfOw-2rvC_3pScWPWQJey0yzg=s288-mo-c-c0xffffffff-rj-k-no",
+        "Twitch":"Nei",
+        "Twitchname":"",
+        "Tsubs":0
 
 },
 
       "Tempel67003":{
         "Name":"Tempel67",
-        "Subscribers":110,
+        "Subscribers":112,
         "Skills":false,
         "YoutubeName":"ELU Shadow ツ",
-        "Kills": 4467,
-        "KD": 1.73,
-        "Ppic":"https://yt3.ggpht.com/a-/AAuE7mB-mFKk_vPzY1-QSCwl10q_zrPDPVlClYwZkA=s288-mo-c-c0xffffffff-rj-k-no"
+        "Kills": 4567,
+        "KD": 1.02,
+        "Ppic":"https://yt3.ggpht.com/a-/AAuE7mB-mFKk_vPzY1-QSCwl10q_zrPDPVlClYwZkA=s288-mo-c-c0xffffffff-rj-k-no",
+        "Twitch":"Nei",
+        "Twitchname":"",
+        "Tsubs":0
 },
 
         "Ghost004":{
@@ -39,16 +48,22 @@
         "YoutubeName":"nei",
         "Kills": 5994,
         "KD": 2.03,
-        "Ppic":"https://kaph.no/wp-content/uploads/2017/12/facebook-default-no-profile-pic.jpg"
+        "Ppic":"https://kaph.no/wp-content/uploads/2017/12/facebook-default-no-profile-pic.jpg",
+        "Twitch":"Nei",
+        "Twitchname":"",
+        "Tsubs":0
 },
         "ItzExt005":{
           "Name":"ItzExt",
           "Subscribers":0,
           "Skills":true,
-          "YoutubeName":"nei",
+          "YoutubeName":"neimentwitch",
           "Kills": 9609,
           "KD": 2.27,
-          "Ppic":"https://static-cdn.jtvnw.net/jtv_user_pictures/2c62b6fb-0c2c-4dfa-abbe-e3f45983fe23-profile_image-70x70.png"
+          "Ppic":"https://static-cdn.jtvnw.net/jtv_user_pictures/2c62b6fb-0c2c-4dfa-abbe-e3f45983fe23-profile_image-70x70.png",
+          "Twitch":"Ja",
+          "Twitchname":"ItzExt",
+          "Tsubs":82
 }
 
 
