@@ -1,3 +1,5 @@
+/* Har prøvd å holde så ryddig som mulig */
+/* Ps: på linje 576 er det en kul funksjon */
 *::selection{
   background-color: orange;
 }
@@ -43,7 +45,7 @@ header{
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.4s;
+  transition: 5s;
   padding-top: 1vw;
   text-align: center;
 }
@@ -53,7 +55,7 @@ header{
 }
 
 .Sidebarlink{
-  padding: 1vw 2vw 1vw 2vw;
+  padding: 1.5vw 2vw 1vw 2vw;
   text-decoration: none;
   font-size: 2.1vw;
   color: #818181;
@@ -331,28 +333,6 @@ header{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-#ortxt{
-  display: inline;
-  text-align: right;
-  margin: 0;
-  margin-top: 0.8vw;
-  margin-right: 0.2vw;
-  font-size: 1.2vw;
-  font-family: monospace;
-  grid-column: span 2;
-}
-
-#ytName{
-  display: inline;
-  text-align: left;
-  margin: 0;
-  margin-top: 0.8vw;
-  font-size: 1.2vw;
-  font-family: monospace;
-  grid-column: span 2;
-  color: rgb(0, 255, 100);
-}
-
 #mempic{
   width: 3vw;
 }
@@ -361,14 +341,15 @@ header{
   display: inline;
   font-size: 1.2vw;
   font-family: monospace;
-  grid-column: span 7;
-  margin-left: 5vw;
+  grid-column: span 6;
 }
 
 #tsub{
   font-size: 1.2vw;
   font-family: monospace;
   grid-column: span 2;
+  text-align: right;
+  margin-right: 1vw;
 }
 
 #tsubcount{
@@ -395,6 +376,8 @@ header{
   font-size: 1.2vw;
   font-family: monospace;
   grid-column: span 2;
+  text-align: right;
+  margin-right: 1vw;
 }
 
 #subamount{
@@ -402,16 +385,67 @@ header{
   font-family: monospace;
   color: rgb(0, 255, 100);
 }
+
 #specifyerkill{
   font-size: 1.2vw;
   font-family: monospace;
-  grid-column: span 2;
 }
 
 #killamount{
   font-size: 1.2vw;
   font-family: monospace;
-  color: rgb(189, 0, 255);
+  color: rgb(255, 0, 0);
+}
+
+#twitchchannel{
+  font-family: monospace;
+  font-size: 1.2vw;
+  grid-column: span 2;
+  text-align: right;
+  margin-right: 1vw;
+}
+
+#twitchname{
+  font-family: monospace;
+  font-size: 1.2vw;
+  grid-column: span 2;
+  color: rgb(0, 0, 255);
+}
+
+#Twitchchannelonly{
+  font-size: 1.2vw;
+  font-family: monospace;
+}
+
+#Youtubechannelonly{
+  font-size: 1.2vw;
+  font-family: monospace;
+}
+
+#YTnameonly{
+  font-family: monospace;
+  font-size: 1.2vw;
+  grid-column: span 2;
+  color: rgb(0, 255, 100);
+}
+
+#YTchannel{
+  font-size: 1.2vw;
+  font-family: monospace;
+}
+
+#YTnametoo{
+  font-family: monospace;
+  font-size: 1.2vw;
+  grid-column: span 2;
+  color: rgb(0, 255, 100);
+}
+
+#Twitchnametoo{
+  font-family: monospace;
+  font-size: 1.2vw;
+  grid-column: span 2;
+  color: rgb(0, 0, 255);
 }
 
 .memSort{
@@ -461,7 +495,7 @@ header{
 
 #videoframe{
   width: 37vw;
-  height: 20.5vw;
+  height: 20.8vw;
 }
 
 #timee{
@@ -518,41 +552,67 @@ header{
   position: fixed;
 }
 
+.Memberask{
+  text-align: center;
+  padding-top: 44vw;
+}
+
+#inpask{
+  width: 90%;
+  border-radius: 2vw;
+  outline: 0;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#sent{
+  margin: 0;
+  padding: 1vw;
+  text-align: center;
+  font-size: 3vw;
+  font-family: monospace;
+}
+
+#sent2{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.5vw;
+}
+
+#sent3{
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.5vw;
+}
+
+#membersubbtn{
+  border-radius: 2vw;
+  width: 4vw;
+  height: 1.5vw;
+}
+
 #iframeindex{
   display: block;
   margin: auto;
   width: 70vw;
   height: 39.4vw;
   margin-bottom: 5vw;
-  margin-top: 39vw;
+  margin-top: 44vw;
   border: none;
   animation-name: T;
   animation-duration: 3s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
 }
+
+/* Kul funksjon som får objekter til å gjøre animasjoner */
 
 @keyframes T{
   from {transform: translate(0, 0);}
-  to {transform: translate(0, -40vw);}
-}
-
-
-
-#twitchchannel{
-  font-family: monospace;
-  font-size: 1.2vw;
-  grid-column: span 2;
-  text-align: right;
-  margin-right: 1vw;
-}
-
-#twitchname{
-  font-family: monospace;
-  font-size: 1.2vw;
-  grid-column: span 2;
-  color: rgb(0, 255, 100);
+  to {transform: translate(0, -44vw);}
 }
 
 footer{
@@ -611,7 +671,7 @@ footer{
   background-color: grey;
 }
 /* LAPTOP*/
-@media(max-width: 1920px){
+@media screen and (max-width: 1920px){
   html{
     height: 100%;
     width: 100%;
@@ -653,7 +713,7 @@ footer{
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.4s;
+    transition: .5s;
     padding-top: 1vw;
     text-align: center;
   }
@@ -663,7 +723,7 @@ footer{
   }
 
   .Sidebarlink{
-    padding: 1vw 2vw 1vw 2vw;
+    padding: 1.5vw 2vw 1vw 2vw;
     text-decoration: none;
     font-size: 2.1vw;
     color: #818181;
@@ -904,7 +964,7 @@ footer{
   }
 }
 /*TELEFON */
-@media(max-width: 750px){
+@media screen and (max-width: 750px){
   header{
     position: fixed;
     z-index: 1;
@@ -922,7 +982,7 @@ footer{
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.4s;
+    transition: .5s;
     padding-top: 2vw;
     text-align: center;
   }
@@ -932,7 +992,7 @@ footer{
   }
 
   .Sidebarlink{
-    padding: 2vw 2vw 2vw 2vw;
+    padding: 3vw 2vw 3vw 2vw;
     text-decoration: none;
     font-size: 2vw;
     color: #818181;
@@ -1183,7 +1243,7 @@ footer{
     display: inline;
   }
 
-  #ortxt, #ytName, #subcount, #subamount, #specifyerkill, #nochan, #killamount, #ortxtKD, #memKD, #tsub, #tsubcount, #twitchchannel, #twitchname{
+  #subcount, #subamount, #specifyerkill, #nochan, #killamount, #ortxtKD, #memKD, #tsub, #tsubcount, #Twitchchannelonly, #twitchname, #Youtubechannelonly, #YTnameonly, #YTchannel, #YTnametoo, #Twitchchannel, #Twitchnametoo{
     font-size: 2vw;
     font-family: monospace;
   }
@@ -1303,20 +1363,22 @@ footer{
 
 #iframeindex{
   display: block;
-  margin: auto;
+  right: 0;
   width: 70vw;
   height: 39.4vw;
   margin-bottom: 5vw;
-  margin-top: 72vw;
+  margin-top: 120vw;
   border: none;
   animation-name: T;
   animation-duration: 3s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
 }
+
+/* Kul funksjon som får objekter til å gjøre animasjoner */
 
 @keyframes T{
   from {transform: translate(0, 0);}
-  to {transform: translate(0, -45vw);}
+  to {transform: translate(0, -80vw);}
 }

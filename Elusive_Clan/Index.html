@@ -31,13 +31,13 @@
     <a class="Sidebarlink" href="comments.html">Comments</a>
     <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
     <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
-    <a id="askelusive" class="Sidebarlink" href="Apply Membership.html">Apply For Membership</a>
+    <a id="askelusive" class="Sidebarlink" href="ApplyMembership.html">Apply For Membership</a>
   </div>
 
   <div id="main">
     <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>
   </div>
-      <img id="logo" src="bilder/logo.png">
+      <a href="Index.html"> <img id="logo" src="bilder/logo.png"></a>
   <section id="Timesec">
       <p id="timeinfo">Current Time</p>
       <section id="timee">
@@ -61,7 +61,7 @@ let nav = "Elusive1";
   }
   </script>
   <script>
-
+//En litt morsom ting jeg fant ut. Den var ikke egt viktig å ha med men jeg tenkte det ville være kult
   let timee = document.querySelector("#timee");
   setInterval(nextSpam, 1);
   function nextSpam(){
@@ -100,10 +100,10 @@ let nav = "Elusive1";
   }
   </script>
 </header>
-<main>
+<main id="indexmain">
   <h1 id="indexheader">Welcome To Our Website!</h1>
   <p id="indextxt">If you want to apply for membership, look in the sidebar above.</p>
-  <iframe id="iframeindex" src="https://www.youtube.com/embed/ttunBoBX2xE" autoplay; picture-in-picture" allowfullscreen>
+  <iframe id="iframeindex" src="https://www.youtube.com/embed/ttunBoBX2xE" autoplay; "picture-in-picture" allowfullscreen>
   </iframe>
 </main>
 <footer>

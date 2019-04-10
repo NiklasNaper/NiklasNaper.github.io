@@ -20,7 +20,7 @@
   firebase.initializeApp(config);
 </script>
   </head>
-  <body class="Underside">
+  <body>
     <header>
       <!-- Her kommer headeren som jeg kopierte fra (har bare endra litt): https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar -->
       <div id="mySidebar" class="sidebar">
@@ -31,7 +31,7 @@
         <a class="Sidebarlink" href="comments.html">Comments</a>
         <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
         <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
-        <a class="Sidebarlink" href="Apply Membership.html">Apply For Membership</a>
+        <a class="Sidebarlink" href="ApplyMembership.html">Apply For Membership</a>
       </div>
 
       <div id="main">
@@ -55,7 +55,20 @@
         }
       }
       </script>
+      <a href="Index.html"> <img id="logo" src="bilder/logo.png"></a>
     </header>
+    <main id="membershipmain">
+      <div class="leftmembership">
+      </div>
+      <form class="Memberask" action="Sent.html" method="post">
+        <input id="inpask" type="text" placeholder="Why would you like to join our clan?" title="Write here">
+        <button id="membersubbtn" type="submit">Send</button>
+      </form>
+      <div class="rightmembership">
+      </div>
+
+
+    </main>
     <footer>
 
     <div class="Footdiv">

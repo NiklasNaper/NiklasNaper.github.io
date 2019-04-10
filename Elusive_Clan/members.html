@@ -32,7 +32,7 @@
         <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
         <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
         <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
-        <a class="Sidebarlink" href="Apply Membership.html">Apply For Membership</a>
+        <a class="Sidebarlink" href="ApplyMembership.html">Apply For Membership</a>
       </div>
       <div id="main">
         <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>
@@ -55,7 +55,7 @@
         }
       }
       </script>
-      <img id="logo" src="bilder/logo.png">
+      <a href="Index.html"> <img id="logo" src="bilder/logo.png"></a>
       <style id="styling">
 
       </style>
@@ -80,7 +80,7 @@
       </div>
     </main>
     <script type="text/javascript">
-
+//Konster som definerer forskjellige objekter
     const secmem = document.querySelector(".membersec")
     const db = firebase.database();
     const members = db.ref("Members");
@@ -94,26 +94,34 @@
       let sub = "";
       let tsub = "";
 
-      if (memSnap.YoutubeName == ("nei")) {
-        yt = `<p id="nochan">No YT channel</p>`;
-      } else if (memSnap.Twitch == ("Ja")) {
-        yt = `<p id="twitchchannel">Twitch:</p><p id="twitchname">${memSnap.Twitchname}</p>`;
-      } else {
-        yt = `<p id="ortxt">Youtubechannel:</p><p id="ytName">${memSnap.YoutubeName}</p>`;
-      }
+//Noen if setninger for å få printa ut kanaler riktig.
 
+      if (memSnap.YTchannel == ("nei")) {
+        if (memSnap.Twitch == ("nei")) {
+          yt = `<p id="nochan">No Channel</p>`;
+        } else {
+          yt = `<p id="Twitchchannelonly">Twitch:</p><p id="twitchname">${memSnap.Twitchname}</p>`;
+}
+    } else {
+        if (memSnap.Twitch == ("nei")) {
+          yt = `<p id="Youtubechannelonly">Youtube:</p><p id="YTnameonly">${memSnap.YoutubeName}</p>`;
+        } else {
+          yt = `<p id="YTchannel">Youtube:</p><p id="YTnametoo">${memSnap.YoutubeName}</p><p id="Twitchchannel">Twitch:</p><p id="Twitchnametoo">${memSnap.Twitchname}</p>`;
+      }
+}
+//If setning som definerer hvor mange yt subs man har
       if (memSnap.Subscribers == (0)) {
         sub = ``;
       } else {
         sub = `<p id="subcount">Sub count:</p><p id="subamount">${memSnap.Subscribers}</p>`;
       }
-
+//If setning som definerer hvor mange twitch subs man har
       if (memSnap.Tsubs == (0)) {
         tsub = ``;
       } else {
         tsub = `<p id="tsub">Sub count:</p> <p id="tsubcount">${memSnap.Tsubs}</p>`;
       }
-
+//selve funkjsonen som printer ut
       secmem.innerHTML += `
       <section id="onemember">
       <h1 id="memberName">${memSnap.Name}</h1>
@@ -122,7 +130,7 @@
       ${yt}
       ${sub}
       ${tsub}
-      <p id="specifyerkill">Kill Amount:</p><p id="killamount">${memSnap.Kills}</p>
+      <p id="specifyerkill">Kills:</p><p id="killamount">${memSnap.Kills}</p>
       </section>
       `;
 
@@ -189,23 +197,8 @@
           transition: 1s;
           background-color: black;
         }
-        #nochan{
-          transition: 1s;
-          color: white;
-        }
-        #specifyerkill{
-          transition: 1s;
-          color: white;
-        }
-        #ortxt, #ytName, #subcount, #subamount{
-          transition: 1s;
-          color: white;
-        }
-        #killamount{
-          transition: 1s;
-          color: white;
-        }
-        #ortxtKD, #memKD{
+
+        #Twitchchannelonly, #Youtubechannelonly, #subcount, #ortxtKD, #tsub, #nochan, #specifyerkill, #YTchannel, #Twitchchannel{
           transition: 1s;
           color: white;
         }
@@ -218,26 +211,12 @@
           transition: 1s;
           background-color: white;
         }
-        #nochan{
-          transition: 1s;
-          color: black;
-        }
-        #specifyerkill{
-          transition: 1s;
-          color: black;
-        }
-        #ortxt, #ytName, #subcount, #subamount{
+
+        #Twitchchannelonly, #Youtubechannelonly, #subcount, #ortxtKD, #tsub, #nochan, #specifyerkill, #YTchannel, #Twitchchannel{
           transition: 1s;
           color: black;
           }
-        #killamount{
-          transition: 1s;
-          color: black;
-        }
-        #ortxtKD, #memKD{
-          transition: 1s;
-          color: black;
-        }`
+          `
         farge = "en";
       }
     }

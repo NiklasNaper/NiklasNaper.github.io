@@ -19,7 +19,7 @@
   firebase.initializeApp(config);
 </script>
   </head>
-  <body class="Underside">
+  <body>
 
     <header id="header">
       <!-- Her kommer headeren som jeg kopierte fra: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar -->
@@ -32,7 +32,7 @@
         <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
         <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
         <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
-        <a class="Sidebarlink" href="Apply Membership.html">Apply For Membership</a>
+        <a class="Sidebarlink" href="ApplyMembership.html">Apply For Membership</a>
       </div>
       <div id="main">
         <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>
@@ -55,7 +55,7 @@
         }
       }
       </script>
-      <img id="logo" src="bilder/logo.png">
+      <a href="Index.html"> <img id="logo" src="bilder/logo.png"></a>
       <style id="Style">
       </style>
     </header>
@@ -81,7 +81,7 @@
 
     </main>
     <script type="text/javascript">
-    //Lager en variabel for sectionen der commentsene skal ligge
+//Konster som definerer forskjellige objekter
     const seccom = document.querySelector(".Comments");
     //refererer til databasen
     const db = firebase.database();
@@ -91,7 +91,7 @@
     const foot = document.querySelector(".footer");
     const load = document.querySelector(".Load");
     const left = document.querySelector("#Leftdiv");
-
+//selve funkjsonen som printer ut
     function visComments(snapshot){
       //javascript funksjon som skriver ut kommentarene på nettsiden
       let comSnap = snapshot.val();
