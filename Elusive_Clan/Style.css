@@ -44,7 +44,7 @@ header{
   background-color: #111;
   overflow-x: hidden;
   transition: 0.4s;
-  padding-top: 2.7vw;
+  padding-top: 1vw;
   text-align: center;
 }
 
@@ -53,7 +53,7 @@ header{
 }
 
 .Sidebarlink{
-  padding: 0 2vw 3vw 2vw;
+  padding: 1vw 2vw 1vw 2vw;
   text-decoration: none;
   font-size: 2vw;
   color: #818181;
@@ -624,7 +624,7 @@ footer{
     background-color: #111;
     overflow-x: hidden;
     transition: 0.4s;
-    padding-top: 2.7vw;
+    padding-top: 1vw;
     text-align: center;
   }
 
@@ -633,7 +633,7 @@ footer{
   }
 
   .Sidebarlink{
-    padding: 0 2vw 3vw 2vw;
+    padding: 0 2vw 1vw 2vw;
     text-decoration: none;
     font-size: 2vw;
     color: #818181;
@@ -893,7 +893,7 @@ footer{
     background-color: #111;
     overflow-x: hidden;
     transition: 0.4s;
-    padding-top: 2.7vw;
+    padding-top: 2vw;
     text-align: center;
   }
 
@@ -902,7 +902,7 @@ footer{
   }
 
   .Sidebarlink{
-    padding: 0 2vw 3vw 2vw;
+    padding: 2vw 2vw 2vw 2vw;
     text-decoration: none;
     font-size: 2vw;
     color: #818181;
