@@ -55,7 +55,7 @@ header{
 }
 
 .Sidebarlink{
-  padding: 1.5vw 2vw 1vw 2vw;
+  padding: 1.3vw 2vw 1vw 2vw;
   text-decoration: none;
   font-size: 2.1vw;
   color: #818181;
@@ -552,9 +552,48 @@ header{
   position: fixed;
 }
 
+#indexsubcount{
+  text-align: center;
+  font-family: cursive;
+  font-weight: 1000;
+  font-size: 1.1vw;
+  width: 8vw;
+  padding: 0.2vw;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 7vw;
+}
+
+#indexsubamount{
+  text-align: center;
+  font-family: cursive;
+  font-weight: 1000;
+  font-size: 2vw;
+  text-align: center;
+  width: 8vw;
+  bottom: 0;
+  margin-bottom: 4vw;
+  padding: 0.2vw;
+  position: fixed;
+  color: red;
+}
+
+#indexsubs{
+  border-style: solid;
+  position: fixed;
+  bottom: 0;
+  width: 9vw;
+  height: 10vw;
+  border-color: rgb(255, 120, 0);
+}
+
 .Memberask{
   text-align: center;
-  padding-top: 44vw;
+  padding-top: 20vw;
+  margin-top: 10%;
+  width: 80%;
+  background-color: white;
+  margin: auto;
 }
 
 #inpask{
@@ -723,7 +762,7 @@ footer{
   }
 
   .Sidebarlink{
-    padding: 1.5vw 2vw 1vw 2vw;
+    padding: 1.3vw 2vw 1vw 2vw;
     text-decoration: none;
     font-size: 2.1vw;
     color: #818181;
