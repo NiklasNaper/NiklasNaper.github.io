@@ -110,7 +110,7 @@
       } else {
         heart = `<p></p>`;
     }
-      seccom.innerHTML +=`
+      seccom.innerHTML += `
       <section class="comments">
       <h1 id="comName">${comSnap.Profile}</h1>
       <img id="compic" src=${comSnap["Ppic"]}>
@@ -149,6 +149,67 @@
         left.innerHTML = ``;
       }
     }
+
+    function visComments2(snapshot){
+      //javascript funksjon som skriver ut kommentarene på nettsiden
+      let comSnap = snapshot.val();
+      let key = snapshot.key;
+      let heart = "";
+      let likes = "";
+
+      if (comSnap.Likes == 1) {
+        likes = `<p id="comliketxt2">Like</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+      } else {
+        likes = `<p id="comliketxt3">Likes</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+      }
+
+    if (comSnap.Heart == ("true")) {
+        heart = `<p id="comheart"> ${comSnap.Hearttxt}</p>`;
+      } else {
+        heart = `<p></p>`;
+    }
+      seccom.innerHTML = `
+      <section class="comments">
+      <h1 id="comName">${comSnap.Profile}</h1>
+      <img id="compic" src=${comSnap["Ppic"]}>
+      ${heart}
+      ${likes}
+      <p id="comtxt">${comSnap.Text}</p>
+      </section>
+      `
+      + seccom.innerHTML;
+      
+      if (seccom != 0) {
+        load.innerHTML = ``;
+      }
+      //Prøvde meg på noe men det funka ikke
+      if (seccom.innerHTML == ``) {
+        foot.innerHTML = ``;
+      }
+      //Prøvde meg på enda en ting men det funka heller ikke ;(
+      if (seccom.innerHTML == 0) {
+        css.innerHTML += `
+        .Comments{
+          background-color: none;
+        }
+        footer{
+          display: none;
+        }
+        `;
+      }
+      if (seccom.innerHTML != ``) {
+        css.innerHTML += `
+        html{
+          height: 100%;
+          bottom: 0;
+        }
+        `;
+      }
+      if (seccom.innerHTML == 0) {
+        left.innerHTML = ``;
+      }
+    }
+
     //funksjoner som kaller ut innhold fra databasen
     function visAlle(){
       seccom.innerHTML = ``;
@@ -169,7 +230,7 @@
       comment
       .orderByChild("Likes")
       .limitToLast(5)
-      .on("child_added",visComments);
+      .on("child_added",visComments2);
     }
 
     function visElusive(){
