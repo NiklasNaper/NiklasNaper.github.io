@@ -21,7 +21,9 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
+  width: 100%;
   top: 0;
+  position: absolute;
 }
 
 button{
@@ -588,12 +590,13 @@ header{
 }
 
 .Memberask{
+  position: relative;
   text-align: center;
   padding-top: 20vw;
+  margin: auto;
   margin-top: 10%;
   width: 80%;
   background-color: white;
-  margin: auto;
 }
 
 #inpask{
@@ -728,7 +731,9 @@ footer{
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100%;
+    width: 100%;
     top: 0;
+    position: absolute;
   }
 
   button{
