@@ -678,7 +678,7 @@ header{
 }
 
 footer{
-  height: 3vw;
+  height: 2vw;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -691,7 +691,7 @@ footer{
   font-family: sans-serif;
   color: rgb(255, 255, 255);
   margin: 0;
-  font-size: 1.7vw;
+  font-size: 1.3vw;
   display: inline-block;
   margin: auto;
 }
@@ -699,18 +699,17 @@ footer{
 #venstre{
   float: left;
   margin: 0;
-  font-size: 2vw;
+  font-size: 1.4vw;
 }
 
 #høyre{
   float: right;
   margin: 0;
-  font-size: 2vw;
+  font-size: 1.4vw;
 }
 
 .Footlink{
   text-decoration: none;
-  width: inherit;
   font-weight: 1000;
   color: rgb(255, 255, 255);
   margin: 0;
@@ -981,7 +980,7 @@ footer{
   }
 
   footer{
-    height: 3vw;
+    height: 2vw;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -994,26 +993,24 @@ footer{
     font-family: sans-serif;
     color: rgb(255, 255, 255);
     margin: 0;
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     display: inline-block;
-    margin: auto;
   }
 
   #venstre{
     float: left;
     margin: 0;
-    font-size: 2vw;
+    font-size: 1.4vw;
   }
 
   #høyre{
     float: right;
     margin: 0;
-    font-size: 2vw;
+    font-size: 1.4vw;
   }
 
   .Footlink{
     text-decoration: none;
-    width: inherit;
     font-weight: 1000;
     color: rgb(255, 255, 255);
     margin: 0;
@@ -1335,7 +1332,7 @@ footer{
     text-align: center;
     font-size: 3vw;
     font-family: monospace;
-    margin-top: 10vw; 
+    margin-top: 10vw;
   }
 
   footer{
