@@ -57,7 +57,7 @@ header{
 }
 
 .Sidebarlink{
-  padding: 2vw 2vw 1vw 2vw;
+  padding: 1.5vw 2vw 1vw 2vw;
   text-decoration: none;
   font-size: 2.1vw;
   color: #818181;
@@ -97,7 +97,8 @@ header{
   width: 17vw;
   display: block;
   margin: auto;
-  margin-top: 2vw;
+  margin-top: 1vw;
+  margin-bottom: 0.8vw;
 }
 
 #askelusive{
@@ -786,7 +787,7 @@ footer{
   }
 
   .Sidebarlink{
-    padding: 2vw 2vw 1vw 2vw;
+    padding: 1.5vw 2vw 1vw 2vw;
     text-decoration: none;
     font-size: 2.1vw;
     color: #818181;
@@ -826,7 +827,8 @@ footer{
     width: 17vw;
     display: block;
     margin: auto;
-    margin-top: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 0.8vw;
   }
 
   #askelusive{
@@ -1093,7 +1095,8 @@ footer{
     width: 17vw;
     display: block;
     margin: auto;
-    margin-top: 4vw;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
   }
 
   #askelusive{
