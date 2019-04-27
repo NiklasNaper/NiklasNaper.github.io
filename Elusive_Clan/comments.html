@@ -96,6 +96,7 @@
       //javascript funksjon som skriver ut kommentarene på nettsiden
       let comSnap = snapshot.val();
       let key = snapshot.key;
+      let parent = snapshot.ref.parent.key;
       let heart = "";
       let likes = "";
 
@@ -117,6 +118,7 @@
       ${heart}
       ${likes}
       <p id="comtxt">${comSnap.Text}</p>
+      <a id="BigComLink" target="_blank" href="oneComment.html?key=${key}&parent=${parent}">Bigger</a>
       </section>
       `;
       if (seccom != 0) {
@@ -154,6 +156,7 @@
       //javascript funksjon som skriver ut kommentarene på nettsiden
       let comSnap = snapshot.val();
       let key = snapshot.key;
+      let parent = snapshot.ref.parent.key;
       let heart = "";
       let likes = "";
 

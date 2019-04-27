@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kommentar</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon" href="bilder/logoo.jpg">
+    <script>
+      var config = {
+        apiKey: "AIzaSyChu0j-D58IEdyXwmJdza06qT8EqUY5XCU",
+        authDomain: "elusive-clan.firebaseapp.com",
+        databaseURL: "https://elusive-clan.firebaseio.com",
+        projectId: "elusive-clan",
+        storageBucket: "",
+        messagingSenderId: "304205795447"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+
+<header>
+
+</header>
+
+<main>
+  <section class="loading">
+    <p id="bigcomload">Loading comment...</p>
+  </section>
+
+  <section class="Comments">
+
+  </section>
+
+
+  <script type="text/javascript">
+
+    const main = document.querySelector("main");
+    const seccom = document.querySelector(".Comments");
+    const load = document.querySelector(".loading");
+
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    let parent = url.searchParams.get("parent");
+    let key = url.searchParams.get("key");
+
+    console.log(key,parent);
+
+    const db = firebase.database();
+    const valgtComment = db.ref(parent+"/"+key);
+
+    valgtComment.on("value",visComments);
+
+    function visComments(snapshot){
+      //javascript funksjon som skriver ut kommentarene på nettsiden
+      let comSnap = snapshot.val();
+      let key = snapshot.key;
+      let heart = "";
+      let likes = "";
+
+      if (comSnap.Likes == 1) {
+        likes = `<p id="comliketxt2">Like</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+      } else {
+        likes = `<p id="comliketxt3">Likes</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+      }
+
+    if (comSnap.Heart == ("true")) {
+        heart = `<p id="comheart"> ${comSnap.Hearttxt}</p>`;
+      } else {
+        heart = `<p></p>`;
+    }
+      seccom.innerHTML += `
+      <section class="comments">
+      <h1 id="comName">${comSnap.Profile}</h1>
+      <img id="compic" src=${comSnap["Ppic"]}>
+      ${heart}
+      ${likes}
+      <p id="comtxt">${comSnap.Text}</p>
+      </section>
+      `;
+      if (seccom != 0) {
+        load.innerHTML = ``;
+      }
+
+    }
+
+  </script>
+</main>
+  </body>
+</html>

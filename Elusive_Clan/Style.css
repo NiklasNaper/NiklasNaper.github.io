@@ -670,6 +670,13 @@ header{
   animation-timing-function: ease-out;
 }
 
+#bigcomload{
+  font-size: 3vw;
+  margin-left: 10vw;
+  margin-top: 3vw;
+  font-family: monospace;
+}
+
 /* Kul funksjon som får objekter til å gjøre animasjoner */
 
 @keyframes T{
@@ -1335,7 +1342,7 @@ footer{
     text-align: center;
     font-size: 3vw;
     font-family: monospace;
-    margin-top: 10vw; 
+    margin-top: 10vw;
   }
 
   footer{
