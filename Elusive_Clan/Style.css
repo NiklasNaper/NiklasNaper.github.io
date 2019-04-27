@@ -57,7 +57,7 @@ header{
 }
 
 .Sidebarlink{
-  padding: 2vw 2vw 1vw 2vw;
+  padding: 1.5vw 2vw 1vw 2vw;
   text-decoration: none;
   font-size: 2.1vw;
   color: #818181;
@@ -97,7 +97,8 @@ header{
   width: 17vw;
   display: block;
   margin: auto;
-  margin-top: 2vw;
+  margin-top: 1vw;
+  margin-bottom: 0.8vw;
 }
 
 #askelusive{
@@ -685,7 +686,7 @@ header{
 }
 
 footer{
-  height: 3vw;
+  height: 2vw;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -698,7 +699,7 @@ footer{
   font-family: sans-serif;
   color: rgb(255, 255, 255);
   margin: 0;
-  font-size: 1.7vw;
+  font-size: 1.3vw;
   display: inline-block;
   margin: auto;
 }
@@ -706,18 +707,17 @@ footer{
 #venstre{
   float: left;
   margin: 0;
-  font-size: 2vw;
+  font-size: 1.4vw;
 }
 
 #høyre{
   float: right;
   margin: 0;
-  font-size: 2vw;
+  font-size: 1.4vw;
 }
 
 .Footlink{
   text-decoration: none;
-  width: inherit;
   font-weight: 1000;
   color: rgb(255, 255, 255);
   margin: 0;
@@ -794,7 +794,7 @@ footer{
   }
 
   .Sidebarlink{
-    padding: 2vw 2vw 1vw 2vw;
+    padding: 1.5vw 2vw 1vw 2vw;
     text-decoration: none;
     font-size: 2.1vw;
     color: #818181;
@@ -834,7 +834,8 @@ footer{
     width: 17vw;
     display: block;
     margin: auto;
-    margin-top: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 0.8vw;
   }
 
   #askelusive{
@@ -988,7 +989,7 @@ footer{
   }
 
   footer{
-    height: 3vw;
+    height: 2vw;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -1001,26 +1002,24 @@ footer{
     font-family: sans-serif;
     color: rgb(255, 255, 255);
     margin: 0;
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     display: inline-block;
-    margin: auto;
   }
 
   #venstre{
     float: left;
     margin: 0;
-    font-size: 2vw;
+    font-size: 1.4vw;
   }
 
   #høyre{
     float: right;
     margin: 0;
-    font-size: 2vw;
+    font-size: 1.4vw;
   }
 
   .Footlink{
     text-decoration: none;
-    width: inherit;
     font-weight: 1000;
     color: rgb(255, 255, 255);
     margin: 0;
@@ -1103,7 +1102,8 @@ footer{
     width: 17vw;
     display: block;
     margin: auto;
-    margin-top: 4vw;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
   }
 
   #askelusive{
