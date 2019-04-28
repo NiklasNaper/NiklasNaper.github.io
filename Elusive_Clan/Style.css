@@ -678,6 +678,20 @@ header{
   font-family: monospace;
 }
 
+#BigComLink{
+  font-size: 1vw;
+  font-family: monospace;
+  text-decoration: none;
+  color: black;
+}
+
+#BigComLink:hover{
+  font-size: 1vw;
+  font-family: monospace;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
 /* Kul funksjon som får objekter til å gjøre animasjoner */
 
 @keyframes T{

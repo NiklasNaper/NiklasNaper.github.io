@@ -97,8 +97,6 @@
       let comSnap = snapshot.val();
       let key = snapshot.key;
       let parent = snapshot.ref.parent.key;
-      let heart = "";
-      let likes = "";
 
       if (comSnap.Likes == 1) {
         likes = `<p id="comliketxt2">Like</p> <p id="comliketxt">${comSnap.Likes}</p>`;
@@ -113,12 +111,14 @@
     }
       seccom.innerHTML += `
       <section class="comments">
-      <h1 id="comName">${comSnap.Profile}</h1>
+      <h1 id="comName">${comSnap.Profile}
+      <br>
+      <a id="BigComLink" target="_blank" href="oneComment.html?key=${key}&parent=${parent}">Bigger</a>
+      </h1>
       <img id="compic" src=${comSnap["Ppic"]}>
       ${heart}
       ${likes}
       <p id="comtxt">${comSnap.Text}</p>
-      <a id="BigComLink" target="_blank" href="oneComment.html?key=${key}&parent=${parent}">Bigger</a>
       </section>
       `;
       if (seccom != 0) {
