@@ -25,6 +25,10 @@
 </header>
 
 <main>
+  <section id="comHeaderBig">
+    <h1 id="BigComOne">Big Comment on Elusive Clan</h1>
+  </section>
+
   <section class="loading">
     <p id="bigcomload">Loading comment...</p>
   </section>
@@ -36,6 +40,7 @@
 
   <script type="text/javascript">
 
+    const BigComh1 = document.querySelector("#comHeaderBig");
     const main = document.querySelector("main");
     const seccom = document.querySelector(".Comments");
     const load = document.querySelector(".loading");
@@ -60,9 +65,9 @@
       let likes = "";
 
       if (comSnap.Likes == 1) {
-        likes = `<p id="comliketxt2">Like</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+        likes = `<p id="comliketxt">${comSnap.Likes}</p> <p id="comliketxt2">Like</p> `;
       } else {
-        likes = `<p id="comliketxt3">Likes</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+        likes = `<p id="comliketxt">${comSnap.Likes}</p> <p id="comliketxt3">Likes</p>`;
       }
 
     if (comSnap.Heart == ("true")) {
@@ -71,16 +76,20 @@
         heart = `<p></p>`;
     }
       seccom.innerHTML += `
-      <section class="comments">
-      <h1 id="comName">${comSnap.Profile}</h1>
-      <img id="compic" src=${comSnap["Ppic"]}>
+      <section class="bigComments">
+      <h1 id="bigcomName">${comSnap.Profile}</h1>
+      <img id="bigcompic" src=${comSnap["Ppic"]}>
       ${heart}
       ${likes}
-      <p id="comtxt">${comSnap.Text}</p>
+      <p id="bigComTXT">${comSnap.Text}</p>
       </section>
       `;
       if (seccom != 0) {
         load.innerHTML = ``;
+      }
+      //prøvde på noe som ikke fungerer jeg vet kke hvorfor for i mitt hode gir det mening at det skal fungere.
+      if (seccom == 0) {
+        BigComh1.innerHTML = `<h1 id="BigComOne"></h1>`;
       }
 
     }

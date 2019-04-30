@@ -99,9 +99,9 @@
       let parent = snapshot.ref.parent.key;
 
       if (comSnap.Likes == 1) {
-        likes = `<p id="comliketxt2">Like</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+        likes = `<p id="comliketxt">${comSnap.Likes}</p> <p id="comliketxt2">Like</p> `;
       } else {
-        likes = `<p id="comliketxt3">Likes</p> <p id="comliketxt">${comSnap.Likes}</p>`;
+        likes = `<p id="comliketxt">${comSnap.Likes}</p> <p id="comliketxt3">Likes</p>`;
       }
 
     if (comSnap.Heart == ("true")) {
@@ -113,7 +113,7 @@
       <section class="comments">
       <h1 id="comName">${comSnap.Profile}
       <br>
-      <a id="BigComLink" target="_blank" href="oneComment.html?key=${key}&parent=${parent}">Bigger</a>
+      <a id="BigComLink" target="_blank" href="oneComment.html?key=${key}&parent=${parent}">Show Bigger</a>
       </h1>
       <img id="compic" src=${comSnap["Ppic"]}>
       ${heart}
