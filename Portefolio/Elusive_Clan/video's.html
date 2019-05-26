@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Video's</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon" href="bilder/logoo.jpg">
+
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyChu0j-D58IEdyXwmJdza06qT8EqUY5XCU",
+    authDomain: "elusive-clan.firebaseapp.com",
+    databaseURL: "https://elusive-clan.firebaseio.com",
+    projectId: "elusive-clan",
+    storageBucket: "",
+    messagingSenderId: "304205795447"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+  <body>
+    <header>
+      <!-- Her kommer headeren som jeg kopierte fra: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar -->
+      <div id="mySidebar" class="sidebar">
+        <a id="Sidebarbutton" href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+        <a class="Sidebarlink" href="Index.html">Home</a>
+        <a class="Sidebarlink" href="members.html">Members</a>
+        <a class="Sidebarlink" href="video's.html">Video's</a>
+        <a class="Sidebarlink" href="comments.html">Comments</a>
+        <a id="Sidebarimage" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw?view_as=subscriber" target="_blank">
+        <img id="Sidebarlogo" src="bilder/logoo.jpg"></a>
+        <button id="themeknapp" type="button" onclick="nyTheme()"><p id="Themetxt">Change Theme</p></button>
+        <a class="Sidebarlink" href="ApplyMembership.html">Membership</a>
+      </div>
+
+      <div id="main">
+        <button class="openbtn" onclick="toggleNav()">☰ Toggle Sidebar</button>
+      </div>
+
+      <script>
+      //Litta javascript for å få navbaren til å fungere
+    let nav = "Elusive1";
+      function toggleNav() {
+
+        if (nav == "Elusive1") {
+          document.getElementById("mySidebar").style.width = "18vw";
+          document.getElementById("main").style.marginLeft = "18vw";
+          nav = "Elusive2";
+
+        }else if (nav == "Elusive2") {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+          nav = "Elusive1";
+        }
+      }
+      </script>
+        <a href="Index.html"> <img id="logo" src="bilder/logo.png"></a>
+      <style id="stil">
+
+      </style>
+    </header>
+    <main id="mainvids">
+      <h1 id="specialheader" class="commentheader">Videos on our channel</h1>
+      <div class="Leftdivvid">
+
+      </div>
+      <section id="vidsec">
+
+      </section>
+      <div class="Rightdivvid">
+        <p class="Load">Loading content...</p>
+      </div>
+      <script type="text/javascript">
+//Konster som definerer forskjellige objekter
+      const db = firebase.database();
+      const video = db.ref("Videoes");
+      const secvid = document.querySelector("#vidsec");
+      const load = document.querySelector(".Load");
+      const css = document.querySelector("#stil");
+      const sidebar = document.querySelector(".sidebar");
+
+
+      function visVids(snapshot){
+//Noen lets for å få kalt ut fra databasen
+        let vidSnap = snapshot.val();
+        let key = snapshot.key;
+
+//selve funkjsonen som printer ut
+        secvid.innerHTML += `
+        <section id="secvids">
+        <iframe id="videoframe" src=${vidSnap["Video URL"]} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        `;
+        if (secvid.innerHTML != 0) {
+          load.innerHTML = ``;
+        }
+
+      }
+
+      function visAlle(){
+        secvid.innerHTML = ``;
+      video
+      .on("child_added",visVids)
+}
+      visAlle();
+
+      let farge = "en";
+      function nyTheme(){
+        if (farge == "en") {
+          css.innerHTML = `
+          #secvids{
+            background-color: black;
+            transition: 1s;
+          }
+          `
+          farge = "to";
+        } else if (farge == "to") {
+          css.innerHTML = `
+          #secvids{
+            background-color: white;
+            transition: 1s;
+          }
+          `
+          farge = "en";
+        }
+      }
+      </script>
+    </main>
+
+    <footer>
+
+    <div class="Footdiv">
+    <a  id="venstre" class="Footlink" href="https://www.youtube.com/channel/UCrbJ3vjXBgMdeh5ZkezpHqw" target="_blank">Youtube</a>
+    </div>
+
+    <div class="Footdiv">
+      <p id="Footertxt">Official Elusive Clan Copyright © 2019 Elusive Clan Inc. All Rights Reserved.</p>
+    </div>
+
+    <div class="Footdiv">
+      <a id="høyre" class="Footlink" href="https://www.facebook.com/ElusiveClan" target="_blank">Facebook</a>
+      </div>
+
+
+    </footer>
+  </body>
+</html>

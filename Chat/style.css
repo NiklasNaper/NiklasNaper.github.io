@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+}
+
+#uteSecMld{
+  overflow: auto;
+  height: 20vw;
+  display: grid;
+}
+
+#secMeldinger{
+  border: solid black;
+  position: fixed;
+  width: 96%;
+  margin: 2vw;
+  margin-right: 2vw;
+}
