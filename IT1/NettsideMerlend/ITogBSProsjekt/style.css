@@ -1,0 +1,435 @@
+* {
+  outline: 0;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  height: 100%;
+  /*dette var nødvendig for at footer skulle bli på bunnen*/
+}
+
+nav {
+  z-index: 2;
+}
+
+#Indexmain {
+  background-color: inherit;
+}
+
+/*Navigasjonsbar til hovedside 2*/
+#IndexNav {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  background-color: white;
+  align-items: center;
+  font-size: 1.2vw;
+  font-family: sans-serif;
+  position: fixed;
+  box-shadow: 0.05vw 0.05vw;
+  z-index: 1;
+  top: 0;
+}
+
+/*Navigasjonsbar til hovedside 2*/
+#IndexNav2 {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  background-color: white;
+  align-items: center;
+  font-size: 1.2vw;
+  font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  box-shadow: 0.05vw 0.05vw;
+}
+
+#Indexmain img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#Inputheader {
+  width: 17vw;
+  height: 0.5vw;
+  border-radius: 0.5vw;
+  padding: 1vw;
+}
+
+*::selection {
+  color: rgb(0, 56, 205);
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  background-color: rgb(158, 158, 158);
+  border-top: solid black 0.05vw;
+  bottom: 0;
+  padding-right: 25vw;
+  padding-left: 25vw;
+}
+
+footer h1 {
+  grid-column: span 11;
+  text-align: center;
+}
+
+.Footertxt {
+  font-family: monospace;
+  font-size: 1vw;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footertext {
+  grid-column: span 3;
+  text-align: center;
+}
+
+#Footerimg {
+  width: 1vw;
+}
+
+#navSøk {
+  grid-column: span 3;
+  text-align: center;
+}
+
+#navLoginIndex {
+  grid-column: span 6;
+  transform: none;
+  color: black;
+  text-align: right;
+  font-size: 1.4vw;
+}
+
+#navLogin {
+  grid-column: span 2;
+}
+
+.navObjekt {
+  text-align: center;
+  transition: .14s ease-in-out;
+}
+
+.navObjekt:hover {
+  color: rgb(0, 56, 205);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#LogoIndex {
+  width: 15vw;
+  transition: .14s ease-in-out;
+  border-radius: 1vw;
+  margin-right: 10vw;
+}
+
+#LogoIndex:hover {
+  transform: scale(1.07);
+}
+
+/*under er knappen på midten av hjemmesiden*/
+#Mainbtn {
+  display: block;
+  margin: auto;
+  margin-left: 2vw;
+  width: 40vw;
+  height: 7vw;
+  font-size: 3vw;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  border-radius: 2vw;
+  background-image: linear-gradient(rgba(175, 175, 175, ), rgba(142, 139, 139, ));
+  opacity: 0.8;
+  color: black;
+  cursor: pointer;
+}
+
+#Mainsec {
+  align-items: center;
+  height: 26.33vw;
+  padding-top: 26vw;
+}
+
+.innholdLogIn {
+  text-align: center;
+  padding: 20vw;
+}
+
+.innholdLogIn h1 {
+  color: #308C8F;
+}
+
+.innholdLogIn a {
+  list-style-type: none;
+  color: #308C8F;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.LogIn {
+  text-align: center;
+  padding: 15vw;
+}
+
+.LogIn h1 {
+  padding-bottom: 4vw;
+}
+
+.LogInnhold input {
+  margin: 0.5vw;
+  padding: 0.2vw;
+  border-radius: 0.2vw;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#Navimg {
+  text-align: right;
+  display: block;
+}
+
+#Passord {}
+
+#KomiGangbtn {
+  margin: 1vw;
+  padding: 0.9vw;
+  border: solid gray 0.1vw;
+  border-radius: 0.3vw;
+  opacity: 0.9;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  font-family: monospace;
+  font-size: 1vw;
+  background-color: rgb(237, 237, 237);
+  cursor: pointer;
+}
+
+#Profilinfo {
+  grid-column: span 2;
+}
+
+#Annonse {}
+
+.Rundt {
+  margin-bottom: 5vw;
+  margin-top: 10vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  text-align: center;
+}
+
+.Inni {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.Inni img {
+  position: relative;
+  width: 50%;
+  z-index: 1;
+}
+
+.tekstInnhold1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5vw;
+  margin: 10vw;
+  margin-top: 12vw;
+  padding: 1vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  background-color: #e9e9e9;
+}
+
+#aftenposten {
+  margin-top: 8vw;
+}
+
+.tekstInnhold {
+  margin: 10vw;
+  margin-top: 12vw;
+  padding: 1vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  background-color: #e9e9e9;
+}
+
+.tekstOverskrift {
+  margin: 3vw;
+  text-align: center;
+}
+
+.tekstInformasjon {
+  font-size: 1.2vw;
+  text-align: left;
+}
+
+.tekstInformasjon2 {
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+.Inni section {
+  background-color: grey;
+  margin: 0.5vw;
+  padding-top: 0.5vw;
+  transition: .2s ease-out;
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.Inni section:hover {
+  background-color: rgb(198, 198, 198);
+  transform: scale(1.1);
+  transition: .2s ease-in;
+}
+
+.jobbTema {
+  margin: 20vw;
+  text-align: center;
+}
+
+.jobbInnhold {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: solid black 0.3vw;
+}
+
+.jobbInnhold section {
+  padding: 1vw;
+  border-bottom: solid black 0.1vw;
+}
+
+.tekstInformasjon img {
+  width: 10vw;
+  display: block;
+  text-align: center;
+  box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw;
+}
+
+/*kode til LeggTilAnnonse */
+#AnnonseMain {
+  margin-top: 20vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  text-align: center;
+  grid-row-gap: 5vw;
+  margin: 10vw;
+  align-items: center;
+}
+
+#AnnonseHeader {
+  grid-column: span 2;
+}
+
+#AnnonseMain form {
+  grid-column: span 2;
+}
+
+#AnnonseMain textarea {
+  padding: 1vw;
+  border-radius: 0.4vw;
+  font-size: 1.2vw;
+}
+
+#AnnonseMain select {
+  font-size: 1.3vw;
+  font-family: sans-serif;
+  padding: 1vw;
+  border-radius: 0.6vw;
+}
+
+#AnnonseMain h1 {
+  font-family: sans-serif;
+  font-size: 2.5vw;
+}
+
+#AnnonseMain input {
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  text-align: right;
+  padding-left: 20vw;
+}
+
+#AnnonseBilde {
+  width: 20vw;
+}
+
+#PrisAnnonse {
+  padding: 1vw;
+  border: solid black;
+  border-radius: 0.4vw;
+  width: 10vw;
+  text-align: center;
+}
+
+/*Kode til Ansatte.html*/
+.ansatte1 {
+  align-items: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-top: 15vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ansatte1 section {
+  margin-bottom: 5vw;
+}
+
+.ansatte2 {
+  align-items: center;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  padding-top: 5vw;
+  padding-bottom: 15vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ansatte2 section {
+  margin-bottom: 5vw;
+}
+
+/*Video til Om oss siden for å få brukeren til å få et overblikk*/
+video {
+  width: 40vw;
+  height: 24vw;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+#HeaderAnsatt {
+  margin: auto;
+  text-align: center;
+}
+
+#personvernHeader {
+  margin-top: 15vw;
+  margin-bottom: 2vw;
+}
+
+#PersonvernSec {
+  text-align: center;
+  margin-bottom: 10vw;
+}
+
+.høyresec {
+  text-align: right;
+}

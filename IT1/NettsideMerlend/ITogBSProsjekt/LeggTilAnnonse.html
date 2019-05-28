@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>GID | Om oss</title>
+  <link rel="shortcut icon" href="bilder/gidFavicon2.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header id="IndeHeader">
+    <nav id="IndexNav2">
+      <a href="index2.html">
+        <p id="Navimg"> <img src="bilder/gidlogo2.png" id="LogoIndex"> </p>
+      </a>
+      <a href="Nyhet.html">
+        <p class="navObjekt">Nyhet</p>
+      </a>
+      <p id="navSøk"> <input id="Inputheader" type="text" placeholder="Søk her"> </p>
+      <a href="LeggTilAnnonse.html">
+        <p class="navObjekt" id="Annonse">Ny Annonse</p>
+      </a>
+      <a href="Profilinformasjon.html" id="Profilinfo">
+        <p class="navObjekt">Profilinformasjon</p>
+      </a>
+      <a href="OmOss.html">
+        <p class="navObjekt">Om oss</p>
+      </a>
+
+    </nav>
+  </header>
+  <main id="AnnonseMain">
+
+    <h1 id="AnnonseHeader">Legg til annonse</h1>
+
+    <form action="index2.html">
+      <select name="Jobbtype">
+        <option value="Overskrift">Jobbtype</option>
+        <option value="Bilvask">Bilvask</option>
+        <option value="Rengjøring">Rengjøring</option>
+        <option value="Maling">Maling</option>
+        <option value="FlyttingOgTransport">Flytting og Transport</option>
+        <option value="Maling">Hagearbeid</option>
+        <option value="Maling">Håndtverk</option>
+        <option value="Maling">Ærend</option>
+      </select>
+    </form>
+
+    <p>Jobbeskrivelse</p>
+
+    <textarea name="text" rows="8" cols="80"></textarea>
+
+    <input type="file" placeholder="Velg Bilde" accept="image/x-png,image/gif,image/jpeg">
+
+    <img id="AnnonseBilde" src="bilder/leggtil.png">
+
+    <p>Lønn:</p>
+    <p id="PrisAnnonse"> Pris</p>
+
+    <form action="index2.html" method="post">
+    <button type="submit" id="KomiGangbtn">Legg til</button>
+    <form>
+  </main>
+  <footer>
+
+    <h1>Kontakt oss</h1>
+
+    <p class="footertext" class="Footertxt">Om oss</p>
+    <p class="Footertxt"> <img id="Footerimg" src="bilder/dot.png"> </p>
+    <p class="footertext" class="Footertxt">Vilkår</p>
+    <p class="Footertxt"> <img id="Footerimg" src="bilder/dot.png"> </p>
+    <a href="Personvern.html">
+      <p class="footertext" class="Footertxt" id="SPAN2">Personvern</p>
+    </a>
+
+    <!-- Linjeskift -->
+
+    <p class="footertext" class="Footertxt" id="SPAN2">firmapost@getitdone.com </p>
+    <p class="Footertxt"> <img id="Footerimg" src="bilder/dot.png"> </p>
+    <p class="footertext" class="Footertxt" id="SPAN2"> 67575600 </p>
+    <p class="Footertxt"> <img id="Footerimg" src="bilder/dot.png"> </p>
+    <p class="footertext" class="Footertxt" id="SPAN2"> GetItDone©2018 </p>
+
+  </footer>
+</body>
+
+</html>
