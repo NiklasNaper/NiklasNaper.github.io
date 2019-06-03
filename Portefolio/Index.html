@@ -38,10 +38,10 @@
   <main>
     <div id="TopDiv">
       <h1 id="TopH1">Welcome to my portfolio!</h1><br>
-      <h1 id="TopH1NR2">On this website you can find information about me and my IT career!<h1>
+      <h1 id="TopH1NR2">Let me introduce myself! <br> My name is <p id="Niklas">Niklas</p> but they call me <p id="Nazarfa">Nazarfa</p> online.<h1>
     </div>
     <div id="MyWorks">
-      <h1 id="MyWorksHeader">Here you can see all the websites I have made the recent year.</h1>
+      <h1 id="MyWorksHeader">Here you can see all the best websites I have made the recent year.</h1>
       <div class="ProjectDiv">
         <h1 class="WorkHeader">Naz Games</h1>
         <a href="https://niklasnaper.github.io/Gamershub/Home.html" target="_blank"><img class="WorkImg" src="bilder/NazGames.png"></a>
@@ -68,12 +68,18 @@
       </div>
     </div>
     <script>
+    //Lager funksjoner som får siden til å scrolle ned til et punkt som er annerledes når man har mindre skjerm.
+    var x = window.matchMedia("(max-width: 750px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
+
       //Dette fant jeg på w3Schools. Link: https://www.w3schools.com/jsref/met_win_scrollto.asp
       function scrollWin() {
-        window.scrollTo({
-          top: 400,
-          left: 0,
-        });
+        if (x.matches) {
+        window.scrollTo(0, 0.5*window.innerWidth);
+      }else{
+        window.scrollTo(0, 0.3*window.innerWidth);
+      }
       }
 
       function myFunction() {
