@@ -16,7 +16,6 @@ html{
 body {
   background-image: url(Bilder/Background1.png);
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 0;
   margin: 0;
@@ -92,8 +91,6 @@ main {
 #TopDiv {
   background-color: rgb(237, 237, 237);
   padding: 1vw;
-  margin: 4vw;
-  border-radius: 1vw;
 }
 
 #TopH1 {
@@ -272,7 +269,8 @@ footer a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(179, 179, 179)
+  background-color: rgb(179, 179, 179);
+  border-radius: 20vw;
 }
 
 @media (max-width: 750px) {
