@@ -14,16 +14,16 @@
     <form id="FormHeader" action="Index.html" method="post">
       <input id="InputHeader" type="text" name="" placeholder="Search">
     </form>
-    <a class="HeaderLink" href="Index.html">
+    <a class="HeaderLink" onclick="scrollWin0()">
       <p class="HeaderTxt">Home</p>
     </a>
     <a class="HeaderLink" onclick="scrollWin()">
       <p class="HeaderTxt">Websites</p>
     </a>
-    <a class="HeaderLink" href="#middle">
+    <a class="HeaderLink" onclick="scrollWin1()">
       <p class="HeaderTxt">Info</p>
     </a>
-    <a class="HeaderLink" href="" id="HeaderARight">
+    <a class="HeaderLink" id="HeaderARight" onclick="scrollWin2()">
       <p class="HeaderTxt">Contact</p>
     </a>
     <div class="dropdown" class="HeaderLink" id="HeaderARight">
@@ -36,12 +36,14 @@
     </div>
   </header>
   <main>
-    <div id="TopDiv">
-      <h1 id="TopH1">Welcome to my portfolio!</h1><br>
-      <h1 id="TopH1NR2">Let me introduce myself! <br> My name is <p id="Niklas">Niklas</p> but they call me <p id="Nazarfa">Nazarfa</p> online.<h1>
-    </div>
     <div id="MyWorks">
-      <h1 id="MyWorksHeader">Here you can see all the best websites I have made the recent year.</h1>
+      <div id="TopDiv">
+        <h1 id="TopH1">Welcome to my <h1 id="TopH1" class="TopH1Last">portfolio!</h1></h1><br>
+      </div>
+      <div id="MyWorksHeader">
+        <h1 id="TopH1NR2">Let me introduce myself! <br> My name is <p id="Niklas">Niklas</p> but they call me <p id="Nazarfa">Nazarfa</p> online.<h1>
+       <h1 id="TopHeaderWelcome">Here you can see all the websites I have made the recent year.</h1>
+             </div>
       <div class="ProjectDiv">
         <h1 class="WorkHeader">Naz Games</h1>
         <a href="https://niklasnaper.github.io/Gamershub/Home.html" target="_blank"><img class="WorkImg" src="bilder/NazGames.png"></a>
@@ -55,17 +57,39 @@
         <a href="https://niklasNaper.github.io/IT1/uke7_sporringer/Pokemon.html" target="_blank"> <img class="WorkImg" src="bilder/Pokedex.png"></a>
       </div>
       <div class="ProjectDiv">
-        <h1 class="WorkHeader">Naz Games</h1>
-        <img class="WorkImg" src="bilder/NazGames.png">
+        <h1 class="WorkHeader">Collab project after christmas</h1>
+      <a href="https://niklasnaper.github.io/IT1/NettsideMerlend/ITogBSProsjekt/Index.html" target="_blank"><img class="WorkImg" src="bilder/MedErlend.png"></a>
       </div>
       <div class="ProjectDiv">
-        <h1 class="WorkHeader">Naz Games</h1>
-        <img class="WorkImg" src="bilder/NazGames.png">
+        <h1 class="WorkHeader">Chat</h1>
+      <a href="https://niklasnaper.github.io/Chat/chat.html" target="_blank">  <img class="WorkImg" src="bilder/Chat.png"></a>
       </div>
       <div class="ProjectDiv">
-        <h1 class="WorkHeader">Naz Games</h1>
-        <img class="WorkImg" src="bilder/NazGames.png">
+        <h1 class="WorkHeader">Digital world</h1>
+      <a href="https://NiklasNaper.github.io/IT1/uke42/Oppgaveruke42.html" target="_blank"> <img class="WorkImg" src="bilder/DigitalSamtid.png"></a>
       </div>
+      <div class="ProjectDiv">
+        <h1 class="WorkHeader">PeriodTable</h1>
+      <a href="https://niklasnaper.github.io/IT1/uke45/PeriodTabl.html" target="_blank"> <img class="WorkImg" src="bilder/PeriodeSystem.png"></a>
+      </div>
+      <div class="ProjectDiv">
+        <h1 class="WorkHeader">DecentMadnessYT</h1>
+      <a href="https://niklasnaper.github.io/IT1/uke37/DecentMadnessYT.html" target="_blank"> <img class="WorkImg" src="bilder/DecentMadnessYT.png"></a>
+      </div>
+    </div>
+    <div class="InfoDiv">
+      <h1 id="InfoHeader">Info</h1>
+      <p id="Info1">I have always liked IT since i got my firt nintendo DS.<br> I love IT and gaming, and I'm looking forwards to getting a IT job.</p>
+<p id="Info2">Here is a picture of me looking forwards to becoming an IT master:</p>
+<img id="NazarfaPic" src="bilder/Logo.png">
+    </div>
+    <div class="ContactDiv">
+      <h1 id="ContactHeader">Contact <p id="NazarfaContactTxt">Nazarfa</p></h1>
+      <input id="NavnInp" type="text" placeholder="Name" required>
+      <input id="MailInp" type="text" placeholder="example@mail.com" required>
+      <textarea id="TxtAreaContact" name="name" rows="8" cols="80" placeholder="Message" required></textarea>
+      <button id="ButtonContact" type="submit" onclick="alert('Message sent')">Send</button>
+      <img id="ContactImg" src="bilder/Contact.png">
     </div>
     <script>
     //Lager funksjoner som får siden til å scrolle ned til et punkt som er annerledes når man har mindre skjerm.
@@ -76,9 +100,33 @@
       //Dette fant jeg på w3Schools. Link: https://www.w3schools.com/jsref/met_win_scrollto.asp
       function scrollWin() {
         if (x.matches) {
-        window.scrollTo(0, 0.5*window.innerWidth);
+        window.scrollTo(0, 0.95*window.innerWidth);
       }else{
-        window.scrollTo(0, 0.3*window.innerWidth);
+        window.scrollTo(0, 0.75*window.innerWidth);
+      }
+      }
+
+      function scrollWin0() {
+        if (x.matches) {
+        window.scrollTo(0, 0*window.innerWidth);
+      }else{
+        window.scrollTo(0, 0*window.innerWidth);
+      }
+      }
+
+      function scrollWin1() {
+        if (x.matches) {
+        window.scrollTo(0, 5.19*window.innerWidth);
+      }else{
+        window.scrollTo(0, 2.18*window.innerWidth);
+      }
+      }
+
+      function scrollWin2() {
+        if (x.matches) {
+        window.scrollTo(0, 6.5*window.innerWidth);
+      }else{
+        window.scrollTo(0, 2.88*window.innerWidth);
       }
       }
 

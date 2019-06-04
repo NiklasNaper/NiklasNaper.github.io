@@ -2,7 +2,10 @@
   outline: 0;
   font-family: monospace;
   text-decoration: none;
-  transition: 0.15s;
+}
+
+img{
+  filter: saturate(1.5);
 }
 
 *::selection {
@@ -17,24 +20,16 @@ body {
   background-image: url(Bilder/Background1.png);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   padding: 0;
   margin: 0;
-  height: 100%;   
+  height: 100%;
 }
 
 main {
   height: 100%;
   margin-top: 49vw;
-  animation-name: Main;
-  animation-duration: 2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
-
-@keyframes Main{
-  from {transform: translate(0, 0);}
-  to {transform: translate(0, -37vw);}
+  margin-bottom: 10vw;
 }
 
 #IndexHeader {
@@ -89,12 +84,41 @@ main {
 
 #TopDiv {
   background-color: rgb(237, 237, 237);
-  padding: 1vw;
+  padding: 2vw;
+  grid-column: span 2;
+  margin-top: 9vw;
+  text-align: center;
+  -webkit-transform: skewY(-10deg);
+  margin-bottom: 13vw;
+}
+
+.InfoDiv{
+  background-color: rgb(237, 237, 237);
+  padding: 2vw;
+  text-align: center;
+  transform: skewY(4deg);
+  margin-left: -20vw;
+  margin-bottom: 15vw;
 }
 
 #TopH1 {
   margin: 0;
   text-align: center;
+  font-size: 4vw;
+}
+
+#TopH1{
+  font-size: 4vw;
+  margin-top: 1vw;
+  display: inline;
+}
+
+.TopH1Last{
+  display: inline;
+  color: rgb(212, 0, 255);
+}
+
+#TopHeaderWelcome{
   font-size: 3vw;
 }
 
@@ -131,6 +155,61 @@ main {
 #Nazarfa{
   color: rgb(0, 255, 0);
   display: inline;
+}
+
+#NazarfaContactTxt{
+  color: rgb(0, 255, 0);
+  display: inline;
+}
+
+.ContactDiv{
+  background-color: rgb(237, 237, 237);
+  padding: 2vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+#ContactImg{
+  width: 20vw;
+  margin-left: 20vw;
+  margin-top: -10vw;
+  position: absolute;
+}
+
+#ContactHeader{
+  text-align: center;
+  font-size: 3vw;
+}
+
+#NavnInp{
+  width: 30vw;
+  display: block;
+  margin-bottom: 5vw;
+  padding: 0.4vw;
+}
+
+#MailInp{
+  width: 30vw;
+  display: block;
+  margin-bottom: 5vw;
+  padding: 0.4vw;
+}
+
+#TxtAreaContact{
+  width: 30vw;
+  height: 10vw;
+  padding: 0.4vw;
+  margin-bottom: 5vw;
+}
+
+#ButtonContact{
+  margin-left: 2vw;
+  position: absolute;
+  margin-top: 10vw;
+  border-radius: 1vw;
+  padding: 0.4vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 footer {
@@ -182,14 +261,27 @@ footer a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 3vw;
+  animation-name: MyWorks;
+  animation-duration: 1s;
+  animation-delay: .5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
+
+@keyframes MyWorks{
+  from {transform: translate(0, 0);}
+  to {transform: translate(0, -42vw);}
+}
+
 
 #MyWorksHeader {
   background-color: rgb(237, 237, 237);
-  padding: 2vw;
+  padding: 3vw;
   text-align: center;
   font-size: 2.2vw;
   grid-column: span 2;
+  margin-top: 8vw;
+  margin-bottom: 5vw;
 }
 
 .ProjectDiv {
@@ -197,9 +289,26 @@ footer a {
   width: 35vw;
   padding: 2vw;
   padding-top: 1vw;
+  padding-bottom: 3vw;
   border-radius: 1vw;
   text-align: center;
   margin: auto;
+}
+
+#NazarfaPic{
+  width: 40vw;
+  transform: rotate(-4deg);
+}
+
+#InfoHeader{
+  font-size: 2vw;
+  transform: rotate(-4deg);
+}
+
+#Info2, #Info1{
+  font-size: 1vw;
+  padding: 1vw;
+  transform: rotate(-4deg);
 }
 
 .WorkImg{
@@ -287,6 +396,7 @@ footer a {
 
   main {
     margin-top: 70vw;
+    margin-bottom: 20vw;
   }
 
   Header a {
@@ -307,7 +417,7 @@ footer a {
   }
 
   #MyWorksHeader {
-    grid-column: span 1;
+    grid-column: span 2;
   }
 
   #InputHeader {
@@ -317,6 +427,7 @@ footer a {
   .ProjectDiv {
     width: 70vw;
     height: 40vw;
+    grid-column: span 2;
   }
 
   .WorkImg {
@@ -370,5 +481,67 @@ footer a {
 
   .dropdown {
     display: inline-block;
+  }
+
+  #TopH1{
+    font-size: 6vw;
+    margin-top: 1vw;
+    display: inline;
+  }
+
+  #TopHeaderWelcome{
+    font-size: 3vw;
+  }
+
+  #TopH1NR2{
+    font-size: 3vw;
+  }
+
+  #NazarfaPic{
+    width: 80vw;
+  }
+
+  #InfoHeader{
+    font-size: 7vw;
+  }
+
+  #Info1{
+    font-size: 2.5vw;
+    margin-left: 20vw;
+  }
+  #Info2{
+    font-size: 2.5vw;
+    margin-left: 20vw;
+    display: run-in;
+  }
+
+  #NavnInp{
+    width: 50vw;
+    margin-bottom: 20vw;
+  }
+
+  #MailInp{
+    width: 50vw;
+    margin-bottom: 20vw;
+  }
+
+  #TxtAreaContact{
+    width: 50vw;
+  }
+
+  #ButtonContact{
+    margin-top: 6vw;
+    margin-left: 4vw;
+    padding: 1.5vw;
+  }
+
+  .ContactDiv{
+    padding: 4vw;
+  }
+
+  #ContactImg{
+    width: 30vw;
+    margin-left: 15vw;
+    margin-top: -15vw;
   }
 }
