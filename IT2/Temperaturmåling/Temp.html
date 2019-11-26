@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Temperatur</title>
+  <link rel="shortcut icon" href="logoo.jpg">
+  <link rel="stylesheet" href="Temp.css">
+</head>
+
+<body>
+  <h1>Her kan du skrive inn en temperatur som blir registrert på siden.</h1>
+  <input id="inpTemp" type="number" placeholder="Skriv inn temp...">
+  <input id="inpSted" type="text" placeholder="Skriv inn sted...">
+  <input id="inpDato" type="date" placeholder="Skriv inn dato...">
+  <button id="btnTemp" type="button">Set Temp</button>
+  <select id="sortering">
+    <option value="Lav-Hoy">Lav-Høy</option>
+    <option value="Hoy-Lav">Høy-Lav</option>
+  </select>
+  <ol id="txtTemp"></ol>
+  <script src="Temp.js" charset="utf-8"></script>
+  <img src="kaldt.jpg">
+</body>
+
+</html>

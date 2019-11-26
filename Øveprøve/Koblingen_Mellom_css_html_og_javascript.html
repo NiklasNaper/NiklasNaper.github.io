@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dette er en overskirft</h1>
+    <script type="text/javascript">
+    let overskrift = document.querySelector("h1");
+
+    overskrift.onclick = function(){
+      overskrift.innerHTML += "Du trykket på meg!";
+    }
+    </script>
+  </body>
+</html>

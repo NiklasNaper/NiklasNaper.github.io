@@ -1,0 +1,48 @@
+body {
+  background-image: linear-gradient(to right, red, green);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#txtTemp {
+  background-color: lightgrey;
+  padding: 1vw;
+  margin: 2vw;
+  margin-top: 4vw;
+  padding-left: 2vw;
+  font-family: monospace;
+  font-size: 1vw;
+  border-radius: 1vw;
+}
+
+h1 {
+  font-size: 2.64vw;
+  text-align: center;
+  font-family: monospace;
+  padding: 2vw;
+  margin: 0;
+}
+
+#code21 {
+  font-family: monospace;
+  font-size: 1vw;
+  margin: 1vw;
+}
+
+#code22 {
+  font-family: monospace;
+  font-size: 1vw;
+}
+
+.soyle {
+  background-color: red;
+  color: white;
+  border-radius: 1vw;
+}
+
+.soyle1 {
+  background-color: blue;
+  color: white;
+  border-radius: 1vw;
+}
