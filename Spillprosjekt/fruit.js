@@ -82,9 +82,9 @@ class Fruit{
       textSize(200);
       text("You Won", windowWidth/6, windowHeight / 2);
       textSize(70);
-      text("Press               to restart", windowWidth/5, windowHeight/1.4);
+      text("Press               to restart", 200, windowHeight/1.4);
       fill("red");
-      text("*ENTER*", windowWidth/3, windowHeight/1.4);
+      text("*ENTER*", 380, windowHeight/1.4);
       this.spawn = false;
       this.xPos = -10;
       this.yPos = -10;
@@ -95,9 +95,9 @@ class Fruit{
       textSize(200);
       text("You Lost", windowWidth/6, windowHeight / 2);
       textSize(70);
-      text("Press               to restart", windowWidth/5, windowHeight/1.4);
+      text("Press               to restart", 200, windowHeight/1.4);
       fill("red");
-      text("*ENTER*", windowWidth/3, windowHeight/1.4);
+      text("*ENTER*", 380, windowHeight/1.4);
       this.spawn = false;
       this.xPos = -100;
       this.yPos = -100;
