@@ -12,7 +12,7 @@ function preload(){
   watermelon = loadImage("Bilder/Watermelon.png");
   strawberry = loadImage("Bilder/Strawberry.png");
   pomegranate = loadImage("Bilder/Pomegranate.png");
-  pineapple = loadImage("bilder/Pineapple.png");
+  pineapple = loadImage("Bilder/Pineapple.png");
   backImg = loadImage("Bilder/NazNinjaBackground.jpg");
 
 }
