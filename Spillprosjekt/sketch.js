@@ -14,7 +14,7 @@ function preload(){
   pomegranate = loadImage("Bilder/Pomegranate.png");
   pineapple = loadImage("Bilder/Pineapple.png");
   backImg = loadImage("Bilder/NazNinjaBackground.jpg");
-
+  soundFormats('mp3', 'ogg');
 }
 
 function setup(){
