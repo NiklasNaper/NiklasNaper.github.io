@@ -1,13 +1,16 @@
 class Fruit{
   constructor(){
+
+//Definerer masse variabler som jeg bruker i koden
+
     this.xSpawn;
     this.xPos;
     this.yPos;
-    this.xFart = 5;
+    this.xFart = 7;
     this.yFart = -4;
     this.d = 20;
     this.spawn = true;
-    this.gravity = 0.01;
+    this.gravity = 0.015;
     this.points = 0;
     this.upForce = -5;
     this.hp = 3;
@@ -15,6 +18,9 @@ class Fruit{
     this.randomFruit;
     this.img;
   }
+
+//Her oppretter jeg frukten og sier hvor den skal spawne
+
   draw(){
     if(this.spawn == true){
       this.randomFruit = Math.ceil(Math.random()*4);
@@ -46,6 +52,9 @@ class Fruit{
     fill("orange");
     image(this.img, this.xPos, this.yPos, 50, 50);
   }
+
+//Her definerer jeg hvordan frukten skal bevege seg
+
   move(){
     if (this.xSpawn == 1){
       this.xPos += this.xFart;
@@ -59,24 +68,35 @@ class Fruit{
       this.upForce += 0.1;
     }
   }
+
+//Her sier jeg at hvis sverdet treffer frukten skal frukten fjernes og spawne på nytt igjen
+
   cut(){
     if(this.xPos+20 > ninja.xPos && this.xPos+20 < ninja.xPos + ninja.width && this.yPos+20 > ninja.yPos && this.yPos+20 < ninja.yPos + ninja.height){
       this.spawn = true;
       this.points += 1;
       this.upForce = -3 - (Math.random()*4);
+      slashSound.setVolume(0.1);
+      slashSound.play();
     }
   }
+
+//Her lager jeg et poengsystem
+
   score(){
     noFill();
     stroke("black");
     rect(windowWidth-200,20,150,40);
     noStroke();
     fill("green");
-    rect(windowWidth-200, 20, this.points*3.4090909090909090, 40);
+    rect(windowWidth-200, 20, this.points*3.4090909090909090, 40); //Det lange tallet kalkulerte jeg at passes perfekt inn i boksen hvis scoren skulle være 44 (150 px / 44)
     textSize(30);
     fill("yellow");
     text("⚡" + this.points, windowWidth-150, 50);
     fill("green");
+
+//Hvis poengsummen er mer enn 43 skal den alltid holde seg på 44 (for å forhindre glitcher) og det ska komme opp en avslutningstekst
+
     if (this.points > 43) {
       this.points = 44;
       textSize(200);
@@ -106,6 +126,9 @@ class Fruit{
       }
     }
   }
+
+//Her lager jeg et system som gjør at hvis du bommer på frukten 3 ganger taper du
+
   healthpoints(){
     if (this.hp == 3) {
       fill("green");

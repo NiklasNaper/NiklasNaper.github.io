@@ -1,9 +1,15 @@
 class Ninja{
   constructor(){
+
+//Definerer variablene jeg trenger
+
      this.width = 27;
      this.height = 144;
      this.xPos;
      this.yPos;
+
+//Dette er fra da jeg prøvde på lage animasjon av at sverdet gikk fra side til side men det ble for komplisert (gjelder alt i grått under)
+
     /* this.dx;
      this.rotate = 0;
      */
@@ -11,6 +17,7 @@ class Ninja{
   make(){
     this.xPos = mouseX - 12;
     this.yPos = mouseY - 133;
+
     //rotate(this.rotate);
     image(katana, this.xPos, this.yPos, this.width, this.height);
     //rotate(-this.rotate);
