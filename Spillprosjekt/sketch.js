@@ -5,7 +5,7 @@ let watermelon;
 let strawberry;
 let pomegranate;
 let pineapple;
-// LEGG TIL LYD NÅR FRUKT KNUSE, KRYSS/HJERTER IKKE TALL PÅ LIV, BOMBE, ROTERINGSEFFEKT PÅ FRUKTEN
+
 function preload(){
   permaMarker = loadFont("PermanentMarker-Regular.ttf");
   katana = loadImage("Bilder/Katana.png");
@@ -14,7 +14,6 @@ function preload(){
   pomegranate = loadImage("Bilder/Pomegranate.png");
   pineapple = loadImage("Bilder/Pineapple.png");
   backImg = loadImage("Bilder/NazNinjaBackground.jpg");
-
 }
 
 function setup(){
