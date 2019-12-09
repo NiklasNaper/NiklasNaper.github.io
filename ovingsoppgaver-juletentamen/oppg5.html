@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id="fahrenheit" type="number" name="" value="" placeholder="skriv inn temp i fahrenheit">
+    <button id="btnFahrenheit" type="button" name="button">ok</button>
+    <div id="div">
+
+    </div>
+    <img src="vedlegg-ovingsoppgaver-juletentamen/termometer.png" alt="">
+    <script type="text/javascript">
+      const fahrenheit = document.querySelector("#fahrenheit");
+      const btnFahrenheit = document.querySelector("#btnFahrenheit");
+      const div = document.querySelector("#div");
+      btnFahrenheit.onclick = function(){
+        let celsius;
+        let fahren = fahrenheit.value;
+        celsius = (fahren - 32)*(5/9);
+        div.innerHTML = celsius;
+      }
+    </script>
+  </body>
+</html>

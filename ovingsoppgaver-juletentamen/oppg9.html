@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <style media="screen">
+      body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+    </style>
+    <img id="granboImg" src="vedlegg-ovingsoppgaver-juletentamen/granbo.jpg" alt="">
+    <img id="granstuaImg" src="vedlegg-ovingsoppgaver-juletentamen/granstua.jpg" alt="">
+    <div id="info">
+
+    </div>
+    <br>
+<div  id="slideshow">
+  <img src="vedlegg-ovingsoppgaver-juletentamen/granbo01.jpg" alt="">
+</div>
+    <script type="text/javascript">
+    const granboImg = document.querySelector("#granboImg");
+    const granstuaImg = document.querySelector("#granstuaImg");
+    const info = document.querySelector("#info");
+    const slideshow = document.querySelector("#slideshow");
+      const hytter = [
+        {
+          navn: "granbo",
+          sengeplasser: 6,
+          standard: "middels"
+        },
+        {
+          navn: "granstua",
+          sengeplasser: 4,
+          standard: "høy"
+        }
+      ];
+
+      granboImg.onclick = function(){
+        showInfo("granbo");
+        granboSlideshow();
+      }
+      granstuaImg.onclick = function(){
+        showInfo("granstua");
+      }
+
+      function showInfo(hytteNavn){
+        for(let i = 0; i < hytter.length; i += 1){
+          if(hytteNavn === hytter[i].navn){
+            info.innerHTML = `Navn: ${hytter[i].navn}. Sengeplasser: ${hytter[i].sengeplasser}. Standard: ${hytter[i].standard}.`;
+          }
+        }
+      }
+
+      slideshow.innerHTML = "";
+
+      function granboSlideshow(){
+        slideshow.innerHTML = `<img src="vedlegg-ovingsoppgaver-juletentamen/granbo01.jpg">`;
+      }
+
+    </script>
+  </body>
+</html>
