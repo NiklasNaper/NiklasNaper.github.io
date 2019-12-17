@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Matkasse</title>
+  </head>
+  <body>
+    <style media="screen">
+      body{
+        background-color: lightgrey;
+        text-align: center;
+      }
+    </style>
+    <img id="imgMiddag" src="vedlegg/middag.png" alt="">
+    <img id="img2" src="" alt="">
+    <img id="img3" src="" alt="">
+    <br>
+    <input id="inpAntallMiddager" type="text" name="" value="" placeholder="2 eller 3 middager?" maxlength="1">
+    <input id="inpAntallPersoner" type="text" name="" value="" placeholder="Antall personer" maxlength="1">
+    <button id="btn" type="button" name="button">ok</button>
+    <div id="personopplysninger">
+
+    </div>
+    <div id="kvittering">
+
+    </div>
+
+    <script type="text/javascript">
+      const inpAntallMiddager = document.querySelector("#inpAntallMiddager");
+      const inpAntallPersoner = document.querySelector("#inpAntallPersoner");
+      const btn = document.querySelector("#btn");
+      const imgMiddag = document.querySelector("#imgMiddag");
+      const img2 = document.querySelector("#img2");
+      const img3 = document.querySelector("#img3");
+      const personopplysninger = document.querySelector("#personopplysninger");
+      const kvittering = document.querySelector("#kvittering");
+
+      btn.onclick = sjekkAntallMatkasser;
+
+      let prisPerPerson = 0;
+
+      function sjekkAntallMatkasser(){
+        if (inpAntallPersoner.value < 5) {
+          prisPerPerson = 80;
+        } else {
+          prisPerPerson = 70;
+        }
+        if (inpAntallPersoner.value < 1) {
+          inpAntallPersoner.value = "";
+          inpAntallPersoner.placeholder = "Du må velge minst 1 person";
+        } else {
+          if (inpAntallMiddager.value == 2) {
+            img2.src = "vedlegg/matkasse2.png";
+            imgMiddag.src = "";
+            img3.src = "";
+          } else if (inpAntallMiddager.value == 3) {
+            img3.src = "vedlegg/matkasse3.png";
+            imgMiddag.src = "";
+            img2.src = "";
+          }
+            personopplysninger.innerHTML = `
+            <input id="inpNavn" type="text" placeholder="Navn">
+            <input id=inpAdresse type="text" placeholder="Adresse">
+            <button id=btn2 type="button" name="button">ok</button>
+            `;
+            const inpNavn = document.querySelector("#inpNavn");
+            const inpAdresse = document.querySelector("#inpAdresse");
+            const btn2 = document.querySelector("#btn2");
+
+            btn2.onclick = function(){
+              kvittering.innerHTML = `<h1>Kvittering:</h1> <br> <h2>Personopplysninger:</h2> <br> Navn: ${inpNavn.value} <br> Adresse: ${inpAdresse.value} <br> <h2>Bestilling:</h2> <br> Antall Middager: ${inpAntallMiddager.value} <br> Antall Personer: ${inpAntallPersoner.value} `;
+            }
+        }
+      }
+
+    </script>
+  </body>
+</html>
