@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    let x; //Definerer variabler
+    let y;
+    const array = [0,1,2,3,4,5,6,7]; //Lager et array som skal kjører gjennom for å teste verdier
+    for (var i = 0; i < array.length; i++) { //For løkke for x verdiene
+      x = i;
+      for (var j = 0; j < array.length; j++) { //for løkke for y verdiene
+        y = j;
+        if (x+y == 7 && x-y == 3) { //Lager en if setning som sjekker hvilke tal som passer
+          document.write("x = " + x + " & y = "); //Sim sala bim der har du svaret
+          document.write(y);
+        }
+
+      }
+    }
+
+
+    </script>
+  </body>
+</html>

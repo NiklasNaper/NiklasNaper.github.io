@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rabattkalkulator</title>
+  </head>
+  <body>
+    <style media="screen">
+      body{
+        background-color: lightgrey;
+      }
+      input{
+        border-radius: 1vw;
+        padding: 0.3vw;
+        outline: 0;
+      }
+    </style>
+<h1>Velkommen!</h1>
+    <input id="inpVare" type="text" name="" value="" placeholder="Prisen på din vare" maxlength="10">
+    <input id="inpProsent" type="text" name="" value="" placeholder="Rabatt i prosent på din vare" maxlength="3">
+
+    <button id="btn" type="button" name="button">ok</button>
+
+    <div id="sumVare">
+
+    </div>
+
+    <script type="text/javascript">
+//definerer
+      const inpVare = document.querySelector("#inpVare");
+      const inpProsent = document.querySelector("#inpProsent");
+      const btn = document.querySelector("#btn");
+      const sumVare = document.querySelector("#sumVare");
+
+      let sum = 0;
+      let faktor = 0;
+
+      btn.onclick = regnUtPris;
+//Lager en funksjon
+      function regnUtPris(){
+        faktor = 1-(inpProsent.value/100); //definerer faktoren som jeg skal gange prisen med
+        sum = Math.round(Number(inpVare.value)*faktor); //Regner ut summen
+        sumVare.innerHTML = "Din vare koster: " + sum + ";- kr."; //Skriver ut summen på nettsiden
+      }
+
+    </script>
+  </body>
+</html>

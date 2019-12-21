@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kinebillett</title>
+  </head>
+  <body>
+    <input id="barn1" type="number" name="" placeholder="Alder på barn1">
+    <input id="barn2" type="number" name="" placeholder="Alder på barn2">
+    <button id="btn" type="button" name="button">ok</button>
+    <div id="divSum">
+
+    </div>
+    <div id="divTxt">
+
+    </div>
+    <script type="text/javascript">
+//Definerer alle objektene jeg skal bruke fra html
+
+      const barn1 = document.querySelector("#barn1");
+      const barn2 = document.querySelector("#barn2");
+      const btn = document.querySelector("#btn");
+      const divSum = document.querySelector("#divSum");
+      const divTxt = document.querySelector("#divTxt");
+
+      let sum = 0;
+
+      btn.onclick = regnUtAlder;
+//Kjører en funksjon som regner på alderen
+      function regnUtAlder(){
+        sum = Number(barn1.value) + Number(barn2.value);
+        divSum.innerHTML = sum;
+        if (sum <= 4) {
+          divTxt.innerHTML = "Barn på til sammen " + sum + " år kommer inn gratis.";
+        } else if (sum > 4 && sum < 18) {
+          divTxt.innerHTML = "Med alderen " + sum + " år må man betale barnebillett.";
+        } else if (sum >= 18) {
+          divTxt.innerHTML = "Med alderen " + sum + " år må man betale voksenbillett."
+        }
+      }
+    </script>
+  </body>
+</html>

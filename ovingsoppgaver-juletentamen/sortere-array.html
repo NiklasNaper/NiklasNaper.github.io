@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const bokstaver = ["h","q","m","s","k","b","t","y","x"];
+
+      //alfabetisk rekkefølge
+      bokstaver.sort();
+      console.log(bokstaver);
+
+      //bakover
+      bokstaver.reverse();
+      console.log(bokstaver);
+
+      //tall
+
+      const tall = [5, 12, 3, 62, 3, 624, 33, 2, 8];
+
+      tall.sort(function(a,b){
+        return a-b;
+      });
+      console.log(tall);
+      tall.reverse(tall);
+      console.log(tall);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<script type="text/javascript">
+//oppg 1
+  const liste = [3, 51, 18, 7, 32, 10, 74];
+
+  let sum = 0;
+
+  for (var i = 0; i < liste.length; i++) {
+    sum += liste[i];
+  }
+  console.log(sum);
+
+  //oppg 2 finne høyeste tall i array
+
+  let maks = 0;
+  for(const tall of liste){
+    if(maks < tall){
+      maks = tall;
+    }
+  }
+  console.log(maks);
+
+  //Oppg 3 finne partall i array
+
+  for(const partall of liste){
+    if (partall % 2 === 0) {
+      console.log(partall);
+    }
+  }
+
+</script>
+  </body>
+</html>
