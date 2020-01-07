@@ -1,1 +1,1 @@
-# DetGjorIngenting
+# DetGjorIngenting.github.io
