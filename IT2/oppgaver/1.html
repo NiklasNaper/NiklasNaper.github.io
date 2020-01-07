@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="p"></p>
+    <button id="btn" type="button" name="button">ok</button>
+    <script type="text/javascript">
+      const button = document.querySelector("#btn");
+      const p = document.querySelector("#p");
+      let hei = 0;
+
+      btn.onclick = function(){
+        hei += 1;
+        p.innerHTML = hei;
+        if (hei > 299) {
+        p.innerHTML = "Du trykket på meg";
+        }
+
+      }
+    </script>
+  </body>
+</html>
