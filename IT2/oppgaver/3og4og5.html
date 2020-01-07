@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <button id="btn1" type="button" name="button">Forrige</button>
+  <button id="btn2" type="button" name="button">Neste</button>
+  <img id="img" src="hei.jfif" alt="">
+  <script type="text/javascript">
+    const btn1 = document.querySelector("#btn1");
+    const btn2 = document.querySelector("#btn2");
+    const img = document.querySelector("#img");
+
+    let nr = 0;
+    let bilder = ["hei.jfif", "hei2.jfif", "hei2.jpg"];
+
+    btn1.onclick = function(){
+      if (nr == 0) {
+        nr = 2;
+      } else{
+        nr += 1;
+      }
+      img.src = bilder[nr];
+    }
+
+    btn2.onclick = function(){
+      if (nr == 2) {
+        nr = 0;
+      } else {
+        nr += 1;
+      }
+      img.src = bilder[nr];
+    }
+  </script>
+</body>
+
+</html>

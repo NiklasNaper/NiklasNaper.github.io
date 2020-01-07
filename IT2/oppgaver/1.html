@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="" value="">
+    <span></span>
+    <script type="text/javascript">
+      const inp = document.querySelector("input");
+      const span = document.querySelector("span");
+
+      inp.oninput = function(){
+        span.innerHTML = inp.value;
+      }
+    </script>
+  </body>
+</html>
