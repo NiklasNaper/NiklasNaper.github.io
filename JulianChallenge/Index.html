@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSGO | Random Map Ganerator</title>
+  <link rel="shortcut icon" href="https://cdn170.picsart.com/upscale-238186308048212.png?r1024x1024">
+</head>
+
+<body>
+  <style media="screen">
+  body{
+    margin: 0;
+    text-align: center;
+    background: lightgrey;
+  }
+  .w{
+    margin-top: 5vw;
+  }
+  #img1{
+    float: left;
+    padding-right: 90%;
+  }
+  #img{
+    margin-top: 3vw;
+  }
+  header{
+    width: 100%;
+  }
+  </style>
+  <header>
+    <img id="img1" src="https://i.pinimg.com/originals/8d/7e/0a/8d7e0a8ecbfd643ab19d834b36289a47.jpg" width="100px">
+  </header>
+
+  <button id="btn" type="button" name="button">Generer random map for wingman</button>
+  <button id="btn1" type="button" name="button">Generer random map for competitive</button>
+  <h1 id="field">
+
+  </h1>
+  <img id="img" src="https://esportsjunkie.com/wp-content/uploads/2019/05/CSGO-Banner-24-3-2019.jpg" width="1000px" height="677px">
+  <script type="text/javascript">
+    const btn = document.querySelector("#btn");
+    const btn1 = document.querySelector("#btn1");
+    const field = document.querySelector("#field");
+    const img = document.querySelector("#img");
+    bilder = ["https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2019/03/28192219/Vertigo_3.jpg", "https://liquipedia.net/commons/images/thumb/2/2b/De_new_inferno.jpg/600px-De_new_inferno.jpg",
+      "https://cdn.mos.cms.futurecdn.net/548230371ddaecc2de88bf0ae9cf12c5.jpg", "https://liquipedia.net/commons/images/thumb/b/b4/Csgo_cobblestone.jpg/600px-Csgo_cobblestone.jpg",
+      "https://image.redbull.com/rbcom/010/2014-12-15/1331695288980_2/0100/0/1/counter-strike-global-offensive-de-train-screen-shot.jpg", "https://liquipedia.net/commons/images/thumb/5/5e/Nuke_csgo.jpg/600px-Nuke_csgo.jpg",
+      "https://i.ytimg.com/vi/nKIKob4bp9Y/maxresdefault.jpg", "https://img.gfx.no/2358/2358168/gd_rialto-01.956x538.jpg", "https://files.gamebanana.com/img/ss/wips/5d18e8fd11d61.webp"
+    ];
+    bilder1 = ["https://i.ytimg.com/vi/fMr0cktobUA/maxresdefault.jpg","https://steamcdn-a.akamaihd.net/apps/csgo/images/inferno/mid1-2.jpg?v=1","https://liquipedia.net/commons/images/thumb/0/0f/Csgo_overpass.jpg/600px-Csgo_overpass.jpg","https://images.egbcdn.net/news/20190520c79d6b423f3286f165e93befa679390e.jpg","https://dotesports-media.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2018/08/11095514/8170447a-969e-4871-9a3d-d241ae249549.jpg","https://image.redbull.com/rbcom/010/2014-12-15/1331695288980_2/0100/0/1/counter-strike-global-offensive-de-train-screen-shot.jpg","https://i.ytimg.com/vi/Jd1mFNHkhg0/maxresdefault.jpg","https://www.talkesport.com/wp-content/uploads/new-csgo-cache-mid.jpg","https://tsarvar.com/maps/csgo/agency/2.jpg","https://www.gamersdecide.com/sites/default/files/csgo-_office_map_1.jpg"];
+    btn.onclick = genrerRandomMap;
+    function genrerRandomMap() {
+      let tall = Math.ceil(Math.random() * 9);
+      if (tall == 1) {
+        field.innerHTML = "Vertigo";
+        img.src = bilder[tall - 1];
+      } else if (tall == 2) {
+        field.innerHTML = "Inferno";
+        img.src = bilder[tall - 1];
+      } else if (tall == 3) {
+        field.innerHTML = "Overpass";
+        img.src = bilder[tall - 1];
+      } else if (tall == 4) {
+        field.innerHTML = "Cobblestone";
+        img.src = bilder[tall - 1];
+      } else if (tall == 5) {
+        field.innerHTML = "Train";
+        img.src = bilder[tall - 1];
+      } else if (tall == 6) {
+        field.innerHTML = "Nuke";
+        img.src = bilder[tall - 1];
+      } else if (tall == 7) {
+        field.innerHTML = "Shortdust";
+        img.src = bilder[tall - 1];
+      } else if (tall == 8) {
+        field.innerHTML = "Rialto";
+        img.src = bilder[tall - 1];
+      } else if (tall == 9) {
+        field.innerHTML = "Lake";
+        img.src = bilder[tall - 1];
+      }
+    }
+    btn1.onclick = genrerRandomMap1;
+    function genrerRandomMap1() {
+      let tall1 = Math.ceil(Math.random() * 10);
+      if (tall1 == 1) {
+        field.innerHTML = "Mirage";
+        img.src = bilder1[tall1 - 1];
+      } else if (tall1 == 2) {
+        field.innerHTML = "Inferno";
+        img.src = bilder1[tall1 - 1];
+      } else if (tall1 == 3) {
+        field.innerHTML = "Overpass";
+        img.src = bilder1[tall1 - 1];
+      } else if (tall1 == 4) {
+        field.innerHTML = "Vertigo";
+        img.src = bilder1[tall1 - 1];
+      } else if (tall1 == 5) {
+        field.innerHTML = "Nuke";
+        img.src = bilder1[tall1 - 1];
+      } else if (tall1 == 6) {
+        field.innerHTML = "Train";
+        img.src = bilder1[tall1 - 1];
+      } else if (tall1 == 7) {
+        field.innerHTML = "Dust2";
+        img.src = bilder1[tall1 - 1];
+      } else if (tall1 == 8) {
+        field.innerHTML = "Cache";
+        img.src = bilder1[tall1 - 1];
+      } else if (tall1 == 9) {
+        field.innerHTML = "Agency";
+        img.src = bilder1[tall1 - 1];
+      }
+      else if (tall1 == 10) {
+        field.innerHTML = "Office";
+        img.src = bilder1[tall1 - 1];
+      }
+    }
+  </script>
+</body>
+
+</html>

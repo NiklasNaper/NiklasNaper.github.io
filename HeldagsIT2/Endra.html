@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Handleliste</title>
+  </head>
+  <body>
+    <style media="screen">
+      #divSumContainer{
+        margin-top: 2vw;
+      }
+    </style>
+    <input id="inpNavn" type="text" name="" value="" placeholder="Navn på vare">
+    <input id="inpPris" type="number" name="" value="" placeholder="Pris">
+    <input id="inpAntall" type="text" name="" value="" placeholder="Antall" maxlength="3">
+    <button id="btn" type="button" name="button">Legg til vare</button>
+    <button id="btnSlett" type="button" name="button">slett forrige vare</button>
+
+    <div id="divVarer">
+
+    </div>
+    <div id="divSumContainer">
+      Sum:
+      <div id="divSum">
+
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+    //Definerer
+      const inpNavn = document.querySelector("#inpNavn");
+      const inpPris = document.querySelector("#inpPris");
+      const inpAntall = document.querySelector("#inpAntall");
+      const btn = document.querySelector("#btn");
+      const divVarer = document.querySelector("#divVarer");
+      const btnSlett = document.querySelector("#btnSlett");
+      const divSum = document.querySelector("#divSum");
+      var varer = []; //Lager en tom array som jeg skal putte varene i senere
+
+      btn.onclick = leggTilVare;
+      btnSlett.onclick = slettVare;
+//Knapper som skal kjøre funksjoner
+      let nr = 0;
+//Definerer nr som skal bestemme hviket objekt som skal tas ut av arrayet
+      function leggTilVare(){
+        varer.push({
+          navn: inpNavn.value,
+          pris: inpPris.value,
+          antall: inpAntall.value
+        });
+        skrivVarer();
+        summer();
+        }
+        function skrivVarer(){
+          divVarer.innerHTML = "";
+          for (let vare of varer) {
+            divVarer.innerHTML += `<div>${vare.navn}-${vare.pris}-${vare.antall}</div>`;
+          }
+        }
+        function slettVare(){
+          varer.pop();
+          skrivVarer();
+          summer();
+        }
+        function summer(){
+          let sum = 0;
+          for (let vare of varer) {
+            sum += vare.pris*vare.antall;
+            divSum.innerHTML = sum;
+          }
+        }
+    </script>
+  </body>
+</html>

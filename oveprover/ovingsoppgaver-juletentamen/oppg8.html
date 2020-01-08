@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SP & MDG info</title>
+  </head>
+  <body>
+    <style media="screen">
+      body{
+        margin: 3vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+        align-items: center;
+      }
+      img{
+        margin: auto;
+        margin-bottom: 2vw;
+      }
+      h1{
+        grid-column: span 2;
+      }
+    </style>
+    <h1>Beste Politiske Partier</h1>
+    <img id="imgMDG" src="Bilder/miljopartiet.png" width="500px" height="144px">
+    <img id="imgSP" src="Bilder/sp.png" width="500px" height="344px">
+    <div class="">
+      <button id="forrigeMDG" type="button" name="button">forrige</button>
+      <button id="nesteMDG" type="button" name="button">neste</button>
+    </div>
+    <div class="">
+      <button id="forrigeSP" type="button" name="button">forrige</button>
+      <button id="nesteSP" type="button" name="button">neste</button>
+    </div>
+    <p id="txtMDG"></p>
+    <p id="txtSP"></p>
+<script type="text/javascript">
+  const imgMDG = document.querySelector("#imgMDG");
+  const imgSP = document.querySelector("#imgSP");
+  const txtMDG = document.querySelector("#txtMDG");
+  const txtSP = document.querySelector("#txtSP");
+  const forrigeMDG = document.querySelector("#forrigeMDG");
+  const nesteMDG = document.querySelector("#nesteMDG");
+  const forrigeSP = document.querySelector("#forrigeSP");
+  const nesteSP = document.querySelector("#nesteSP");
+
+  let arrayNrSP = 0;
+  let bilderSP = ["Bilder/sp.png","Bilder/sp01.jpg","Bilder/sp02.jpg","Bilder/sp03.jpg"];
+  let arrayNrMDG = 0;
+  let bilderMDG = ["Bilder/miljopartiet.png","Bilder/mdg01.jpg","Bilder/mdg02.jpg","Bilder/mdg03.jpg"];
+
+  imgMDG.onclick = function(){
+    txtMDG.innerHTML = "Heia MDG";
+  }
+  imgSP.onclick = function(){
+    txtSP.innerHTML = "Heia SP";
+  }
+
+  forrigeSP.onclick = function(){
+    if (arrayNrSP <= 0) {
+      arrayNrSP = 3;
+    } else {
+      arrayNrSP -= 1;
+    }
+    imgSP.src = bilderSP[arrayNrSP];
+  }
+
+  nesteSP.onclick = function(){
+    if (arrayNrSP >= 3) {
+      arrayNrSP = 0;
+    } else {
+      arrayNrSP += 1;
+    }
+    imgSP.src = bilderSP[arrayNrSP];
+  }
+
+  forrigeMDG.onclick = function(){
+    if (arrayNrMDG <= 0) {
+      arrayNrMDG = 3;
+    } else {
+      arrayNrMDG -= 1;
+    }
+    imgMDG.src = bilderMDG[arrayNrMDG];
+  }
+
+  nesteMDG.onclick = function(){
+    if (arrayNrMDG >= 3) {
+      arrayNrMDG = 0;
+    } else {
+      arrayNrMDG += 1;
+    }
+    imgMDG.src = bilderMDG[arrayNrMDG];
+  }
+
+</script>
+  </body>
+</html>
