@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="New York.png">
+  <title></title>
+</head>
+
+<body>
+  <style media="screen">
+    .bilderamme {
+      width: 1000px;
+      height: 620.5px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    #img {
+      width: 100%;
+    }
+  </style>
+  <div class="bilderamme">
+    <img src="New York.jpg" id="img">
+  </div>
+  <script type="text/javascript">
+    const bilderamme = document.querySelector(".bilderamme");
+    const img = document.querySelector("#img");
+    img.onmousemove = function(){
+      console.log("x:",event.clientX);
+      console.log("y:",event.clientY);
+      console.log(bilderamme.offsetLeft)
+      img.style.width = "4000px";
+      img.style.marginLeft = (- event.clientX + bilderamme.offsetLeft)*3 + "px";
+      img.style.marginTop = (- event.clientY + bilderamme.offsetTop)*3 + "px";
+    }
+    bilderamme.onmouseout = function(){
+      img.style.width = "1000px";
+      img.style.marginLeft = "";
+      img.style.marginTop = "";
+    }
+  </script>
+</body>
+
+</html>

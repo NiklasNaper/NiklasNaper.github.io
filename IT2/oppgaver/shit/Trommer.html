@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trommemaskin</title>
+  </head>
+  <body>
+    <audio id="a" src="1.mp3" controls></audio>
+    <script type="text/javascript">
+    const a = document.querySelector("#a");
+      window.onkeydown = function(event){
+        if(event.key == "q"){
+          a.play();
+        }
+      }
+    </script>
+  </body>
+</html>

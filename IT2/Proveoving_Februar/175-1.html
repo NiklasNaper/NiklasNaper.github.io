@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 1</title>
+  </head>
+  <body>
+    <img src="" width="500px" height="500px">
+    <button type="button" name="button">Tilfeldig bilde</button>
+    <script type="text/javascript">
+    const img = document.querySelector("img");
+    const btn = document.querySelector("button");
+
+    alert(window.innerWidth);
+
+    const bilder = ["https://www.fhi.no/contentassets/ebd1f4562a7041229aea119fcc2a7b23/brunrotte-breddebilde.jpg?preset=mainbodywidth", "https://smp.vgc.no/v2/images/d02fe9e6-6b26-4bd8-924c-43b03869c401?fit=crop&h=468&w=834&s=b2b382a6b123777f99164c06e94ec6dbf51b65d9"];
+
+    btn.onclick = function(){
+      let i = Math.round(Math.random());
+      console.log(i);
+      img.src = bilder[i];
+    }
+
+    </script>
+  </body>
+</html>

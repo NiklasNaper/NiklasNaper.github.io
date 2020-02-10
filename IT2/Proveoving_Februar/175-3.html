@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 3</title>
+    <style media="screen">
+      body{
+        margin: 100px;
+        display: flex;
+      }
+      ::-webkit-scrollbar{
+        display: none;
+      }
+      .bilderamme{
+        width: 1500px;
+        height: 800px;
+        margin: auto;
+        overflow: hidden;
+      }
+      img{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bilderamme">
+        <img src="London.jpg">
+    </div>
+    <script type="text/javascript">
+    const img = document.querySelector("img");
+    const ramme = document.querySelector(".bilderamme");
+    ramme.onmouseover = function(){
+      img.style.width = "2500px";
+      img.style.height = "1500px";
+    }
+    img.onmouseout = function(){
+      img.style.width = "1500px";
+      img.style.height = "800px";
+      img.style.marginLeft = "0px";
+      img.style.marginTop = "0px";
+    }
+    ramme.onmousemove = function(evt){
+      img.style.marginLeft = (-evt.clientX+210)*0.66 + "px";
+      img.style.marginTop = (-evt.clientY+100)*0.85 + "px";
+    }
+    </script>
+  </body>
+</html>

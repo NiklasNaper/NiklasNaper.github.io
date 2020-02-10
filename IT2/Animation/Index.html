@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .firkant{
+            height: 500px;
+            width: 500px;
+            background-color: magenta;
+            position: relative;
+        }
+        .litenfirkant{
+            height: 50px;   
+            width: 50px;
+            background-color: green;
+            position: absolute;
+            left: 450px;
+            top: 450px;
+            transition-duration: 0.1s;
+        }
+        .firkant:hover .litenfirkant{
+            left: 0px;
+            top: 0px;
+            transform:scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="firkant">
+        <div class="litenfirkant">
+
+        </div>
+    </div>
+</body>
+</html>

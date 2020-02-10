@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 1, 2, 3 og 4</title>
+    <style media="screen">
+      body{
+        margin: 0;
+      }
+      ::-webkit-scrollbar{
+        display: none;
+      }
+      video{
+        display: block;
+        width: 1920px;
+        height: 969px;
+      }
+      input{
+        width: 90%;
+        margin-left: 5%;
+      }
+      p{
+        margin-left: 5vw;
+        font-size: 2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="p">0</p>
+    <input type="range" min="0" max="600" value="0">
+      <video src="Headshot.mp4" controls>
+        <script type="text/javascript">
+          const vid = document.querySelector("video");
+          const slider = document.querySelector("input");
+          const p = document.querySelector("p");
+
+          window.onkeydown = function(evt){
+            if (event.key == "ArrowLeft") {
+              vid.currentTime -= 2;
+            } else if (event.key == "ArrowRight") {
+              vid.currentTime += 2;
+            }
+          }
+
+          slider.oninput = function(){
+            p.innerHTML = slider.value/100;
+            vid.currentTime = slider.value/100;
+          }
+        </script>
+  </body>
+</html>

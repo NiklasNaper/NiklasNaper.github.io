@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animate</title>
+    <style>
+        img{
+            border-radius: 50%;
+            position: absolute;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        #btn{
+            margin-left: 800px;
+        }
+    </style>
+</head>
+<body>
+    <img src="Scale.jfif" width="30%">
+    
+    <button type="button" id="btn">Start</button>
+    <button type="button" id="btn1">Stop</button>
+    <script>
+        const btn = document.querySelector("#btn");
+        const btn1 = document.querySelector("#btn1");
+        const kongen = document.querySelector("img");
+
+        const kongeAni =  kongen.animate([{
+            transform: "translateX(0) scale(1)",
+
+
+        },{
+            transform: "translateX(200px) scale(2)"
+
+
+        }], {
+            duration: 1000,
+            iterations: Infinity,
+            fill: "forwards",
+            direction: "alternate"
+            });
+            
+            kongeAni.pause();
+            
+            btn.onclick = function(){
+                kongeAni.play();
+            }
+
+            btn1.onclick = function(){
+                kongeAni.pause();
+            }
+
+
+    </script>
+</body>
+</html>

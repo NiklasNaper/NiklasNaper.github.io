@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation-float.css">
+  </head>
+  <body>
+    <style media="screen" id="style">
+      .mal{
+        border: solid red 2px;
+      }
+
+    </style>
+<h1>Augsburg vs Dortmund</h1>
+
+    <button id="a" type="button" name="button">0/3</button>
+    <button id="b" type="button" name="button">1/3</button>
+    <button id="c" type="button" name="button">2/3</button>
+
+    <video id="vid" src="Sequence 01.mp4" controls width="100%">
+
+
+    </video>
+    <audio src="L.mp3" controls>
+
+    </audio>
+    <script type="text/javascript">
+    const btn0 = document.querySelector("#a");
+    const btn1 = document.querySelector("#b");
+    const btn2 = document.querySelector("#c");
+    const style = document.querySelector("#style");
+    const vid = document.querySelector("#vid");
+
+    btn0.onclick = function1;
+    btn1.onclick = function2;
+    btn2.onclick = function3;
+
+    function function1(){
+      vid.currentTime = 0;
+    }
+
+    function function2(){
+      vid.currentTime = 1/3*57;
+    }
+
+    function function3(){
+      vid.currentTime = 2/3*57;
+    }
+
+    vid.ontimeupdate = function(){
+      if (vid.currentTime < 1/3*57) {
+        btn0.classList.add("mal");
+        btn1.classList.remove("mal");
+        btn2.classList.remove("mal");
+      } else if (vid.currentTime >= 1/3*57 && vid.currentTime < 2/3*57) {
+        btn1.classList.add("mal");
+        btn0.classList.remove("mal");
+        btn2.classList.remove("mal");
+      } else if (vid.currentTime >= 2/3*57) {
+        btn2.classList.add("mal");
+        btn1.classList.remove("mal");
+        btn0.classList.remove("mal");
+      }
+    }
+    </script>
+  </body>
+</html>

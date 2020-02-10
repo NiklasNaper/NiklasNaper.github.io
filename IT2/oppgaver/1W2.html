@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>1.2</title>
+  </head>
+  <body>
+    <input id="input" type="range">
+    <label for="input">Julians alder</label>
+    <span id="span"></span>
+    
+    <script type="text/javascript">
+      const input = document.querySelector("#input");
+      const span = document.querySelector("#span");
+
+      input.oninput = function(){
+        span.innerHTML = input.value;
+      }
+      input.onfocus = function(){
+        span.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
