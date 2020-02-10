@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    body{
+      margin: 0;
+    }
+      div{
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+
+    </div>
+    <script type="text/javascript">
+      const div = document.querySelector("div");
+
+      const divAni = div.animate([{
+        transform: "translateX(0) translateY(0)"
+      },{
+        transform: "translateX(1880px) translateY(929px)"
+      },{
+        transform: "translateX (0) translateY(929px)"
+      }], {
+        duration: 5000,
+        iterations: Infinity,
+        fill: "forwards",
+        direction: "alternate"
+      });
+      divAni.play();
+    </script>
+  </body>
+</html>

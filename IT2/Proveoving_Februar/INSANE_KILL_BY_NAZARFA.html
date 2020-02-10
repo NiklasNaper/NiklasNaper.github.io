@@ -22,10 +22,30 @@
       p{
         margin-left: 5vw;
         font-size: 2vw;
+        display: inline;
+      }
+      .ad{
+        position: absolute;
+        display: block;
+        margin-top: 500px;
+        margin-left: 600px;
+        width: 1000px;
+        height: 200px;
+        background-color: lightgrey;
+        opacity: 0.8;
+        z-index: 11;
+      }
+      button{
+        height: 50px;
       }
     </style>
   </head>
   <body>
+    <div class="ad">
+<p>REKLAMEPAUSE FOR LONDON TRIP</p>
+<img src="London.jpg" width = "200px">
+<button type="button" name="button">Fortsett video</button>
+    </div>
     <p class="p">0</p>
     <input type="range" min="0" max="600" value="0">
       <video src="Headshot.mp4" controls>
@@ -33,6 +53,15 @@
           const vid = document.querySelector("video");
           const slider = document.querySelector("input");
           const p = document.querySelector("p");
+          const div = document.querySelector("div");
+          const btn = document.querySelector("button");
+
+          div.style.display = "none";
+
+          btn.onclick = function(){
+            vid.play();
+            div.style.display = "none";
+          }
 
           window.onkeydown = function(evt){
             if (event.key == "ArrowLeft") {
@@ -41,6 +70,13 @@
               vid.currentTime += 2;
             }
           }
+          vid.ontimeupdate = function(){
+            if (vid.currentTime > 3 && vid.currentTime < 3.2) {
+              vid.pause();
+              div.style.display = "block";
+            }
+          }
+
 
           slider.oninput = function(){
             p.innerHTML = slider.value/100;

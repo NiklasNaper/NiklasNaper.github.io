@@ -20,7 +20,7 @@
 </head>
 <body>
     <img src="Scale.jfif" width="30%">
-    
+
     <button type="button" id="btn">Start</button>
     <button type="button" id="btn1">Stop</button>
     <script>
@@ -29,7 +29,7 @@
         const kongen = document.querySelector("img");
 
         const kongeAni =  kongen.animate([{
-            transform: "translateX(0) scale(1)",
+            transform: "translateX(0) scale(1)"
 
 
         },{
@@ -42,9 +42,9 @@
             fill: "forwards",
             direction: "alternate"
             });
-            
+
             kongeAni.pause();
-            
+
             btn.onclick = function(){
                 kongeAni.play();
             }
